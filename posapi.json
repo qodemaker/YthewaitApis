@@ -1,2 +1,2437 @@
-
-{"info":{"_postman_id":"2702c810-135e-40de-91f9-6c7f43e1c5bd","name":"POS APIS","schema":"https:\/\/schema.getpostman.com\/json\/collection\/v2.0.0\/collection.json"},"item":[{"name":"{{base_url}}pos_api\/login","event":[{"listen":"test","script":{"id":"6d197679-156c-4e4e-aea3-7c002c2485c8","exec":[""],"type":"text\/javascript"}}],"_postman_id":"eeb7c7d2-2635-40bd-b51e-a646132241c7","request":{"method":"POST","header":[],"body":{"mode":"formdata","formdata":[{"key":"email","value":"harpreetsinghsahi89@yopmail.com","type":"text"},{"key":"password","value":"Test@123","type":"text"}]},"url":"{{base_url}}pos_api\/login"},"response":[]},{"name":"{{base_url}}pos_api\/user_restaurants_list","event":[{"listen":"test","script":{"id":"38458899-5336-4856-9d5c-69741acab844","exec":[""],"type":"text\/javascript"}}],"_postman_id":"eeab181c-ac49-4a2c-acd7-6d879d22cae7","request":{"auth":{"type":"oauth2","oauth2":{"accessToken":"","addTokenTo":"header"}},"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[]},"url":"{{base_url}}pos_api\/user_restaurants_list"},"response":[]},{"name":"{{base_url}}pos_api\/get_all_waiter_manager","_postman_id":"b7f3129e-4511-40e7-9c3f-abc7bb031cbe","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"restaurant_id","value":"78","type":"text"},{"key":"no_delivery_boy","value":"1","description":"Optional","type":"text"},{"key":"limit","value":"20","description":"Optional","type":"text"},{"key":"page_no","value":"1","description":"Optional","type":"text"}]},"url":"{{base_url}}pos_api\/get_all_waiter_manager"},"response":[]},{"name":"{{base_url}}pos_api\/user_notifications","_postman_id":"23a750f4-3800-4771-a846-11cfde3fdb7d","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"type","value":"all","description":"pos||delivery ||takeaway","type":"text"},{"key":"restaurant_id","value":"76","description":"Optional","type":"text"},{"key":"limit","value":"10","description":"Optional","type":"text"},{"key":"page_no","value":"1","description":"Optional","type":"text"}]},"url":"{{base_url}}pos_api\/user_notifications"},"response":[]},{"name":"{{base_url}}pos_api\/all_tables","_postman_id":"c199fd9e-435d-41f6-84ac-2b7634203b87","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"restaurant_id","value":"76","type":"text"},{"key":"current_device_width","value":"1024.0","description":"optional","type":"text"},{"key":"current_device_height","value":"622.0","description":"optional","type":"text"},{"key":"loor_id","value":"100","type":"text"}]},"url":"{{base_url}}pos_api\/all_tables","description":"all tables"},"response":[]},{"name":"{{base_url}}pos_api\/verify_pin","_postman_id":"26deca94-77aa-40ca-a171-664cb4ec4c22","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"user_id","value":"377","type":"text"},{"key":"pin","value":"1094","type":"text"},{"key":"restaurant_id","value":"76","description":"optional","type":"text"},{"key":"ios_device_id","value":"","description":"optional","type":"text"},{"key":"token","value":"","description":"optional","type":"text"},{"key":"uuid","value":"BC0B7495-860B-44C8-837A-5C67C0FAE164","description":"optional","type":"text"}]},"url":"{{base_url}}pos_api\/verify_pin"},"response":[]},{"name":"{{base_url}}pos_api\/add_bank_details","_postman_id":"136d4aa9-c285-4f4c-af55-b938413f59b0","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"account_number","value":"10101010120200203003034","type":"text"},{"key":"restaurant_id","value":"2","type":"text"},{"key":"ifsc_code","value":"AXIS00012","type":"text"},{"key":"bank_branch","value":"Ludhiana","type":"text"},{"key":"bank_name","value":"AXIS BANK","type":"text"},{"key":"swift_code","value":"AXIB00001","type":"text"}]},"url":"{{base_url}}pos_api\/add_bank_details"},"response":[]},{"name":"{{base_url}}pos_api\/get_verification_data","_postman_id":"1e514e2d-b904-40fb-855c-64a1b2448f87","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"restaurant_id","value":"76","type":"text"}]},"url":"{{base_url}}pos_api\/get_verification_data"},"response":[]},{"name":"{{base_url}}pos_api\/countries_states_cities","_postman_id":"7e02fbe9-f984-4b59-823b-df0d32aafe12","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"country_id","value":"101","description":"Optional","type":"text"},{"key":"state_id","value":"32","description":"Optional","type":"text"}]},"url":"{{base_url}}pos_api\/countries_states_cities"},"response":[]},{"name":"{{base_url}}pos_api\/legal_form_list","_postman_id":"f99118da-79aa-4062-9b7b-4c6aca96f7bc","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"restaurant_id","value":"76","type":"text"},{"key":"country_id","value":"101","type":"text"}]},"url":"{{base_url}}pos_api\/legal_form_list"},"response":[]},{"name":"{{base_url}}pos_api\/add_organization_details","_postman_id":"0615b32c-2743-47fc-a808-68b573fcc42a","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"restaurant_id","value":"76","type":"text"},{"key":"legalform","value":"0","type":"text"},{"key":"business_name","value":"Raymond Restaurant","type":"text"},{"key":"postal","value":"141003","type":"text"},{"key":"registration_number","value":"65r6rr6","type":"text"},{"key":"state_id","value":"32","type":"text"},{"key":"city_id","value":"3225","type":"text"},{"key":"address","value":"65, industrial area","type":"text"},{"key":"country_id","value":"101","type":"text"}]},"url":"{{base_url}}pos_api\/add_organization_details"},"response":[]},{"name":"{{base_url}}pos_api\/add_ultimate_owners","_postman_id":"74924731-3938-40fe-8fab-fd33918aa2ea","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"o_first_name","value":"demo","type":"text"},{"key":"o_last_name","value":"tester","type":"text"},{"key":"o_birth_country","value":"101","type":"text"},{"key":"o_dob","value":"2000-03-28","type":"text"},{"key":"restaurant_id","value":"76","type":"text"},{"key":"o_residence_country","value":"101","type":"text"},{"key":"o_nationality","value":"101","type":"text"}]},"url":"{{base_url}}pos_api\/add_ultimate_owners"},"response":[]},{"name":"{{base_url}}pos_api\/add_stakeholder","_postman_id":"89d11a5a-69c7-49ee-811b-23558ff9c074","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"nationality","value":"101","type":"text"},{"key":"politically_exposed","value":"0","type":"text"},{"key":"first_name","value":"5e543e45ee54","type":"text"},{"key":"birth_country","value":"101","type":"text"},{"key":"dob","value":"2019-04-16","type":"text"},{"key":"last_name","value":"tr6r6r4r6yr","type":"text"},{"key":"restaurant_id","value":"76","type":"text"},{"key":"residence_country","value":"101","type":"text"},{"key":"is_ultimate_beneficial_owner","value":"0","type":"text"},{"key":"politically_exposed_desc","value":"","type":"text"}]},"url":"{{base_url}}pos_api\/add_stakeholder"},"response":[]},{"name":"{{base_url}}pos_api\/add_website_profile","_postman_id":"56630b90-ac40-4e5b-bf8b-1797dc730900","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"trade_name","value":"6r56r466r6y","type":"text"},{"key":"phone","value":"66788435443","type":"text"},{"key":"restaurant_id","value":"76","type":"text"},{"key":"website","value":"http:\/\/www.4786yure.com","type":"text"},{"key":"email","value":"jyotisharma@yopmail.com","type":"text"}]},"url":"{{base_url}}pos_api\/add_website_profile"},"response":[]},{"name":"{{base_url}}pos_api\/add_documents","_postman_id":"da07e2a8-5450-4f09-9df5-483e4a386cad","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"restaurant_id","value":"76","type":"text"},{"key":"docsimage","description":"[send files\/file in docsimage[] array]","type":"file","src":[]}]},"url":"{{base_url}}pos_api\/add_documents"},"response":[]},{"name":"{{base_url}}pos_api\/delete_verification_document","_postman_id":"5cb9212c-858c-4261-9924-27aabd47b72c","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"id","value":"53","type":"text"}]},"url":"{{base_url}}pos_api\/delete_verification_document"},"response":[]},{"name":"{{base_url}}pos_api\/add_identification_docs","_postman_id":"00073a0c-fccd-4a4d-9397-f8863807a080","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"restaurant_id","value":"76","type":"text"},{"key":"id_type","value":"2","description":"['1' = 'Passport', '2' = 'ID Card','3' = 'Residence Permit']","type":"text"},{"key":"front_page","type":"file","src":[]},{"key":"back_page","type":"file","src":[]}]},"url":"{{base_url}}pos_api\/add_identification_docs"},"response":[]},{"name":"{{base_url}}pos_api\/restaurant_menu_category_wise","_postman_id":"1273d6fc-a61d-4e20-a32f-7398cd9d4f5e","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"restaurant_id","value":"76","type":"text"},{"key":"delivery_type","value":"dinein","description":"(OPTIONAL => delivery, takeaway, dinein)","type":"text"}]},"url":"{{base_url}}pos_api\/restaurant_menu_category_wise"},"response":[]},{"name":"{{base_url}}pos_api\/restaurant_booking","_postman_id":"28f65c85-f76c-4c53-9f7d-50a9a2deae7b","request":{"method":"POST","header":[{"key":"X-Auth-Token","type":"text","value":"{{access_token}}"}],"body":{"mode":"formdata","formdata":[{"key":"restaurant_id","value":"76","type":"text"},{"key":"page_no","value":"1","type":"text"},{"key":"limit","value":"20","type":"text"},{"key":"from","value":"2020-03-30","description":"Date range specific reservation","type":"text"},{"key":"to","value":"2020-03-30","description":"Date range specific reservation","type":"text"},{"key":"reservation_status","value":"1","description":"today for :1 || Upcoming for : 2 || Archive for :3","type":"text"}]},"url":"{{base_url}}pos_api\/restaurant_booking","description":"Upcoming reservation||Archive reservation||Today reservation||Date range specific reservation"},"response":[]},{"name":"{{base_url}}pos_api\/remove_table_from_waiting","_postman_id":"a65e6191-ba25-45c8-b05c-5e2e3411ca28","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"restaurant_id","value":"76","type":"text"},{"key":"table_id","value":"585","type":"text"}]},"url":"{{base_url}}pos_api\/remove_table_from_waiting"},"response":[]},{"name":"{{base_url}}pos_api\/waiter_list","_postman_id":"9197aa7d-1453-416d-9cfe-48a960d31eef","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"restaurant_id","value":"76","type":"text"}]},"url":"{{base_url}}pos_api\/waiter_list"},"response":[]},{"name":"{{base_url}}pos_api\/customers_list","_postman_id":"495edaa0-701e-41b1-90f1-7b8147b9501f","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"restaurant_id","value":"76","type":"text"},{"key":"page_no","value":"1","description":"Optional","type":"text"},{"key":"limit","value":"100","description":"Optional","type":"text"},{"key":"search","value":"tes","description":"Optional","type":"text"},{"key":"with_walkin","value":"1","description":"Optional","type":"text"}]},"url":"{{base_url}}pos_api\/customers_list"},"response":[]},{"name":"{{base_url}}pos_api\/dinning_help_list","_postman_id":"623a040a-28fd-48fa-94c6-23d635a0ffd2","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"restaurant_id","value":"76","type":"text"}]},"url":"{{base_url}}pos_api\/dinning_help_list"},"response":[]},{"name":"{{base_url}}pos_api\/get_cart","_postman_id":"486acf88-14f7-4ba5-aef4-bcefe3b294d4","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"c_id","value":"35","type":"text"},{"key":"cart_token_number","value":"1","type":"text"},{"key":"delivery_type","value":"dinein","description":"delivery || takeaway || dinein","type":"text"},{"key":"table_id","value":"585","type":"text"},{"key":"order_id","value":"0","type":"text"},{"key":"restaurant_id","value":"76","type":"text"}]},"url":"{{base_url}}pos_api\/get_cart"},"response":[]},{"name":"{{base_url}}pos_api\/update_table_persons","_postman_id":"99719735-0333-4095-9d28-ef5b79f69e81","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"no_of_persons","value":"4","type":"text"},{"key":"restaurant_id","value":"76","type":"text"},{"key":"table_id","value":"585","type":"text"}]},"url":"{{base_url}}pos_api\/update_table_persons"},"response":[]},{"name":"{{base_url}}pos_api\/add_to_cart_batch","_postman_id":"22984833-3bac-485d-9d2d-99c692602871","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"restaurant_id","value":"76","type":"text"},{"key":"data","value":"{\"order_id\":\"5\",\"cart_token_number\":\"1\",\"food_item_name\":\"Jim Beam (30ML)\",\"attribute_value_id\":\"\",\"attribute_id\":\"\",\"quantity\":\"1\",\"c_id\":\"54\",\"delivery_type\":\"dinein\",\"table_id\":\"585\",\"pos_note\":\"\",\"food_item_id\":\"3307\"}","type":"text"}]},"url":"{{base_url}}pos_api\/add_to_cart_batch"},"response":[]},{"name":"{{base_url}}pos_api\/place_order","_postman_id":"c6a2f4b2-7a65-4a72-8dc7-d7d24d58543f","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"subtotal","value":"255.0","type":"text"},{"key":"total","value":"255.0","type":"text"},{"key":"table_id","value":"585","type":"text"},{"key":"delivery_type","value":"dinein","type":"text"},{"key":"address_id","value":"","type":"text"},{"key":"c_id","value":"0","type":"text"},{"key":"restaurant_id","value":"76","type":"text"},{"key":"cart_token_number","value":"1","type":"text"},{"key":"tax_amount","value":"0.00","type":"text"},{"key":"tip","value":"10","type":"text"},{"key":"order_id","value":"2549","type":"text"}]},"url":"{{base_url}}pos_api\/place_order"},"response":[]},{"name":"{{base_url}}pos_api\/add_discount_to_cart","_postman_id":"1ee2a0ec-6944-4a79-aac8-432da89321c6","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"cart_discount_value","value":"10","type":"text"},{"key":"c_id","value":"0","type":"text"},{"key":"subtotal","value":"100","type":"text"},{"key":"table_id","value":"585","type":"text"},{"key":"order_id","value":"0","type":"text"},{"key":"tax_amount","value":"","type":"text"},{"key":"cart_token_number","value":"1","type":"text"},{"key":"delivery_type","value":"dinein","type":"text"},{"key":"restaurant_id","value":"76","type":"text"},{"key":"cart_discount_type","value":"percentage","type":"text"}]},"url":"{{base_url}}pos_api\/add_discount_to_cart"},"response":[]},{"name":"{{base_url}}pos_api\/get_receipt","_postman_id":"f1bf3dc6-dec6-4804-a162-1214aa81877d","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"restaurant_id","value":"76","type":"text"},{"key":"order_id","value":"2549","type":"text"}]},"url":"{{base_url}}pos_api\/get_receipt"},"response":[]},{"name":"{{base_url}}pos_api\/pay_order_split_payment","_postman_id":"78ebf9de-3785-468c-b04c-1ed9dc869c96","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"order_id","value":"2549","type":"text"},{"key":"payment_method","value":"cash","description":"payment_method is Cash payment  = cash ||payment_method is Card payment = pin ||payment_method is Cheque payment =cheque","type":"text"},{"key":"restaurant_id","value":"76","type":"text"},{"key":"cart_token_number","value":"1","type":"text"},{"key":"amount","value":"229.5","type":"text"},{"key":"table_id","value":"585","type":"text"},{"key":"delivery_type","value":"dinein","type":"text"},{"key":"action","value":"add","description":"add ||action is Void Payment = void","type":"text"},{"key":"c_id","value":"0","type":"text"},{"key":"split_payment_id","value":"3192","type":"text"}]},"url":"{{base_url}}pos_api\/pay_order_split_payment"},"response":[]},{"name":"{{base_url}}pos_api\/save_payment","_postman_id":"3e4bf1a4-7a92-49e3-b9e0-10c04fc9bb8f","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"restaurant_id","value":"76","type":"text"},{"key":"order_id","value":"2549","type":"text"},{"key":"table_id","value":"585","type":"text"},{"key":"cart_token_number","value":"1","type":"text"},{"key":"c_id","value":"0","type":"text"},{"key":"delivery_type","value":"dinein","type":"text"}]},"url":"{{base_url}}pos_api\/save_payment"},"response":[]},{"name":"{{base_url}}pos_api\/split_table","_postman_id":"7676fb3a-e879-4022-adf7-2b491644d4ac","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"table_id","value":"585","type":"text"},{"key":"restaurant_id","value":"76","type":"text"},{"key":"no_of_persons","value":"1","type":"text"},{"key":"user_id","value":"377","description":"[OPTIONAL]","type":"text","disabled":true}]},"url":"{{base_url}}pos_api\/split_table"},"response":[]},{"name":"{{base_url}}pos_api\/pending_request_of_table","_postman_id":"e743549e-28a1-4395-b11b-8322970f9254","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"table_id","value":"717","type":"text"},{"key":"restaurant_id","value":"76","type":"text"}]},"url":"{{base_url}}pos_api\/pending_request_of_table"},"response":[]},{"name":"{{base_url}}pos_api\/delete_split_table","_postman_id":"7bea7e81-cbf7-422b-9b43-5dcd9327db6b","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"table_id","value":"717","type":"text"}]},"url":"{{base_url}}pos_api\/delete_split_table"},"response":[]},{"name":"{{base_url}}pos_api\/add_table","_postman_id":"f2aed7e8-7b88-45ca-9611-6809b1bcf749","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"no_of_chairs","value":"4","type":"text"},{"key":"table_number","value":"12","type":"text"},{"key":"floor_id","value":"99","type":"text"},{"key":"restaurant_id","value":"76","type":"text"},{"key":"table_type","value":"2","type":"text"}]},"url":"{{base_url}}pos_api\/add_table","description":"Add table"},"response":[]},{"name":"{{base_url}}pos_api\/save_table_arrangment","_postman_id":"f1492037-25a9-4ac2-a590-df26d6a93ac4","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"device_height","value":"660.0","type":"text"},{"key":"device_width","value":"1024.0","type":"text"},{"key":"restaurant_id","value":"76","type":"text"},{"key":"table_position","value":"[{\"table_id\":\"1\",\"x_position\":\"450\",\"y_position\":\"381\"}{\"table_id\":\"2\",\"x_position\":\"450\",\"y_position\":\"381\"}]","type":"text"}]},"url":"{{base_url}}pos_api\/save_table_arrangment"},"response":[]},{"name":"{{base_url}}pos_api\/edit_table","_postman_id":"a68a567a-7752-40d3-9c6f-1a31ff9d030e","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"table_number","value":"2","type":"text"},{"key":"no_of_chairs","value":"4","type":"text"},{"key":"table_id","value":"718","type":"text"},{"key":"floor_id","value":"99","type":"text"},{"key":"restaurant_id","value":"76","type":"text"},{"key":"table_type","value":"2","type":"text"}]},"url":"{{base_url}}pos_api\/edit_table"},"response":[]},{"name":"{{base_url}}pos_api\/delete_table","_postman_id":"90ccef30-5105-402b-b21b-9ce305d48b4c","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"delete_table","value":"719","type":"text"}]},"url":"{{base_url}}pos_api\/delete_table"},"response":[]},{"name":"{{base_url}}pos_api\/combine_tables","_postman_id":"58eb19c7-fc9f-45f7-b1b0-cb69cfef54f8","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"table_ids","value":"585,718","type":"text"},{"key":"c_id","value":"0","type":"text"},{"key":"restaurant_id","value":"76","type":"text"}]},"url":"{{base_url}}pos_api\/combine_tables"},"response":[]},{"name":"{{base_url}}pos_api\/revert_table","_postman_id":"26fd3a54-9653-4d5b-a47e-213ce8779a95","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"delivery_type","value":"dinein","type":"text"},{"key":"table_id","value":"720","type":"text"},{"key":"c_id","value":"0","type":"text"},{"key":"cart_token_number","value":"1","type":"text"},{"key":"restaurant_id","value":"76","type":"text"}]},"url":"{{base_url}}pos_api\/revert_table"},"response":[]},{"name":"{{base_url}}pos_api\/dinning_help","_postman_id":"a0b64998-3eca-4ba7-b8d3-ac51d4dee76e","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"request","value":"4","type":"text"},{"key":"restaurant_id","value":"76","type":"text"},{"key":"table_id","value":"585","type":"text"}]},"url":"{{base_url}}pos_api\/dinning_help"},"response":[]},{"name":"{{base_url}}pos_api\/assignWaiterTable","_postman_id":"177c53b0-96a0-44c6-87cc-220c9dde24e4","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"table_id","value":"585","type":"text"},{"key":"waiter_id","value":"387","type":"text"}]},"url":"{{base_url}}pos_api\/assignWaiterTable","description":"Assign Waiter"},"response":[]},{"name":"{{base_url}}pos_api\/change_table_customer","_postman_id":"d8f56d47-601f-4ed2-81d7-a3c7a99054a3","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"customer_id","value":"40","type":"text"},{"key":"restaurant_id","value":"76","type":"text"},{"key":"table_id","value":"585","type":"text"}]},"url":"{{base_url}}pos_api\/change_table_customer","description":"Change table customer"},"response":[]},{"name":"{{base_url}}pos_api\/restaurant_timings","_postman_id":"a14c3c75-da2b-44a6-9a44-dd60472d52a8","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"restaurant_id","value":"76","type":"text"},{"key":"date","value":"2020-03-30","type":"text"}]},"url":"{{base_url}}pos_api\/restaurant_timings"},"response":[]},{"name":"{{base_url}}pos_api\/reservation_booking_add","_postman_id":"2c7dff42-35a0-4784-894f-6985957717ad","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"contact_phone","value":"1456239870","type":"text"},{"key":"is_confirm","value":"0","type":"text"},{"key":"booking_date","value":"2020-03-29","type":"text"},{"key":"c_id","value":"40","type":"text"},{"key":"booking_time","value":"14:45:00","type":"text"},{"key":"pos_note","value":"Som note on reservation","type":"text"},{"key":"restaurant_id","value":"76","type":"text"},{"key":"table_id","value":"718","type":"text"},{"key":"contact_name","value":"customer16 test","type":"text"},{"key":"contact_email","value":"gstsgscsf@gsgsgs.com","type":"text"},{"key":"no_of_persons","value":"3","type":"text"}]},"url":"{{base_url}}pos_api\/reservation_booking_add"},"response":[]},{"name":"{{base_url}}pos_api\/edit_reservation_booking","_postman_id":"6baed97d-1a10-418f-b9de-fcf24b7ba27b","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"table_id","value":"718","type":"text"},{"key":"pos_note","value":"Som note on reservation","type":"text"},{"key":"date","value":"2020-03-29","type":"text"},{"key":"time","value":"14:45:00","type":"text"},{"key":"no_of_persons","value":"3","type":"text"},{"key":"is_confirm","value":"1","description":"1 for Confirm reservation || 2 for Cancel reservation","type":"text"},{"key":"booking_id","value":"313","type":"text"}]},"url":"{{base_url}}pos_api\/edit_reservation_booking"},"response":[]},{"name":"{{base_url}}pos_api\/sales","_postman_id":"c26bc415-4da2-458d-81fd-690560383582","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"order_status","value":"1","type":"text"},{"key":"page_no","value":"1","type":"text"},{"key":"limit","value":"100","type":"text"},{"key":"search","value":"","type":"text"},{"key":"restaurant_id","value":"76","type":"text"},{"key":"end_date","value":"2020-03-29","type":"text"},{"key":"start_date","value":"2020-02-28","type":"text"},{"key":"order_type","value":"0","type":"text"}]},"url":"{{base_url}}pos_api\/sales"},"response":[]},{"name":"{{base_url}}pos_api\/getTotalSale","_postman_id":"fb6ccdcc-022a-45e4-bf5a-11c44d5abadf","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"restaurant_id","value":"76","type":"text"}]},"url":"{{base_url}}pos_api\/getTotalSale"},"response":[]},{"name":"{{base_url}}pos_api\/get_staff_attendance","_postman_id":"cec34272-1ccb-4cfc-a5a2-cc595e7211db","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"limit","value":"100","type":"text"},{"key":"page_no","value":"1","type":"text"},{"key":"restaurant_id","value":"76","type":"text"},{"key":"date","value":"2020-03-01","type":"text"},{"key":"user_id","value":"377","type":"text"}]},"url":"{{base_url}}pos_api\/get_staff_attendance"},"response":[]},{"name":"{{base_url}}pos_api\/staff_attendance","_postman_id":"6eb38886-6a8a-4a77-941e-769622235916","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"checked_in","value":"1","description":"1 for Start Staff || 0 End staff attendance","type":"text"},{"key":"user_id","value":"386","type":"text"},{"key":"restaurant_id","value":"7","type":"text"}]},"url":"{{base_url}}pos_api\/staff_attendance"},"response":[]},{"name":"{{base_url}}pos_api\/add_new_customer","_postman_id":"34c96df8-0b40-4abf-8731-0564c4bc9c28","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"last_name","value":"Lname","type":"text"},{"key":"email","value":"custmer@mailinator.com","type":"text"},{"key":"city","value":"Ludhiana","type":"text"},{"key":"first_name","value":"Customer Fname","type":"text"},{"key":"complete_address","value":"","type":"text"},{"key":"address_nick_name","value":"","type":"text"},{"key":"company_name","value":"QM","type":"text"},{"key":"phone","value":"87654320000","type":"text"},{"key":"dob","value":"1987-03-29","type":"text"},{"key":"latitude","value":"30.89213969999999","type":"text"},{"key":"longitude","value":"75.8752189","type":"text"},{"key":"restaurant_id","value":"76","type":"text"},{"key":"house_no","value":"","type":"text"},{"key":"postcode","value":"141003","type":"text"},{"key":"address","value":"Grand Trunk Road, Industrial Area- A, Parbhat Nagar, Ludhiana, Punjab","type":"text"},{"key":"country","value":"India","type":"text"}]},"url":"{{base_url}}pos_api\/add_new_customer"},"response":[]},{"name":"{{base_url}}pos_api\/add_edit_customer_address","_postman_id":"7d0cb740-4bd5-4fc2-a56f-de8aee3f5719","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"address_id","value":"","type":"text"},{"key":"address_nick_name","value":"model town","type":"text"},{"key":"longitude","value":"75.84017759999999","type":"text"},{"key":"postcode","value":"141001","type":"text"},{"key":"latitude","value":"30.8883034","type":"text"},{"key":"address","value":"Model Town, Ludhiana, Punjab","type":"text"},{"key":"complete_address","value":"model own","type":"text"},{"key":"house_no","value":"123","type":"text"},{"key":"c_id","value":"153","type":"text"}]},"url":"{{base_url}}pos_api\/add_edit_customer_address"},"response":[]},{"name":"{{base_url}}pos_api\/delete_payment_address","_postman_id":"8460b53b-b58b-4133-9b9f-5bcfdb1b3cb3","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"id","value":"209","type":"text"}]},"url":"{{base_url}}pos_api\/delete_payment_address"},"response":[]},{"name":"{{base_url}}pos_api\/edit_customer","_postman_id":"f99ab11a-ec06-4252-98ae-6e2747176deb","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"phone","value":"8765432109","type":"text"},{"key":"email","value":"cust@mailinator.com","type":"text"},{"key":"restaurant_id","value":"76","type":"text"},{"key":"first_name","value":"sunil Fname","type":"text"},{"key":"dob","value":"1987-03-29","type":"text"},{"key":"customer_id","value":"153","type":"text"},{"key":"last_name","value":"Lname","type":"text"},{"key":"company_name","value":"QM","type":"text"}]},"url":"{{base_url}}pos_api\/edit_customer"},"response":[]},{"name":"{{base_url}}pos_api\/delete_customer","_postman_id":"b85acd26-f601-470a-92aa-74f2149407b7","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"restaurant_id","value":"74","type":"text"},{"key":"customer_id","value":"54","type":"text"}]},"url":"{{base_url}}pos_api\/delete_customer"},"response":[]},{"name":"{{base_url}}pos_api\/stock_manage","_postman_id":"13bce753-c899-4f1e-88be-e585be774708","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"restaurant_id","value":"76","type":"text"}]},"url":"{{base_url}}pos_api\/stock_manage"},"response":[]},{"name":"{{base_url}}pos_api\/set_stock_manage","_postman_id":"3e98e5ae-b58a-4d9f-a757-20487bb09a39","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"is_stock_item","value":"3215","description":"[\"3215\": \"0\"]","type":"text"},{"key":"restaurant_id","value":"76","type":"text"}]},"url":"{{base_url}}pos_api\/set_stock_manage"},"response":[]},{"name":"{{base_url}}pos_api\/get_restaurant_setting","_postman_id":"688d9ced-4373-4531-95ce-8e87c56c2d5a","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"restaurant_id","value":"76","type":"text"}]},"url":"{{base_url}}pos_api\/get_restaurant_setting"},"response":[]},{"name":"{{base_url}}pos_api\/restaurant_setting","_postman_id":"c454e9fe-19d2-4125-81e9-58d659c72db9","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"reservation_auto_confirm","value":"1","type":"text"},{"key":"is_restaurant_open","value":"1","type":"text"},{"key":"takeaway_auto_confirm","value":"1","type":"text"},{"key":"Enable Walkthrough","value":"0","type":"text"},{"key":"delivery_types","value":"1, 2, 3","type":"text"},{"key":"restaurant_id","value":"76","type":"text"},{"key":"delivery_auto_confirm","value":"1","type":"text"}]},"url":"{{base_url}}pos_api\/restaurant_setting"},"response":[]},{"name":"{{base_url}}pos_api\/list_printer","_postman_id":"8c3e2741-b70f-44fb-b1b1-c5bf699a90ad","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"restaurant_id","value":"76","type":"text"}]},"url":"{{base_url}}pos_api\/list_printer"},"response":[]},{"name":"{{base_url}}pos_api\/add_printer","_postman_id":"1292f844-fb09-4f29-97ab-fac2d6b7fbf5","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"printer_name","value":"Test","type":"text"},{"key":"restaurant_id","value":"76","type":"text"},{"key":"ticket_width","value":"512","type":"text"},{"key":"connection_type","value":"1","type":"text"},{"key":"type","value":"1,2,3,4","type":"text"},{"key":"brand","value":"Epson","type":"text"},{"key":"port","value":"1200","type":"text"},{"key":"ip","value":"192.168.1.1","type":"text"},{"key":"model","value":"TM-T88V","type":"text"},{"key":"is_active","value":"1","type":"text"}]},"url":"{{base_url}}pos_api\/add_printer"},"response":[]},{"name":"{{base_url}}pos_api\/edit_printer","_postman_id":"168b19a1-f16e-4dfc-8594-cc3f8f456d7d","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"printer_name","value":"Test 123","type":"text"},{"key":"restaurant_id","value":"76","type":"text"},{"key":"ticket_width","value":"512","type":"text"},{"key":"connection_type","value":"1","type":"text"},{"key":"type","value":"1,2,3,4","type":"text"},{"key":"brand","value":"Epson","type":"text"},{"key":"port","value":"1200","type":"text"},{"key":"ip","value":"192.168.1.1","type":"text"},{"key":"model","value":"TM-T88V","type":"text"},{"key":"is_active","value":"1","type":"text"},{"key":"printer_id","value":"67","type":"text"}]},"url":"{{base_url}}pos_api\/edit_printer"},"response":[]},{"name":"{{base_url}}pos_api\/delete_printer","_postman_id":"9b08166a-9915-4a63-aa56-ace9506f0677","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"printer_id","value":"67","type":"text"}]},"url":"{{base_url}}pos_api\/delete_printer"},"response":[]},{"name":"{{base_url}}pos_api\/staff_cash_inhand","_postman_id":"5d54e77c-87c2-44c8-b230-225a44d2e9d5","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"restaurant_id","value":"76","type":"text"}]},"url":"{{base_url}}pos_api\/staff_cash_inhand"},"response":[]},{"name":"{{base_url}}pos_api\/submit_cash_in_hand","_postman_id":"4fc0c281-2777-45ce-b1c9-8cd52ad63285","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"total_cash","value":"1200","type":"text"},{"key":"restaurant_id","value":"76","type":"text"}]},"url":"{{base_url}}pos_api\/submit_cash_in_hand"},"response":[]},{"name":"{{base_url}}pos_api\/logout","_postman_id":"5ccad95b-ac8b-4851-b690-f8374f63d5af","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"url":"{{base_url}}pos_api\/logout"},"response":[]},{"name":"{{base_url}}pos_api\/get_todays_incomplete_orders","_postman_id":"574f4136-d901-44d2-972d-1c4f982182da","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"future_orders","value":"1","description":"(optional -- to get future orders, by default today's orders)","type":"text"},{"key":"restaurant_id","value":"78","type":"text"},{"key":"page_no","value":"1","description":"[for pagination eg, 1,2,3. by default set to 1] [optional]","type":"text"},{"key":"search","value":"john","description":"(optional -- for name and invoice num)","type":"text"},{"key":"type","value":"delivery","description":"(delivery | takeaway )","type":"text"},{"key":"limit","value":"100","description":"[by default 10 if not sent] [optional]","type":"text"}]},"url":"{{base_url}}pos_api\/get_todays_incomplete_orders"},"response":[]},{"name":"{{base_url}}pos_api\/check_delivery_address","_postman_id":"d3ba6096-37f2-440e-9c75-b832d593964c","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"restaurant_id","value":"76","type":"text"},{"key":"address_id","value":"158","type":"text"}]},"url":"{{base_url}}pos_api\/check_delivery_address"},"response":[]},{"name":"{{base_url}}pos_api\/set_lang","_postman_id":"56e5532b-1459-41c9-b8e1-577c92e30636","request":{"method":"POST","header":[{"key":"X-Auth-Token","value":"{{access_token}}","type":"text"}],"body":{"mode":"formdata","formdata":[{"key":"lang_id","value":"2","type":"text"}]},"url":"{{base_url}}pos_api\/set_lang"},"response":[]}],"event":[{"listen":"prerequest","script":{"id":"c07abade-8715-46de-ab88-c4d028f4c703","type":"text\/javascript","exec":[""]}},{"listen":"test","script":{"id":"c860a481-6c44-4004-9c92-b273846b5e70","type":"text\/javascript","exec":[""]}}],"variable":[{"id":"29efa745-15e4-40e0-8143-64c2ba1541dd","key":"access_token","value":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjA4ZDc3NjFkNDcyNDg3YWExZTJiOTg4NDQyYTM4NmM5ZDdlNTJjMjVjOGIyNWJmNzZiMWIyZDZlNTAzNjJiZGJmNTQ3Yjc5ZWU2MGE4NTcwNjY3YzNiNDM4YmU2NmQ4ZDIyNTkzNzBhZjAwY2QxM2ZiNGU1MTRiYmJjZTc0MjMzNmk5MzlWLm82UTVZUS5tOWRYMVRlbDg1SzRSNHg3MFNUNkNVODJKbTdUMC0iLCJlbWFpbCI6ImhhcnByZWV0c2luZ2hzYWhpODlAeW9wbWFpbC5jb20iLCJwaG9uZSI6Ijc4OTQ1NjEyMzAiLCJmaXJzdF9uYW1lIjoiSGFycHJlZXQgU2luZ2giLCJsYXN0X25hbWUiOiJTYWhpIiwicGluIjoiMTExMSIsImFkZHJlc3MiOiJTdHJlZXQuTm8uOCIsImdyb3VwX2lkIjoiNjRhNWJjMGFlM2QyZDExZjUyOWYwOGZiNDg3OTRiMTgwM2U5MGY0YjMwMzRiZDhkN2E4NGRhYTFkYTk2NjAxMmEyODE4MmY0ZDBjMzZmMjM1MjY5OTY3Yzg4YWZiNjc2YTIxZTVjZDE5ZjZlNzVmZjMwNjE4NjI0M2UxMTdmZWZKYkRoa2RGalIxREY0QmxIdUdLYTl0ZWpBTGpqc3pVYzZmfjF-MlI3czJZLSIsImxhbmdfaWQiOiIxIiwiaXNfZW1haWxfdmVyaWZpZWQiOiIwIiwiYWNjZXB0ZWRfdGVybXMiOiIwIiwiaW1hZ2UiOiJodHRwOlwvXC9saXZlLnl0aGV3YWl0LmNvbVwvdXBsb2Fkc1wvdXNlcnNcL2JvdF91c2VyLnBuZyIsImNhc2hfY291bnRlcl90eXBlIjoiIiwiY2FzaF9jb3VudGVyX21lYW4iOiJNYWluIENvdW50ZXIgKyBXYWl0ZXJzIENvdW50ZXIiLCJhdXRob3JpemF0aW9uIjoiIiwibm9fb2ZfcGVyc29uc19kcm9wZG93bl9lbmRfdmFsdWUiOiI1MCIsImV4cGlyZV9kYXRlIjoxNjE3MjgzMjY1LCJ1c2VyX2FnZW50IjoiUG9zdG1hblJ1bnRpbWVcLzcuMjQuMCIsInJhbmQiOiI1ZTg0OTU0MTljODhlIn0.FkutaQ3gCEBARypYlc7vPNH2vNERYOG4RM0G0ipBAE0","type":"string"}],"protocolProfileBehavior":{}}
+{
+	"info": {
+		"_postman_id": "2702c810-135e-40de-91f9-6c7f43e1c5bd",
+		"name": "POS APIS",
+		"schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.0.0\/collection.json"
+	},
+	"item": [{
+		"name": "{{base_url}}pos_api\/login",
+		"event": [{
+			"listen": "test",
+			"script": {
+				"id": "6d197679-156c-4e4e-aea3-7c002c2485c8",
+				"exec": [""],
+				"type": "text\/javascript"
+			}
+		}],
+		"_postman_id": "eeb7c7d2-2635-40bd-b51e-a646132241c7",
+		"request": {
+			"method": "POST",
+			"header": [],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "email",
+					"value": "harpreetsinghsahi89@yopmail.com",
+					"type": "text"
+				}, {
+					"key": "password",
+					"value": "Test@123",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/login"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/user_restaurants_list",
+		"event": [{
+			"listen": "test",
+			"script": {
+				"id": "38458899-5336-4856-9d5c-69741acab844",
+				"exec": [""],
+				"type": "text\/javascript"
+			}
+		}],
+		"_postman_id": "eeab181c-ac49-4a2c-acd7-6d879d22cae7",
+		"request": {
+			"auth": {
+				"type": "oauth2",
+				"oauth2": {
+					"accessToken": "",
+					"addTokenTo": "header"
+				}
+			},
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": []
+			},
+			"url": "{{base_url}}pos_api\/user_restaurants_list"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/get_all_waiter_manager",
+		"_postman_id": "b7f3129e-4511-40e7-9c3f-abc7bb031cbe",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "restaurant_id",
+					"value": "78",
+					"type": "text"
+				}, {
+					"key": "no_delivery_boy",
+					"value": "1",
+					"description": "Optional",
+					"type": "text"
+				}, {
+					"key": "limit",
+					"value": "20",
+					"description": "Optional",
+					"type": "text"
+				}, {
+					"key": "page_no",
+					"value": "1",
+					"description": "Optional",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/get_all_waiter_manager"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/user_notifications",
+		"_postman_id": "23a750f4-3800-4771-a846-11cfde3fdb7d",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "type",
+					"value": "all",
+					"description": "pos||delivery ||takeaway",
+					"type": "text"
+				}, {
+					"key": "restaurant_id",
+					"value": "76",
+					"description": "Optional",
+					"type": "text"
+				}, {
+					"key": "limit",
+					"value": "10",
+					"description": "Optional",
+					"type": "text"
+				}, {
+					"key": "page_no",
+					"value": "1",
+					"description": "Optional",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/user_notifications"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/all_tables",
+		"_postman_id": "c199fd9e-435d-41f6-84ac-2b7634203b87",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}, {
+					"key": "current_device_width",
+					"value": "1024.0",
+					"description": "optional",
+					"type": "text"
+				}, {
+					"key": "current_device_height",
+					"value": "622.0",
+					"description": "optional",
+					"type": "text"
+				}, {
+					"key": "loor_id",
+					"value": "100",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/all_tables",
+			"description": "all tables"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/verify_pin",
+		"_postman_id": "26deca94-77aa-40ca-a171-664cb4ec4c22",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "user_id",
+					"value": "377",
+					"type": "text"
+				}, {
+					"key": "pin",
+					"value": "1094",
+					"type": "text"
+				}, {
+					"key": "restaurant_id",
+					"value": "76",
+					"description": "optional",
+					"type": "text"
+				}, {
+					"key": "ios_device_id",
+					"value": "",
+					"description": "optional",
+					"type": "text"
+				}, {
+					"key": "token",
+					"value": "",
+					"description": "optional",
+					"type": "text"
+				}, {
+					"key": "uuid",
+					"value": "BC0B7495-860B-44C8-837A-5C67C0FAE164",
+					"description": "optional",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/verify_pin"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/add_bank_details",
+		"_postman_id": "136d4aa9-c285-4f4c-af55-b938413f59b0",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "account_number",
+					"value": "10101010120200203003034",
+					"type": "text"
+				}, {
+					"key": "restaurant_id",
+					"value": "2",
+					"type": "text"
+				}, {
+					"key": "ifsc_code",
+					"value": "AXIS00012",
+					"type": "text"
+				}, {
+					"key": "bank_branch",
+					"value": "Ludhiana",
+					"type": "text"
+				}, {
+					"key": "bank_name",
+					"value": "AXIS BANK",
+					"type": "text"
+				}, {
+					"key": "swift_code",
+					"value": "AXIB00001",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/add_bank_details"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/get_verification_data",
+		"_postman_id": "1e514e2d-b904-40fb-855c-64a1b2448f87",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/get_verification_data"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/countries_states_cities",
+		"_postman_id": "7e02fbe9-f984-4b59-823b-df0d32aafe12",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "country_id",
+					"value": "101",
+					"description": "Optional",
+					"type": "text"
+				}, {
+					"key": "state_id",
+					"value": "32",
+					"description": "Optional",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/countries_states_cities"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/legal_form_list",
+		"_postman_id": "f99118da-79aa-4062-9b7b-4c6aca96f7bc",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}, {
+					"key": "country_id",
+					"value": "101",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/legal_form_list"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/add_organization_details",
+		"_postman_id": "0615b32c-2743-47fc-a808-68b573fcc42a",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}, {
+					"key": "legalform",
+					"value": "0",
+					"type": "text"
+				}, {
+					"key": "business_name",
+					"value": "Raymond Restaurant",
+					"type": "text"
+				}, {
+					"key": "postal",
+					"value": "141003",
+					"type": "text"
+				}, {
+					"key": "registration_number",
+					"value": "65r6rr6",
+					"type": "text"
+				}, {
+					"key": "state_id",
+					"value": "32",
+					"type": "text"
+				}, {
+					"key": "city_id",
+					"value": "3225",
+					"type": "text"
+				}, {
+					"key": "address",
+					"value": "65, industrial area",
+					"type": "text"
+				}, {
+					"key": "country_id",
+					"value": "101",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/add_organization_details"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/add_ultimate_owners",
+		"_postman_id": "74924731-3938-40fe-8fab-fd33918aa2ea",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "o_first_name",
+					"value": "demo",
+					"type": "text"
+				}, {
+					"key": "o_last_name",
+					"value": "tester",
+					"type": "text"
+				}, {
+					"key": "o_birth_country",
+					"value": "101",
+					"type": "text"
+				}, {
+					"key": "o_dob",
+					"value": "2000-03-28",
+					"type": "text"
+				}, {
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}, {
+					"key": "o_residence_country",
+					"value": "101",
+					"type": "text"
+				}, {
+					"key": "o_nationality",
+					"value": "101",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/add_ultimate_owners"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/add_stakeholder",
+		"_postman_id": "89d11a5a-69c7-49ee-811b-23558ff9c074",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "nationality",
+					"value": "101",
+					"type": "text"
+				}, {
+					"key": "politically_exposed",
+					"value": "0",
+					"type": "text"
+				}, {
+					"key": "first_name",
+					"value": "5e543e45ee54",
+					"type": "text"
+				}, {
+					"key": "birth_country",
+					"value": "101",
+					"type": "text"
+				}, {
+					"key": "dob",
+					"value": "2019-04-16",
+					"type": "text"
+				}, {
+					"key": "last_name",
+					"value": "tr6r6r4r6yr",
+					"type": "text"
+				}, {
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}, {
+					"key": "residence_country",
+					"value": "101",
+					"type": "text"
+				}, {
+					"key": "is_ultimate_beneficial_owner",
+					"value": "0",
+					"type": "text"
+				}, {
+					"key": "politically_exposed_desc",
+					"value": "",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/add_stakeholder"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/add_website_profile",
+		"_postman_id": "56630b90-ac40-4e5b-bf8b-1797dc730900",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "trade_name",
+					"value": "6r56r466r6y",
+					"type": "text"
+				}, {
+					"key": "phone",
+					"value": "66788435443",
+					"type": "text"
+				}, {
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}, {
+					"key": "website",
+					"value": "http:\/\/www.4786yure.com",
+					"type": "text"
+				}, {
+					"key": "email",
+					"value": "jyotisharma@yopmail.com",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/add_website_profile"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/add_documents",
+		"_postman_id": "da07e2a8-5450-4f09-9df5-483e4a386cad",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}, {
+					"key": "docsimage",
+					"description": "[send files\/file in docsimage[] array]",
+					"type": "file",
+					"src": []
+				}]
+			},
+			"url": "{{base_url}}pos_api\/add_documents"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/delete_verification_document",
+		"_postman_id": "5cb9212c-858c-4261-9924-27aabd47b72c",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "id",
+					"value": "53",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/delete_verification_document"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/add_identification_docs",
+		"_postman_id": "00073a0c-fccd-4a4d-9397-f8863807a080",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}, {
+					"key": "id_type",
+					"value": "2",
+					"description": "['1' = 'Passport', '2' = 'ID Card','3' = 'Residence Permit']",
+					"type": "text"
+				}, {
+					"key": "front_page",
+					"type": "file",
+					"src": []
+				}, {
+					"key": "back_page",
+					"type": "file",
+					"src": []
+				}]
+			},
+			"url": "{{base_url}}pos_api\/add_identification_docs"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/restaurant_menu_category_wise",
+		"_postman_id": "1273d6fc-a61d-4e20-a32f-7398cd9d4f5e",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}, {
+					"key": "delivery_type",
+					"value": "dinein",
+					"description": "(OPTIONAL => delivery, takeaway, dinein)",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/restaurant_menu_category_wise"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/restaurant_booking",
+		"_postman_id": "28f65c85-f76c-4c53-9f7d-50a9a2deae7b",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"type": "text",
+				"value": "{{access_token}}"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}, {
+					"key": "page_no",
+					"value": "1",
+					"type": "text"
+				}, {
+					"key": "limit",
+					"value": "20",
+					"type": "text"
+				}, {
+					"key": "from",
+					"value": "2020-03-30",
+					"description": "Date range specific reservation",
+					"type": "text"
+				}, {
+					"key": "to",
+					"value": "2020-03-30",
+					"description": "Date range specific reservation",
+					"type": "text"
+				}, {
+					"key": "reservation_status",
+					"value": "1",
+					"description": "today for :1 || Upcoming for : 2 || Archive for :3",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/restaurant_booking",
+			"description": "Upcoming reservation||Archive reservation||Today reservation||Date range specific reservation"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/remove_table_from_waiting",
+		"_postman_id": "a65e6191-ba25-45c8-b05c-5e2e3411ca28",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}, {
+					"key": "table_id",
+					"value": "585",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/remove_table_from_waiting"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/waiter_list",
+		"_postman_id": "9197aa7d-1453-416d-9cfe-48a960d31eef",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/waiter_list"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/customers_list",
+		"_postman_id": "495edaa0-701e-41b1-90f1-7b8147b9501f",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}, {
+					"key": "page_no",
+					"value": "1",
+					"description": "Optional",
+					"type": "text"
+				}, {
+					"key": "limit",
+					"value": "100",
+					"description": "Optional",
+					"type": "text"
+				}, {
+					"key": "search",
+					"value": "tes",
+					"description": "Optional",
+					"type": "text"
+				}, {
+					"key": "with_walkin",
+					"value": "1",
+					"description": "Optional",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/customers_list"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/dinning_help_list",
+		"_postman_id": "623a040a-28fd-48fa-94c6-23d635a0ffd2",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/dinning_help_list"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/get_cart",
+		"_postman_id": "486acf88-14f7-4ba5-aef4-bcefe3b294d4",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "c_id",
+					"value": "35",
+					"type": "text"
+				}, {
+					"key": "cart_token_number",
+					"value": "1",
+					"type": "text"
+				}, {
+					"key": "delivery_type",
+					"value": "dinein",
+					"description": "delivery || takeaway || dinein",
+					"type": "text"
+				}, {
+					"key": "table_id",
+					"value": "585",
+					"type": "text"
+				}, {
+					"key": "order_id",
+					"value": "0",
+					"type": "text"
+				}, {
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/get_cart"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/update_table_persons",
+		"_postman_id": "99719735-0333-4095-9d28-ef5b79f69e81",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "no_of_persons",
+					"value": "4",
+					"type": "text"
+				}, {
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}, {
+					"key": "table_id",
+					"value": "585",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/update_table_persons"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/add_to_cart_batch",
+		"_postman_id": "22984833-3bac-485d-9d2d-99c692602871",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}, {
+					"key": "data",
+					"value": "{\"order_id\":\"5\",\"cart_token_number\":\"1\",\"food_item_name\":\"Jim Beam (30ML)\",\"attribute_value_id\":\"\",\"attribute_id\":\"\",\"quantity\":\"1\",\"c_id\":\"54\",\"delivery_type\":\"dinein\",\"table_id\":\"585\",\"pos_note\":\"\",\"food_item_id\":\"3307\"}",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/add_to_cart_batch"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/place_order",
+		"_postman_id": "c6a2f4b2-7a65-4a72-8dc7-d7d24d58543f",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "subtotal",
+					"value": "255.0",
+					"type": "text"
+				}, {
+					"key": "total",
+					"value": "255.0",
+					"type": "text"
+				}, {
+					"key": "table_id",
+					"value": "585",
+					"type": "text"
+				}, {
+					"key": "delivery_type",
+					"value": "dinein",
+					"type": "text"
+				}, {
+					"key": "address_id",
+					"value": "",
+					"type": "text"
+				}, {
+					"key": "c_id",
+					"value": "0",
+					"type": "text"
+				}, {
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}, {
+					"key": "cart_token_number",
+					"value": "1",
+					"type": "text"
+				}, {
+					"key": "tax_amount",
+					"value": "0.00",
+					"type": "text"
+				}, {
+					"key": "tip",
+					"value": "10",
+					"type": "text"
+				}, {
+					"key": "order_id",
+					"value": "2549",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/place_order"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/add_discount_to_cart",
+		"_postman_id": "1ee2a0ec-6944-4a79-aac8-432da89321c6",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "cart_discount_value",
+					"value": "10",
+					"type": "text"
+				}, {
+					"key": "c_id",
+					"value": "0",
+					"type": "text"
+				}, {
+					"key": "subtotal",
+					"value": "100",
+					"type": "text"
+				}, {
+					"key": "table_id",
+					"value": "585",
+					"type": "text"
+				}, {
+					"key": "order_id",
+					"value": "0",
+					"type": "text"
+				}, {
+					"key": "tax_amount",
+					"value": "",
+					"type": "text"
+				}, {
+					"key": "cart_token_number",
+					"value": "1",
+					"type": "text"
+				}, {
+					"key": "delivery_type",
+					"value": "dinein",
+					"type": "text"
+				}, {
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}, {
+					"key": "cart_discount_type",
+					"value": "percentage",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/add_discount_to_cart"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/get_receipt",
+		"_postman_id": "f1bf3dc6-dec6-4804-a162-1214aa81877d",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}, {
+					"key": "order_id",
+					"value": "2549",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/get_receipt"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/pay_order_split_payment",
+		"_postman_id": "78ebf9de-3785-468c-b04c-1ed9dc869c96",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "order_id",
+					"value": "2549",
+					"type": "text"
+				}, {
+					"key": "payment_method",
+					"value": "cash",
+					"description": "payment_method is Cash payment  = cash ||payment_method is Card payment = pin ||payment_method is Cheque payment =cheque",
+					"type": "text"
+				}, {
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}, {
+					"key": "cart_token_number",
+					"value": "1",
+					"type": "text"
+				}, {
+					"key": "amount",
+					"value": "229.5",
+					"type": "text"
+				}, {
+					"key": "table_id",
+					"value": "585",
+					"type": "text"
+				}, {
+					"key": "delivery_type",
+					"value": "dinein",
+					"type": "text"
+				}, {
+					"key": "action",
+					"value": "add",
+					"description": "add ||action is Void Payment = void",
+					"type": "text"
+				}, {
+					"key": "c_id",
+					"value": "0",
+					"type": "text"
+				}, {
+					"key": "split_payment_id",
+					"value": "3192",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/pay_order_split_payment"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/save_payment",
+		"_postman_id": "3e4bf1a4-7a92-49e3-b9e0-10c04fc9bb8f",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}, {
+					"key": "order_id",
+					"value": "2549",
+					"type": "text"
+				}, {
+					"key": "table_id",
+					"value": "585",
+					"type": "text"
+				}, {
+					"key": "cart_token_number",
+					"value": "1",
+					"type": "text"
+				}, {
+					"key": "c_id",
+					"value": "0",
+					"type": "text"
+				}, {
+					"key": "delivery_type",
+					"value": "dinein",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/save_payment"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/split_table",
+		"_postman_id": "7676fb3a-e879-4022-adf7-2b491644d4ac",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "table_id",
+					"value": "585",
+					"type": "text"
+				}, {
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}, {
+					"key": "no_of_persons",
+					"value": "1",
+					"type": "text"
+				}, {
+					"key": "user_id",
+					"value": "377",
+					"description": "[OPTIONAL]",
+					"type": "text",
+					"disabled": true
+				}]
+			},
+			"url": "{{base_url}}pos_api\/split_table"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/pending_request_of_table",
+		"_postman_id": "e743549e-28a1-4395-b11b-8322970f9254",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "table_id",
+					"value": "717",
+					"type": "text"
+				}, {
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/pending_request_of_table"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/delete_split_table",
+		"_postman_id": "7bea7e81-cbf7-422b-9b43-5dcd9327db6b",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "table_id",
+					"value": "717",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/delete_split_table"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/add_table",
+		"_postman_id": "f2aed7e8-7b88-45ca-9611-6809b1bcf749",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "no_of_chairs",
+					"value": "4",
+					"type": "text"
+				}, {
+					"key": "table_number",
+					"value": "12",
+					"type": "text"
+				}, {
+					"key": "floor_id",
+					"value": "99",
+					"type": "text"
+				}, {
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}, {
+					"key": "table_type",
+					"value": "2",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/add_table",
+			"description": "Add table"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/save_table_arrangment",
+		"_postman_id": "f1492037-25a9-4ac2-a590-df26d6a93ac4",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "device_height",
+					"value": "660.0",
+					"type": "text"
+				}, {
+					"key": "device_width",
+					"value": "1024.0",
+					"type": "text"
+				}, {
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}, {
+					"key": "table_position",
+					"value": "[{\"table_id\":\"1\",\"x_position\":\"450\",\"y_position\":\"381\"}{\"table_id\":\"2\",\"x_position\":\"450\",\"y_position\":\"381\"}]",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/save_table_arrangment"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/edit_table",
+		"_postman_id": "a68a567a-7752-40d3-9c6f-1a31ff9d030e",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "table_number",
+					"value": "2",
+					"type": "text"
+				}, {
+					"key": "no_of_chairs",
+					"value": "4",
+					"type": "text"
+				}, {
+					"key": "table_id",
+					"value": "718",
+					"type": "text"
+				}, {
+					"key": "floor_id",
+					"value": "99",
+					"type": "text"
+				}, {
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}, {
+					"key": "table_type",
+					"value": "2",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/edit_table"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/delete_table",
+		"_postman_id": "90ccef30-5105-402b-b21b-9ce305d48b4c",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "delete_table",
+					"value": "719",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/delete_table"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/combine_tables",
+		"_postman_id": "58eb19c7-fc9f-45f7-b1b0-cb69cfef54f8",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "table_ids",
+					"value": "585,718",
+					"type": "text"
+				}, {
+					"key": "c_id",
+					"value": "0",
+					"type": "text"
+				}, {
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/combine_tables"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/revert_table",
+		"_postman_id": "26fd3a54-9653-4d5b-a47e-213ce8779a95",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "delivery_type",
+					"value": "dinein",
+					"type": "text"
+				}, {
+					"key": "table_id",
+					"value": "720",
+					"type": "text"
+				}, {
+					"key": "c_id",
+					"value": "0",
+					"type": "text"
+				}, {
+					"key": "cart_token_number",
+					"value": "1",
+					"type": "text"
+				}, {
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/revert_table"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/dinning_help",
+		"_postman_id": "a0b64998-3eca-4ba7-b8d3-ac51d4dee76e",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "request",
+					"value": "4",
+					"type": "text"
+				}, {
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}, {
+					"key": "table_id",
+					"value": "585",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/dinning_help"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/assignWaiterTable",
+		"_postman_id": "177c53b0-96a0-44c6-87cc-220c9dde24e4",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "table_id",
+					"value": "585",
+					"type": "text"
+				}, {
+					"key": "waiter_id",
+					"value": "387",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/assignWaiterTable",
+			"description": "Assign Waiter"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/change_table_customer",
+		"_postman_id": "d8f56d47-601f-4ed2-81d7-a3c7a99054a3",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "customer_id",
+					"value": "40",
+					"type": "text"
+				}, {
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}, {
+					"key": "table_id",
+					"value": "585",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/change_table_customer",
+			"description": "Change table customer"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/restaurant_timings",
+		"_postman_id": "a14c3c75-da2b-44a6-9a44-dd60472d52a8",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}, {
+					"key": "date",
+					"value": "2020-03-30",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/restaurant_timings"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/reservation_booking_add",
+		"_postman_id": "2c7dff42-35a0-4784-894f-6985957717ad",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "contact_phone",
+					"value": "1456239870",
+					"type": "text"
+				}, {
+					"key": "is_confirm",
+					"value": "0",
+					"type": "text"
+				}, {
+					"key": "booking_date",
+					"value": "2020-03-29",
+					"type": "text"
+				}, {
+					"key": "c_id",
+					"value": "40",
+					"type": "text"
+				}, {
+					"key": "booking_time",
+					"value": "14:45:00",
+					"type": "text"
+				}, {
+					"key": "pos_note",
+					"value": "Som note on reservation",
+					"type": "text"
+				}, {
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}, {
+					"key": "table_id",
+					"value": "718",
+					"type": "text"
+				}, {
+					"key": "contact_name",
+					"value": "customer16 test",
+					"type": "text"
+				}, {
+					"key": "contact_email",
+					"value": "gstsgscsf@gsgsgs.com",
+					"type": "text"
+				}, {
+					"key": "no_of_persons",
+					"value": "3",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/reservation_booking_add"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/edit_reservation_booking",
+		"_postman_id": "6baed97d-1a10-418f-b9de-fcf24b7ba27b",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "table_id",
+					"value": "718",
+					"type": "text"
+				}, {
+					"key": "pos_note",
+					"value": "Som note on reservation",
+					"type": "text"
+				}, {
+					"key": "date",
+					"value": "2020-03-29",
+					"type": "text"
+				}, {
+					"key": "time",
+					"value": "14:45:00",
+					"type": "text"
+				}, {
+					"key": "no_of_persons",
+					"value": "3",
+					"type": "text"
+				}, {
+					"key": "is_confirm",
+					"value": "1",
+					"description": "1 for Confirm reservation || 2 for Cancel reservation",
+					"type": "text"
+				}, {
+					"key": "booking_id",
+					"value": "313",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/edit_reservation_booking"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/sales",
+		"_postman_id": "c26bc415-4da2-458d-81fd-690560383582",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "order_status",
+					"value": "1",
+					"type": "text"
+				}, {
+					"key": "page_no",
+					"value": "1",
+					"type": "text"
+				}, {
+					"key": "limit",
+					"value": "100",
+					"type": "text"
+				}, {
+					"key": "search",
+					"value": "",
+					"type": "text"
+				}, {
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}, {
+					"key": "end_date",
+					"value": "2020-03-29",
+					"type": "text"
+				}, {
+					"key": "start_date",
+					"value": "2020-02-28",
+					"type": "text"
+				}, {
+					"key": "order_type",
+					"value": "0",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/sales"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/getTotalSale",
+		"_postman_id": "fb6ccdcc-022a-45e4-bf5a-11c44d5abadf",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/getTotalSale"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/get_staff_attendance",
+		"_postman_id": "cec34272-1ccb-4cfc-a5a2-cc595e7211db",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "limit",
+					"value": "100",
+					"type": "text"
+				}, {
+					"key": "page_no",
+					"value": "1",
+					"type": "text"
+				}, {
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}, {
+					"key": "date",
+					"value": "2020-03-01",
+					"type": "text"
+				}, {
+					"key": "user_id",
+					"value": "377",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/get_staff_attendance"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/staff_attendance",
+		"_postman_id": "6eb38886-6a8a-4a77-941e-769622235916",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "checked_in",
+					"value": "1",
+					"description": "1 for Start Staff || 0 End staff attendance",
+					"type": "text"
+				}, {
+					"key": "user_id",
+					"value": "386",
+					"type": "text"
+				}, {
+					"key": "restaurant_id",
+					"value": "7",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/staff_attendance"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/add_new_customer",
+		"_postman_id": "34c96df8-0b40-4abf-8731-0564c4bc9c28",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "last_name",
+					"value": "Lname",
+					"type": "text"
+				}, {
+					"key": "email",
+					"value": "custmer@mailinator.com",
+					"type": "text"
+				}, {
+					"key": "city",
+					"value": "Ludhiana",
+					"type": "text"
+				}, {
+					"key": "first_name",
+					"value": "Customer Fname",
+					"type": "text"
+				}, {
+					"key": "complete_address",
+					"value": "",
+					"type": "text"
+				}, {
+					"key": "address_nick_name",
+					"value": "",
+					"type": "text"
+				}, {
+					"key": "company_name",
+					"value": "QM",
+					"type": "text"
+				}, {
+					"key": "phone",
+					"value": "87654320000",
+					"type": "text"
+				}, {
+					"key": "dob",
+					"value": "1987-03-29",
+					"type": "text"
+				}, {
+					"key": "latitude",
+					"value": "30.89213969999999",
+					"type": "text"
+				}, {
+					"key": "longitude",
+					"value": "75.8752189",
+					"type": "text"
+				}, {
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}, {
+					"key": "house_no",
+					"value": "",
+					"type": "text"
+				}, {
+					"key": "postcode",
+					"value": "141003",
+					"type": "text"
+				}, {
+					"key": "address",
+					"value": "Grand Trunk Road, Industrial Area- A, Parbhat Nagar, Ludhiana, Punjab",
+					"type": "text"
+				}, {
+					"key": "country",
+					"value": "India",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/add_new_customer"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/add_edit_customer_address",
+		"_postman_id": "7d0cb740-4bd5-4fc2-a56f-de8aee3f5719",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "address_id",
+					"value": "",
+					"type": "text"
+				}, {
+					"key": "address_nick_name",
+					"value": "model town",
+					"type": "text"
+				}, {
+					"key": "longitude",
+					"value": "75.84017759999999",
+					"type": "text"
+				}, {
+					"key": "postcode",
+					"value": "141001",
+					"type": "text"
+				}, {
+					"key": "latitude",
+					"value": "30.8883034",
+					"type": "text"
+				}, {
+					"key": "address",
+					"value": "Model Town, Ludhiana, Punjab",
+					"type": "text"
+				}, {
+					"key": "complete_address",
+					"value": "model own",
+					"type": "text"
+				}, {
+					"key": "house_no",
+					"value": "123",
+					"type": "text"
+				}, {
+					"key": "c_id",
+					"value": "153",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/add_edit_customer_address"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/delete_payment_address",
+		"_postman_id": "8460b53b-b58b-4133-9b9f-5bcfdb1b3cb3",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "id",
+					"value": "209",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/delete_payment_address"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/edit_customer",
+		"_postman_id": "f99ab11a-ec06-4252-98ae-6e2747176deb",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "phone",
+					"value": "8765432109",
+					"type": "text"
+				}, {
+					"key": "email",
+					"value": "cust@mailinator.com",
+					"type": "text"
+				}, {
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}, {
+					"key": "first_name",
+					"value": "sunil Fname",
+					"type": "text"
+				}, {
+					"key": "dob",
+					"value": "1987-03-29",
+					"type": "text"
+				}, {
+					"key": "customer_id",
+					"value": "153",
+					"type": "text"
+				}, {
+					"key": "last_name",
+					"value": "Lname",
+					"type": "text"
+				}, {
+					"key": "company_name",
+					"value": "QM",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/edit_customer"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/delete_customer",
+		"_postman_id": "b85acd26-f601-470a-92aa-74f2149407b7",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "restaurant_id",
+					"value": "74",
+					"type": "text"
+				}, {
+					"key": "customer_id",
+					"value": "54",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/delete_customer"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/stock_manage",
+		"_postman_id": "13bce753-c899-4f1e-88be-e585be774708",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/stock_manage"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/set_stock_manage",
+		"_postman_id": "3e98e5ae-b58a-4d9f-a757-20487bb09a39",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "is_stock_item",
+					"value": "3215",
+					"description": "[\"3215\": \"0\"]",
+					"type": "text"
+				}, {
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/set_stock_manage"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/get_restaurant_setting",
+		"_postman_id": "688d9ced-4373-4531-95ce-8e87c56c2d5a",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/get_restaurant_setting"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/restaurant_setting",
+		"_postman_id": "c454e9fe-19d2-4125-81e9-58d659c72db9",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "reservation_auto_confirm",
+					"value": "1",
+					"type": "text"
+				}, {
+					"key": "is_restaurant_open",
+					"value": "1",
+					"type": "text"
+				}, {
+					"key": "takeaway_auto_confirm",
+					"value": "1",
+					"type": "text"
+				}, {
+					"key": "Enable Walkthrough",
+					"value": "0",
+					"type": "text"
+				}, {
+					"key": "delivery_types",
+					"value": "1, 2, 3",
+					"type": "text"
+				}, {
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}, {
+					"key": "delivery_auto_confirm",
+					"value": "1",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/restaurant_setting"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/list_printer",
+		"_postman_id": "8c3e2741-b70f-44fb-b1b1-c5bf699a90ad",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/list_printer"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/add_printer",
+		"_postman_id": "1292f844-fb09-4f29-97ab-fac2d6b7fbf5",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "printer_name",
+					"value": "Test",
+					"type": "text"
+				}, {
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}, {
+					"key": "ticket_width",
+					"value": "512",
+					"type": "text"
+				}, {
+					"key": "connection_type",
+					"value": "1",
+					"type": "text"
+				}, {
+					"key": "type",
+					"value": "1,2,3,4",
+					"type": "text"
+				}, {
+					"key": "brand",
+					"value": "Epson",
+					"type": "text"
+				}, {
+					"key": "port",
+					"value": "1200",
+					"type": "text"
+				}, {
+					"key": "ip",
+					"value": "192.168.1.1",
+					"type": "text"
+				}, {
+					"key": "model",
+					"value": "TM-T88V",
+					"type": "text"
+				}, {
+					"key": "is_active",
+					"value": "1",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/add_printer"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/edit_printer",
+		"_postman_id": "168b19a1-f16e-4dfc-8594-cc3f8f456d7d",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "printer_name",
+					"value": "Test 123",
+					"type": "text"
+				}, {
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}, {
+					"key": "ticket_width",
+					"value": "512",
+					"type": "text"
+				}, {
+					"key": "connection_type",
+					"value": "1",
+					"type": "text"
+				}, {
+					"key": "type",
+					"value": "1,2,3,4",
+					"type": "text"
+				}, {
+					"key": "brand",
+					"value": "Epson",
+					"type": "text"
+				}, {
+					"key": "port",
+					"value": "1200",
+					"type": "text"
+				}, {
+					"key": "ip",
+					"value": "192.168.1.1",
+					"type": "text"
+				}, {
+					"key": "model",
+					"value": "TM-T88V",
+					"type": "text"
+				}, {
+					"key": "is_active",
+					"value": "1",
+					"type": "text"
+				}, {
+					"key": "printer_id",
+					"value": "67",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/edit_printer"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/delete_printer",
+		"_postman_id": "9b08166a-9915-4a63-aa56-ace9506f0677",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "printer_id",
+					"value": "67",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/delete_printer"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/staff_cash_inhand",
+		"_postman_id": "5d54e77c-87c2-44c8-b230-225a44d2e9d5",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/staff_cash_inhand"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/submit_cash_in_hand",
+		"_postman_id": "4fc0c281-2777-45ce-b1c9-8cd52ad63285",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "total_cash",
+					"value": "1200",
+					"type": "text"
+				}, {
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/submit_cash_in_hand"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/logout",
+		"_postman_id": "5ccad95b-ac8b-4851-b690-f8374f63d5af",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"url": "{{base_url}}pos_api\/logout"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/get_todays_incomplete_orders",
+		"_postman_id": "574f4136-d901-44d2-972d-1c4f982182da",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "future_orders",
+					"value": "1",
+					"description": "(optional -- to get future orders, by default today's orders)",
+					"type": "text"
+				}, {
+					"key": "restaurant_id",
+					"value": "78",
+					"type": "text"
+				}, {
+					"key": "page_no",
+					"value": "1",
+					"description": "[for pagination eg, 1,2,3. by default set to 1] [optional]",
+					"type": "text"
+				}, {
+					"key": "search",
+					"value": "john",
+					"description": "(optional -- for name and invoice num)",
+					"type": "text"
+				}, {
+					"key": "type",
+					"value": "delivery",
+					"description": "(delivery | takeaway )",
+					"type": "text"
+				}, {
+					"key": "limit",
+					"value": "100",
+					"description": "[by default 10 if not sent] [optional]",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/get_todays_incomplete_orders"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/check_delivery_address",
+		"_postman_id": "d3ba6096-37f2-440e-9c75-b832d593964c",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "restaurant_id",
+					"value": "76",
+					"type": "text"
+				}, {
+					"key": "address_id",
+					"value": "158",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/check_delivery_address"
+		},
+		"response": []
+	}, {
+		"name": "{{base_url}}pos_api\/set_lang",
+		"_postman_id": "56e5532b-1459-41c9-b8e1-577c92e30636",
+		"request": {
+			"method": "POST",
+			"header": [{
+				"key": "X-Auth-Token",
+				"value": "{{access_token}}",
+				"type": "text"
+			}],
+			"body": {
+				"mode": "formdata",
+				"formdata": [{
+					"key": "lang_id",
+					"value": "2",
+					"type": "text"
+				}]
+			},
+			"url": "{{base_url}}pos_api\/set_lang"
+		},
+		"response": []
+	}],
+	"event": [{
+		"listen": "prerequest",
+		"script": {
+			"id": "c07abade-8715-46de-ab88-c4d028f4c703",
+			"type": "text\/javascript",
+			"exec": [""]
+		}
+	}, {
+		"listen": "test",
+		"script": {
+			"id": "c860a481-6c44-4004-9c92-b273846b5e70",
+			"type": "text\/javascript",
+			"exec": [""]
+		}
+	}],
+	"variable": [{
+		"id": "29efa745-15e4-40e0-8143-64c2ba1541dd",
+		"key": "access_token",
+		"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjA4ZDc3NjFkNDcyNDg3YWExZTJiOTg4NDQyYTM4NmM5ZDdlNTJjMjVjOGIyNWJmNzZiMWIyZDZlNTAzNjJiZGJmNTQ3Yjc5ZWU2MGE4NTcwNjY3YzNiNDM4YmU2NmQ4ZDIyNTkzNzBhZjAwY2QxM2ZiNGU1MTRiYmJjZTc0MjMzNmk5MzlWLm82UTVZUS5tOWRYMVRlbDg1SzRSNHg3MFNUNkNVODJKbTdUMC0iLCJlbWFpbCI6ImhhcnByZWV0c2luZ2hzYWhpODlAeW9wbWFpbC5jb20iLCJwaG9uZSI6Ijc4OTQ1NjEyMzAiLCJmaXJzdF9uYW1lIjoiSGFycHJlZXQgU2luZ2giLCJsYXN0X25hbWUiOiJTYWhpIiwicGluIjoiMTExMSIsImFkZHJlc3MiOiJTdHJlZXQuTm8uOCIsImdyb3VwX2lkIjoiNjRhNWJjMGFlM2QyZDExZjUyOWYwOGZiNDg3OTRiMTgwM2U5MGY0YjMwMzRiZDhkN2E4NGRhYTFkYTk2NjAxMmEyODE4MmY0ZDBjMzZmMjM1MjY5OTY3Yzg4YWZiNjc2YTIxZTVjZDE5ZjZlNzVmZjMwNjE4NjI0M2UxMTdmZWZKYkRoa2RGalIxREY0QmxIdUdLYTl0ZWpBTGpqc3pVYzZmfjF-MlI3czJZLSIsImxhbmdfaWQiOiIxIiwiaXNfZW1haWxfdmVyaWZpZWQiOiIwIiwiYWNjZXB0ZWRfdGVybXMiOiIwIiwiaW1hZ2UiOiJodHRwOlwvXC9saXZlLnl0aGV3YWl0LmNvbVwvdXBsb2Fkc1wvdXNlcnNcL2JvdF91c2VyLnBuZyIsImNhc2hfY291bnRlcl90eXBlIjoiIiwiY2FzaF9jb3VudGVyX21lYW4iOiJNYWluIENvdW50ZXIgKyBXYWl0ZXJzIENvdW50ZXIiLCJhdXRob3JpemF0aW9uIjoiIiwibm9fb2ZfcGVyc29uc19kcm9wZG93bl9lbmRfdmFsdWUiOiI1MCIsImV4cGlyZV9kYXRlIjoxNjE3MjgzMjY1LCJ1c2VyX2FnZW50IjoiUG9zdG1hblJ1bnRpbWVcLzcuMjQuMCIsInJhbmQiOiI1ZTg0OTU0MTljODhlIn0.FkutaQ3gCEBARypYlc7vPNH2vNERYOG4RM0G0ipBAE0",
+		"type": "string"
+	}],
+	"protocolProfileBehavior": {}
+}
