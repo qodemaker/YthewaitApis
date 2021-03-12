@@ -1,1604 +1,4586 @@
 {
 	"info": {
-		"_postman_id": "603a0666-ba50-468e-8c1b-52a070e672cc",
+		"_postman_id": "d7d8bd1d-1b9a-402d-9ebf-5327912c47b2",
 		"name": "User Apis",
-		"schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.0.0\/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
-	"item": [{
-		"name": "{{base_url}}\/api\/login",
-		"_postman_id": "f7a94015-cc90-4edd-a49f-b6184341751d",
-		"request": {
-			"method": "POST",
-			"header": [],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "email",
-					"value": "priyasohal45@gmail.com",
-					"type": "text"
-				}, {
-					"key": "password",
-					"value": "3GKn#@doru",
-					"type": "text"
-				}]
-			},
-			"url": "{{base_url}}\/api\/login"
-		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/add_restaurant_reviews",
-		"_postman_id": "7a8155a6-f198-4aed-b067-b740e85de6d2",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "restaurant_id",
-					"value": "2",
-					"type": "text"
-				}, {
-					"key": "user_id",
-					"value": "12",
-					"type": "text"
-				}, {
-					"key": "rating",
-					"value": "4",
-					"type": "text"
-				}, {
-					"key": "reviews",
-					"value": "This is a test reviews",
-					"type": "text"
-				}]
-			},
-			"url": "{{base_url}}\/api\/add_restaurant_reviews"
-		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/get_user_details",
-		"_postman_id": "3579abbf-df9e-4442-ab82-1eece2798051",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": []
-			},
-			"url": "{{base_url}}\/api\/get_user_details"
-		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/scan_qr_code",
-		"_postman_id": "0fe36d92-b02a-45fd-9329-130028601957",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "qr_code",
-					"value": "637521",
-					"description": "Checkin with qrcode scan",
-					"type": "text"
-				}, {
-					"key": "latitude",
-					"value": "30.8640439",
-					"type": "text"
-				}, {
-					"key": "longtitude",
-					"value": "75.8720949",
-					"type": "text"
-				}, {
-					"key": "timezone",
-					"value": "Asia Kolkata",
-					"type": "text"
-				}, {
-					"key": "unique_code",
-					"value": "637521",
-					"description": "Checkin Using Unique code",
-					"type": "text"
-				}]
-			},
-			"url": "{{base_url}}\/api\/scan_qr_code"
-		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/confirm_scan_user",
-		"_postman_id": "209d7f13-1f46-4fbd-bc0f-3e872e057c8e",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "table_id",
-					"value": "6",
-					"type": "text"
-				}, {
-					"key": "requested_user_id",
-					"value": "58",
-					"type": "text"
-				}, {
-					"key": "restaurant_id",
-					"value": "2",
-					"type": "text"
-				}, {
-					"key": "confirmation",
-					"value": "1",
-					"description": " \"1\" For yes | \"0\" For no",
-					"type": "text"
-				}]
-			},
-			"url": "{{base_url}}\/api\/confirm_scan_user"
-		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/get_all_cart_food_items",
-		"_postman_id": "734f9c8e-3271-40ee-91c7-fa3caeb3f636",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "restaurant_id",
-					"value": "2",
-					"type": "text"
-				}, {
-					"key": "table_id",
-					"value": "4",
-					"type": "text"
-				}, {
-					"key": "delivery_type",
-					"value": "dinein",
-					"type": "text"
-				}, {
-					"key": "cart_token_number",
-					"value": "1",
-					"type": "text"
-				}, {
-					"key": "food_court",
-					"value": "0",
-					"type": "text"
-				}],
-				"options": {
-					"formdata": {}
+	"item": [
+		{
+			"name": "{{base_url}}/api/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "priyasohal45@gmail.com",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "3GKn#@doru",
+							"description": "Required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/login",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"login"
+					]
 				}
 			},
-			"url": "{{base_url}}\/api\/get_all_cart_food_items"
+			"response": []
 		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/add_to_cart",
-		"_postman_id": "01928378-1aca-4e51-a189-ec8d6bf71346",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "cart_token_number",
-					"value": "1",
-					"type": "text"
-				}, {
-					"key": "food_item_id",
-					"value": "1895",
-					"type": "text"
-				}, {
-					"key": "quantity",
-					"value": "1",
-					"type": "text"
-				}, {
-					"key": "user_id",
-					"value": "500",
-					"type": "text",
-					"disabled": true
-				}, {
-					"key": "restaurant_id",
-					"value": "30",
-					"type": "text"
-				}, {
-					"key": "delivery_type",
-					"value": "dinein",
-					"type": "text"
-				}, {
-					"key": "attribute_id",
-					"value": "26,27,28",
-					"type": "text"
-				}, {
-					"key": "table_id",
-					"value": "580",
-					"type": "text"
-				}, {
-					"key": "attribute_value_id",
-					"value": "36,39,41",
-					"description": "with attributes",
-					"type": "text"
-				}, {
-					"key": "food_item_name",
-					"value": "Metro Breakfast",
-					"type": "text"
-				}, {
-					"key": "instructions",
-					"value": "make it spicy",
-					"description": "add\/remove food item note",
-					"type": "text"
-				}, {
-					"key": "cart_item_id",
-					"value": "12548",
-					"description": "add\/remove food item note",
-					"type": "text"
-				}, {
-					"key": "food_court",
-					"value": "0",
-					"type": "text"
-				}]
-			},
-			"url": "{{base_url}}\/api\/add_to_cart"
-		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/placed_order",
-		"_postman_id": "f8884e88-e14d-44bd-9e4a-95ca4765e2c1",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "restaurant_id",
-					"value": "7",
-					"type": "text"
-				}, {
-					"key": "delivery_type",
-					"value": "dinein",
-					"description": "dinein||delivery |takeaway",
-					"type": "text"
-				}, {
-					"key": "cart_token_number",
-					"value": "1",
-					"type": "text"
-				}, {
-					"key": "table_id",
-					"value": "350",
-					"description": "if(delivery_type =dinein) then use table_id ",
-					"type": "text"
-				}, {
-					"key": "delivery_date",
-					"value": "2020-03-25",
-					"description": "if(delivery_type =delivery || takeaway ) then use delivery_date",
-					"type": "text"
-				}, {
-					"key": "payment_method_id",
-					"value": "2",
-					"description": "if(delivery_type =delivery || takeaway ) then use payment_method_id",
-					"type": "text"
-				}, {
-					"key": "delivery_cost",
-					"value": "120",
-					"description": "if(delivery_type =delivery) then use delivery_cost",
-					"type": "text"
-				}, {
-					"key": "address_id",
-					"value": "158",
-					"description": "if(delivery_type =delivery) then use address_id ",
-					"type": "text"
-				}, {
-					"key": "tip",
-					"value": "10.0",
-					"description": "if(delivery_type =delivery || takeaway ) then use tip",
-					"type": "text"
-				}, {
-					"key": "delivery_time",
-					"value": "21:58",
-					"description": "if(delivery_type =delivery || takeaway ) then use delivery_time",
-					"type": "text"
-				}, {
-					"key": "payment_gateway_id",
-					"value": "58",
-					"description": "if(delivery_type =delivery || takeaway ) then use payment_gateway_id",
-					"type": "text"
-				}, {
-					"key": "remarks",
-					"value": "",
-					"description": "if(delivery_type =delivery || takeaway ) then use remarks",
-					"type": "text"
-				}]
-			},
-			"url": "{{base_url}}\/api\/placed_order"
-		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/update_tip_and_donation",
-		"_postman_id": "7ce2be86-c196-4ff8-bea9-6c31f096cc7b",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "tip_type",
-					"value": "2",
-					"type": "text"
-				}, {
-					"key": "tip",
-					"value": "5.0",
-					"description": "[tip or donation amount, one of these is required, can send 0 to update again]",
-					"type": "text"
-				}, {
-					"key": "order_id",
-					"value": "2358",
-					"description": "[required]",
-					"type": "text"
-				}]
-			},
-			"url": "{{base_url}}\/api\/update_tip_and_donation"
-		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/getPaymentGatewayMethods",
-		"_postman_id": "8c03a488-feca-4dac-b7b8-7c5556840d95",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "country_id",
-					"value": "101",
-					"type": "text"
-				}, {
-					"key": "restaurant_id",
-					"value": "2",
-					"type": "text"
-				}, {
-					"key": "delivery_type",
-					"value": "delivery",
-					"description": "(dinein |delivery |takeaway)",
-					"type": "text"
-				}],
-				"options": {
-					"formdata": {}
+		{
+			"name": "{{base_url}}/api/add_restaurant_reviews",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "restaurant_id",
+							"value": "2",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "12",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "rating",
+							"value": "4",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "reviews",
+							"value": "This is a test reviews",
+							"description": "Optional",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/add_restaurant_reviews",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"add_restaurant_reviews"
+					]
 				}
 			},
-			"url": "{{base_url}}\/api\/getPaymentGatewayMethods"
+			"response": []
 		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/clear_basket",
-		"_postman_id": "dc8119dc-c5dc-46e1-a80c-044804a1ea9c",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "table_id",
-					"value": "65",
-					"type": "text"
-				}, {
-					"key": "delivery_type",
-					"value": "dinein",
-					"type": "text"
-				}, {
-					"key": "cart_token_number",
-					"value": "1",
-					"type": "text"
-				}, {
-					"key": "restaurant_id",
-					"value": "30",
-					"type": "text"
-				}, {
-					"key": "user_id",
-					"value": "500",
-					"type": "text"
-				}]
-			},
-			"url": "{{base_url}}\/api\/clear_basket"
-		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/unfavorite_restaurant_by_user",
-		"_postman_id": "1282c89c-9efb-4846-bfc3-bfd9afc19b1b",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "restaurant_id",
-					"value": "1",
-					"type": "text"
-				}]
-			},
-			"url": "{{base_url}}\/api\/unfavorite_restaurant_by_user"
-		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/favorite_restaurant_by_user",
-		"_postman_id": "0a323663-cdac-487e-8b44-9da0446b9175",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "user_id",
-					"value": "6",
-					"type": "text"
-				}, {
-					"key": "restaurant_id",
-					"value": "78",
-					"type": "text"
-				}]
-			},
-			"url": "{{base_url}}\/api\/favorite_restaurants"
-		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/restaurant_timings",
-		"_postman_id": "aa546316-bba1-464a-bafb-a3c7806751c1",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "restaurant_id",
-					"value": "78",
-					"type": "text"
-				}, {
-					"key": "date",
-					"value": "2019-05-21",
-					"description": "(optional, to get the timings for particular day)",
-					"type": "text"
-				}, {
-					"key": "type",
-					"value": "delivery",
-					"description": "('delivery', 'takeaway', 'dinein') (optional, to get the timings type \nfor reservation bookings or food delivery or takeaway. By default dinein)",
-					"type": "text"
-				}],
-				"options": {
-					"formdata": {}
+		{
+			"name": "{{base_url}}/api/get_user_details",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{base_url}}/api/get_user_details",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"get_user_details"
+					]
 				}
 			},
-			"url": "{{base_url}}\/api\/restaurant_timings"
+			"response": []
 		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/book_table",
-		"_postman_id": "e9f54a0d-f398-491b-b841-b5acf5a27853",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "user_id",
-					"value": "6",
-					"type": "text"
-				}, {
-					"key": "restaurant_id",
-					"value": "2",
-					"type": "text"
-				}, {
-					"key": "contact_name",
-					"value": "sunil",
-					"type": "text"
-				}, {
-					"key": "no_of_persons",
-					"value": "3",
-					"type": "text"
-				}, {
-					"key": "booking_date",
-					"value": "2020-03-24",
-					"type": "text"
-				}, {
-					"key": "booking_time",
-					"value": "8:15",
-					"type": "text"
-				}, {
-					"key": "contact_phone",
-					"value": "5123566",
-					"type": "text"
-				}, {
-					"key": "contact_email",
-					"value": "abc@gmail.com",
-					"type": "text"
-				}, {
-					"key": "message",
-					"value": "This is a test message",
-					"type": "text"
-				}, {
-					"key": "country_code",
-					"value": "91",
-					"type": "text"
-				}]
-			},
-			"url": "{{base_url}}\/api\/book_table"
-		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/register",
-		"_postman_id": "a4e01306-7298-4850-b72a-4154f2bd59ea",
-		"request": {
-			"method": "POST",
-			"header": [],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "email",
-					"value": "sunilthakur@gmail.com",
-					"type": "text"
-				}, {
-					"key": "password",
-					"value": "1234567890",
-					"type": "text"
-				}, {
-					"key": "first_name",
-					"value": "sunil",
-					"type": "text"
-				}, {
-					"key": "last_name",
-					"value": "thakur",
-					"type": "text"
-				}]
-			},
-			"url": "{{base_url}}\/api\/register"
-		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/verify_email",
-		"_postman_id": "41292bab-da10-4db5-a005-3c2c3dd2ebb1",
-		"request": {
-			"method": "POST",
-			"header": [],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "user_id",
-					"value": "500",
-					"type": "text"
-				}, {
-					"key": "verification_code",
-					"value": "123345",
-					"type": "text"
-				}, {
-					"key": "email",
-					"value": "sunilthakur@gmail.com",
-					"type": "text"
-				}]
-			},
-			"url": "{{base_url}}\/api\/verify_email"
-		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/customer_profile",
-		"_postman_id": "ca77b579-d94c-4f2a-ad1a-bcf591d069a2",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "user_id",
-					"value": "1091",
-					"type": "text"
-				}]
-			},
-			"url": "{{base_url}}\/api\/customer_profile"
-		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/edit_profile",
-		"_postman_id": "9608e70d-24e4-4f72-921d-439cce44a8f0",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "user_id",
-					"value": "2",
-					"type": "text"
-				}, {
-					"key": "first_name",
-					"value": "Test",
-					"type": "text"
-				}, {
-					"key": "last_name",
-					"value": "demo",
-					"type": "text"
-				}, {
-					"key": "phone",
-					"value": "90048219",
-					"type": "text"
-				}, {
-					"key": "address",
-					"value": "25, kings villa",
-					"type": "text"
-				}, {
-					"key": "image",
-					"value": "UPLOAD IMAGE",
-					"type": "text"
-				}, {
-					"key": "city",
-					"value": "Rotterdam",
-					"type": "text"
-				}, {
-					"key": "postcode",
-					"value": "3011",
-					"type": "text"
-				}, {
-					"key": "country",
-					"value": "Nitherlands",
-					"type": "text"
-				}, {
-					"key": "company_name",
-					"value": "Qodemaker",
-					"type": "text"
-				}, {
-					"key": "country_code",
-					"value": "963",
-					"type": "text"
-				}]
-			},
-			"url": "{{base_url}}\/api\/edit_profile"
-		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/forgot_password",
-		"_postman_id": "69d32b3f-0f2e-49dd-96d2-587c0a67a31b",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text",
-				"disabled": true
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "email",
-					"value": "sunilthakur@gmail.com",
-					"type": "text"
-				}]
-			},
-			"url": "{{base_url}}\/api\/forgot_password"
-		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/logout",
-		"_postman_id": "e8989f7b-24a7-45b3-a686-25714ada06a2",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "user_id",
-					"value": "1",
-					"type": "text"
-				}]
-			},
-			"url": "{{base_url}}\/api\/logout"
-		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/all_restaurants",
-		"_postman_id": "4c2e23f4-8e9d-4b95-9194-cd9f166a0d98",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "user_id",
-					"value": "500",
-					"description": "(OPTIONAL)",
-					"type": "text"
-				}, {
-					"key": "latitude",
-					"value": "30.9356468",
-					"description": "(OPTIONAL)",
-					"type": "text"
-				}, {
-					"key": "happy_hours",
-					"value": "1",
-					"description": "(OPTIONAL)",
-					"type": "text"
-				}, {
-					"key": "longitude",
-					"value": "75.7945674",
-					"description": "(OPTIONAL)",
-					"type": "text"
-				}, {
-					"key": "place_id",
-					"value": "ChIJfVo0YnSDGjkREAbGjjQCEWg",
-					"description": "(OPTIONAL)",
-					"type": "text"
-				}, {
-					"key": "map_view",
-					"value": "1",
-					"description": "(OPTIONAL)",
-					"type": "text"
-				}, {
-					"key": "delivery_type",
-					"value": "dinein",
-					"description": "(OPTIONAL) =>dinein || takeaway || delivery",
-					"type": "text"
-				}, {
-					"key": "filter_by_is_restaurant_open",
-					"value": "1",
-					"description": "(OPTIONAL)",
-					"type": "text"
-				}, {
-					"key": "happy_hours",
-					"value": "1",
-					"description": "(OPTIONAL)",
-					"type": "text"
-				}, {
-					"key": "radius",
-					"value": "5",
-					"description": "(OPTIONAL)",
-					"type": "text"
-				}, {
-					"key": "map_view",
-					"value": "1",
-					"description": "(OPTIONAL)",
-					"type": "text"
-				}, {
-					"key": "food_type",
-					"value": "4",
-					"description": "(OPTIONAL)",
-					"type": "text"
-				}, {
-					"key": "filter_by_facilities",
-					"value": "12",
-					"description": "(OPTIONAL)",
-					"type": "text"
-				}, {
-					"key": "food_court",
-					"value": "1",
-					"description": "(OPTIONAL)",
-					"type": "text"
-				}, {
-					"key": "pre_order",
-					"value": "1",
-					"description": "(OPTIONAL)",
-					"type": "text"
-				}, {
-					"key": "page_no",
-					"value": "1",
-					"description": "(OPTIONAL)",
-					"type": "text"
-				}, {
-					"key": "limit",
-					"value": "10",
-					"description": "(OPTIONAL)",
-					"type": "text"
-				}, {
-					"key": "timezone",
-					"value": "Asia\/Kolkata",
-					"description": "(OPTIONAL)",
-					"type": "text"
-				}]
-			},
-			"url": "{{base_url}}\/api\/all_restaurants",
-			"description": "user_id=500&timezone=Asia%2FKolkata&latitude=30.900965&limit=20&page_no=1&radius=2&place_id=ChIJfVo0YnSDGjkREAbGjjQCEWg&longitude=75.8572758 => Nearby list\n\nuser_id=500&map_view=1&timezone=Asia%2FKolkata&latitude=30.900965&radius=15&place_id=ChIJfVo0YnSDGjkREAbGjjQCEWg&longitude=75.8572758\n=> Nearby map\n\nuser_id=500&timezone=Asia%2FKolkata&delivery_type=dinein&latitude=30.900965&limit=10&page_no=1&place_id=ChIJfVo0YnSDGjkREAbGjjQCEWg&longitude=75.8572758 => Reservation\n\nuser_id=500&map_view=1&timezone=Asia%2FKolkata&latitude=30.900965&radius=15&happy_hours=1&place_id=ChIJfVo0YnSDGjkREAbGjjQCEWg&longitude=75.8572758 => Happy Hours\n\nuser_id=500&timezone=Asia%2FKolkata&delivery_type=delivery&latitude=30.900965&limit=10&page_no=1&place_id=ChIJfVo0YnSDGjkREAbGjjQCEWg&longitude=75.8572758 => Delivery\n\nuser_id=500&timezone=Asia%2FKolkata&delivery_type=takeaway&latitude=30.900965&limit=10&page_no=1&radius=15&food_court=0&bar_only=0&place_id=ChIJfVo0YnSDGjkREAbGjjQCEWg&longitude=75.8572758 => Takeaway\n\nuser_id=500&timezone=Asia%2FKolkata&delivery_type=takeaway&latitude=30.8633008&limit=10&page_no=1&pre_order=1&food_court=0&bar_only=0&place_id=ChIJbSYDuJaCGjkRxR2v7KJSWG0&longitude=75.8717318 \n=> PreOrder\n\nuser_id=500&timezone=Asia%2FKolkata&delivery_type=takeaway&latitude=30.8633008&limit=10&page_no=1&food_court=0&bar_only=1&place_id=ChIJbSYDuJaCGjkRxR2v7KJSWG0&longitude=75.8717318 => Bar\/Festival\n\nuser_id=500&timezone=Asia%2FKolkata&delivery_type=takeaway&latitude=30.8633008&limit=10&page_no=1&food_court=1&bar_only=0&place_id=ChIJbSYDuJaCGjkRxR2v7KJSWG0&longitude=75.8717318 => Food Court\n\ntimezone=Asia%2FKolkata&filter_by_is_restaurant_open=1&latitude=30.900965&page_no=1&food_type=4&food_court=0&filter_by_facilities=12&user_id=500&delivery_type=takeaway&limit=10&radius=15&bar_only=0&place_id=ChIJfVo0YnSDGjkREAbGjjQCEWg&longitude=75.8572758 => with filter options\n"
-		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/restaurant_highlights",
-		"_postman_id": "63e5a9c5-5961-4ba4-baa9-f585c4a684ec",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"url": "{{base_url}}\/api\/restaurant_highlights"
-		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/restaurant_categories_list",
-		"_postman_id": "5898281e-1829-4883-9a27-8dec76cbc899",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"url": "{{base_url}}\/api\/restaurant_categories_list"
-		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/restaurant_data",
-		"_postman_id": "a71a66c4-3a5d-476a-abfe-526a8e04fde4",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "date",
-					"value": "2020-03-24",
-					"type": "text"
-				}, {
-					"key": "user_id",
-					"value": "500",
-					"type": "text"
-				}, {
-					"key": "restaurant_id",
-					"value": "78",
-					"type": "text"
-				}, {
-					"key": "delivery_type",
-					"value": "dinein",
-					"description": "(dinein | delivery | takeaway)",
-					"type": "text"
-				}, {
-					"key": "latitude",
-					"value": "30.8612724",
-					"type": "text"
-				}, {
-					"key": "place_id",
-					"value": "ChIJ-bftE5eCGjkRrNQi8l9EuWw",
-					"type": "text"
-				}, {
-					"key": "longitude",
-					"value": "75.872458",
-					"type": "text"
-				}, {
-					"key": "food_court",
-					"value": "0",
-					"description": "if delivery_type (delivery | takeaway) then food_court",
-					"type": "text"
-				}]
-			},
-			"url": "{{base_url}}\/api\/restaurant_data",
-			"description": "date=2020-03-24&user_id=500&restaurant_id=78&delivery_type=dinein&latitude=30.8612724&place_id=ChIJ-bftE5eCGjkRrNQi8l9EuWw&longitude=75.872458 => dinein\n\n date=2020-03-24&user_id=500&restaurant_id=78&delivery_type=delivery&latitude=30.900965&food_court=0&place_id=ChIJfVo0YnSDGjkREAbGjjQCEWg&longitude=75.8572758 => delivery\n \n date=2020-03-24&user_id=500&restaurant_id=78&delivery_type=takeaway&latitude=30.900965&food_court=0&place_id=ChIJfVo0YnSDGjkREAbGjjQCEWg&longitude=75.8572758 => takeaway"
-		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/twitterLogin",
-		"_postman_id": "5a5285f8-3725-4408-8947-2e2f7332b0ba",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "oauth_token",
-					"value": "TWITTER_OAUTH_TOKEN",
-					"type": "text",
-					"disabled": true
-				}, {
-					"key": "oauth_token_secret",
-					"value": "TWITTER_OAUTH_SECRET",
-					"type": "text",
-					"disabled": true
-				}]
-			},
-			"url": "{{base_url}}\/api\/twitterLogin"
-		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/googlelogin",
-		"_postman_id": "9915b749-e718-40cd-96ba-5e376dce9ec2",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "access_token",
-					"value": "Google_ACCESS_TOKEN",
-					"type": "text",
-					"disabled": true
-				}, {
-					"key": "id_token",
-					"value": "Google_ID_TOKEN",
-					"type": "text",
-					"disabled": true
-				}]
-			},
-			"url": "{{base_url}}\/api\/googlelogin"
-		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/happy_hours",
-		"_postman_id": "bf75d0b9-642e-4c4a-a279-d7bebbd6aa93",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "restaurant_id",
-					"value": "2",
-					"type": "text"
-				}]
-			},
-			"url": "{{base_url}}\/api\/happy_hours"
-		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/get_payment_addresses_by_user",
-		"_postman_id": "7d35340d-b251-483f-ad45-f5f6ad84d5d2",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "user_id",
-					"value": "16",
-					"type": "text"
-				}]
-			},
-			"url": "{{base_url}}\/api\/get_payment_addresses_by_user"
-		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/list_coupons",
-		"_postman_id": "15931061-4f88-45c8-9724-92429a054eaf",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "restaurant_id",
-					"value": "38",
-					"type": "text"
-				}, {
-					"key": "delivery_type",
-					"value": "delivery",
-					"type": "text"
-				}],
-				"options": {
-					"formdata": {}
+		{
+			"name": "{{base_url}}/api/scan_qr_code",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "qr_code",
+							"value": "637521",
+							"description": "Checkin with qrcode scan",
+							"type": "text"
+						},
+						{
+							"key": "latitude",
+							"value": "30.8640439",
+							"type": "text"
+						},
+						{
+							"key": "longtitude",
+							"value": "75.8720949",
+							"type": "text"
+						},
+						{
+							"key": "timezone",
+							"value": "Asia Kolkata",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "unique_code",
+							"value": "637521",
+							"description": "Checkin Using Unique code",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/scan_qr_code",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"scan_qr_code"
+					]
 				}
 			},
-			"url": "{{base_url}}\/api\/list_coupons"
+			"response": []
 		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/apply_coupon",
-		"_postman_id": "7d29fdd3-ff08-474b-aa19-f5d65528e793",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "id",
-					"value": "2",
-					"description": "{coupon id}",
-					"type": "text"
-				}, {
-					"key": "restaurant_id",
-					"value": "2",
-					"type": "text"
-				}, {
-					"key": "delivery_type",
-					"value": "delivery",
-					"type": "text"
-				}, {
-					"key": "discount_type",
-					"value": "Fixed",
-					"type": "text"
-				}],
-				"options": {
-					"formdata": {}
+		{
+			"name": "{{base_url}}/api/confirm_scan_user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "table_id",
+							"value": "6",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "requested_user_id",
+							"value": "58",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "restaurant_id",
+							"value": "2",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "confirmation",
+							"value": "1",
+							"description": " \"1\" For yes | \"0\" For no",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/confirm_scan_user",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"confirm_scan_user"
+					]
 				}
 			},
-			"url": "{{base_url}}\/api\/apply_coupon"
+			"response": []
 		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/check_restaurant_delivery",
-		"_postman_id": "696ea502-6325-4d2b-9450-65e7c6c46903",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "restaurant_id",
-					"value": "2",
-					"type": "text"
-				}, {
-					"key": "address_id",
-					"value": "158",
-					"description": "with payment address id",
-					"type": "text"
-				}, {
-					"key": "country",
-					"value": "India",
-					"type": "text"
-				}, {
-					"key": "city",
-					"value": "Ludhiana",
-					"type": "text"
-				}, {
-					"key": "latitude",
-					"value": "30.900965",
-					"type": "text"
-				}, {
-					"key": "state",
-					"value": "Punjab",
-					"type": "text"
-				}, {
-					"key": "postal_code",
-					"value": "160015",
-					"type": "text"
-				}, {
-					"key": "short_country",
-					"value": "IN",
-					"type": "text"
-				}, {
-					"key": "place_id",
-					"value": "ChIJfVo0YnSDGjkREAbGjjQCEWg",
-					"type": "text"
-				}, {
-					"key": "longitude",
-					"value": "75.8572758",
-					"type": "text"
-				}],
-				"options": {
-					"formdata": {}
+		{
+			"name": "{{base_url}}/api/get_all_cart_food_items",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "restaurant_id",
+							"value": "32",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "table_id",
+							"value": "4",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "delivery_type",
+							"value": "1",
+							"description": "Required(Delivery = 1,Takeaway = 2,Dinein = 3) ",
+							"type": "text"
+						},
+						{
+							"key": "cart_token_number",
+							"value": "1",
+							"description": "Optional",
+							"type": "text"
+						},
+						{
+							"key": "food_court",
+							"value": "0",
+							"description": "Optional",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/get_all_cart_food_items",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"get_all_cart_food_items"
+					]
 				}
 			},
-			"url": "{{base_url}}\/api\/check_restaurant_delivery"
+			"response": []
 		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/add_payment_addresses",
-		"_postman_id": "e6debdf7-fa56-4280-ad28-a6f99d5271d3",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "user_id",
-					"value": "16",
-					"type": "text"
-				}, {
-					"key": "phone",
-					"value": "9813252133",
-					"type": "text"
-				}, {
-					"key": "address",
-					"value": "Ludhiana Punjab India",
-					"type": "text"
-				}, {
-					"key": "house_no",
-					"value": "15",
-					"type": "text"
-				}, {
-					"key": "flat",
-					"value": "B",
-					"type": "text"
-				}, {
-					"key": "city",
-					"value": "Holland",
-					"type": "text"
-				}, {
-					"key": "postal_code",
-					"value": "1012AA",
-					"type": "text"
-				}, {
-					"key": "address_nick_name",
-					"value": "",
-					"type": "text"
-				}, {
-					"key": "country",
-					"value": "",
-					"type": "text"
-				}, {
-					"key": "complete_address",
-					"value": "",
-					"type": "text"
-				}, {
-					"key": "latitude",
-					"value": "",
-					"type": "text"
-				}, {
-					"key": "place_id",
-					"value": "",
-					"type": "text"
-				}, {
-					"key": "state",
-					"value": "",
-					"type": "text"
-				}, {
-					"key": "landmark",
-					"value": "",
-					"type": "text"
-				}, {
-					"key": "longitude",
-					"value": "",
-					"type": "text"
-				}]
-			},
-			"url": "{{base_url}}\/api\/add_payment_addresses"
-		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/order_history",
-		"_postman_id": "d91d0e03-fc1c-497e-a6cb-70139451bdf6",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": []
-			},
-			"url": "{{base_url}}\/api\/order_history"
-		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/get_all_order_food_items",
-		"_postman_id": "0e81117f-d437-468e-86bc-0d167fa57da0",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "order_id",
-					"value": "1",
-					"type": "text"
-				}]
-			},
-			"url": "{{base_url}}\/api\/get_all_order_food_items"
-		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/track_order",
-		"_postman_id": "ad98ba91-3004-4be9-828f-00f32207427c",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "order_id",
-					"value": "1",
-					"type": "text"
-				}, {
-					"key": "user_id",
-					"value": "500",
-					"type": "text"
-				}]
-			},
-			"url": "{{base_url}}\/api\/track_order"
-		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/favorite_restaurants",
-		"_postman_id": "3a87ca18-4460-400b-867d-4e7160a9788a",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": []
-			},
-			"url": "{{base_url}}\/api\/favorite_restaurants"
-		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/get_bookings_by_user",
-		"_postman_id": "bfa4aa85-4766-44fb-b212-4a40a49e0f9d",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "user_id",
-					"value": "6",
-					"type": "text",
-					"disabled": true
-				}, {
-					"key": "type",
-					"value": "archived",
-					"description": " upcoming|today|archived [optional]",
-					"type": "text"
-				}, {
-					"key": "page_no",
-					"value": "1",
-					"description": "for pagination eg, 1,2,3. by default set to 1[optional]",
-					"type": "text"
-				}, {
-					"key": "limit",
-					"value": "20",
-					"description": "by default 10 if not sent  [optional]",
-					"type": "text"
-				}]
-			},
-			"url": "{{base_url}}\/api\/get_bookings_by_user"
-		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/view_organizations",
-		"_postman_id": "744f2e1d-c202-4814-a9f9-27d2767dcc92",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [],
-				"options": {
-					"formdata": {}
+		{
+			"name": "{{base_url}}/api/add_to_cart",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "cart_token_number",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "food_item_id",
+							"value": "1895",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "500",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "restaurant_id",
+							"value": "30",
+							"type": "text"
+						},
+						{
+							"key": "delivery_type",
+							"value": "dinein",
+							"type": "text"
+						},
+						{
+							"key": "attribute_id",
+							"value": "26,27,28",
+							"type": "text"
+						},
+						{
+							"key": "table_id",
+							"value": "580",
+							"type": "text"
+						},
+						{
+							"key": "attribute_value_id",
+							"value": "36,39,41",
+							"description": "with attributes",
+							"type": "text"
+						},
+						{
+							"key": "food_item_name",
+							"value": "Metro Breakfast",
+							"type": "text"
+						},
+						{
+							"key": "instructions",
+							"value": "make it spicy",
+							"description": "add/remove food item note",
+							"type": "text"
+						},
+						{
+							"key": "cart_item_id",
+							"value": "12548",
+							"description": "add/remove food item note",
+							"type": "text"
+						},
+						{
+							"key": "food_court",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/add_to_cart",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"add_to_cart"
+					]
 				}
 			},
-			"url": "{{base_url}}\/api\/view_organizations"
+			"response": []
 		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/view_causes",
-		"_postman_id": "56b43ce3-7ff4-4e64-aaf2-20a0fd61273a",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": []
-			},
-			"url": "{{base_url}}\/api\/view_causes"
-		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/favorite_organization",
-		"_postman_id": "32167255-683d-4391-a237-bc61ccfc3253",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [],
-				"options": {
-					"formdata": {}
+		{
+			"name": "{{base_url}}/api/placed_order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "restaurant_id",
+							"value": "32",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "delivery_type",
+							"value": "1",
+							"description": "Required(Delivery = 1,Takeaway = 2,Dinein = 3)",
+							"type": "text"
+						},
+						{
+							"key": "table_id",
+							"value": "350",
+							"description": "if(delivery_type =dinein) then use table_id ",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "delivery_date",
+							"value": "2021-03-04",
+							"description": "if(delivery_type =delivery || takeaway ) then use delivery_date",
+							"type": "text"
+						},
+						{
+							"key": "payment_method_id",
+							"value": "2",
+							"description": "if(delivery_type =delivery || takeaway ) then use payment_method_id",
+							"type": "text"
+						},
+						{
+							"key": "delivery_cost",
+							"value": "120",
+							"description": "if(delivery_type =delivery) then use delivery_cost",
+							"type": "text"
+						},
+						{
+							"key": "address_id",
+							"value": "158",
+							"description": "if(delivery_type =delivery) then use address_id ",
+							"type": "text"
+						},
+						{
+							"key": "tip",
+							"value": "10.0",
+							"description": "if(delivery_type =delivery || takeaway ) then use tip",
+							"type": "text"
+						},
+						{
+							"key": "delivery_time",
+							"value": "21:58",
+							"description": "if(delivery_type =delivery || takeaway ) then use delivery_time",
+							"type": "text"
+						},
+						{
+							"key": "payment_gateway_id",
+							"value": "58",
+							"description": "if(delivery_type =delivery || takeaway ) then use payment_gateway_id",
+							"type": "text"
+						},
+						{
+							"key": "remarks",
+							"value": "",
+							"description": "if(delivery_type =delivery || takeaway ) then use remarks",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/placed_order",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"placed_order"
+					]
 				}
 			},
-			"url": "{{base_url}}\/api\/favorite_organization"
+			"response": []
 		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/preferred_organization",
-		"_postman_id": "1002a2a9-a6c4-4b74-bf89-375078c5f8e4",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "organization_id",
-					"value": "1",
-					"type": "text"
-				}],
-				"options": {
-					"formdata": {}
+		{
+			"name": "{{base_url}}/api/update_tip_and_donation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "tip_type",
+							"value": "2",
+							"description": "required",
+							"type": "text"
+						},
+						{
+							"key": "tip",
+							"value": "5.0",
+							"description": "[tip or donation amount, one of these is required, can send 0 to update again]",
+							"type": "text"
+						},
+						{
+							"key": "order_id",
+							"value": "2358",
+							"description": "[required]",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/update_tip_and_donation",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"update_tip_and_donation"
+					]
 				}
 			},
-			"url": "{{base_url}}\/api\/preferred_organization"
+			"response": []
 		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/set_lang",
-		"_postman_id": "d0e19464-b810-4aa0-ba4c-8d2486ac9084",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "lang_id",
-					"value": "2",
-					"type": "text"
-				}]
-			},
-			"url": "{{base_url}}\/api\/set_lang"
-		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/user_notifications",
-		"_postman_id": "fdeada58-6ebd-4bb4-a8ac-d7a4670b6a8f",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "user_id",
-					"value": "216",
-					"type": "text",
-					"disabled": true
-				}, {
-					"key": "page_no",
-					"value": "1",
-					"description": " [for pagination eg, 1,2,3. by default set to 1] [optional]",
-					"type": "text",
-					"disabled": true
-				}, {
-					"key": "limit",
-					"value": "20",
-					"description": "[by default 10 if not sent] [optional]",
-					"type": "text",
-					"disabled": true
-				}],
-				"options": {
-					"formdata": {}
+		{
+			"name": "{{base_url}}/api/getPaymentGatewayMethods",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "restaurant_id",
+							"value": "32",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "delivery_type",
+							"value": "1",
+							"description": "Required(Delivery = 1,Takeaway = 2,Dinein = 3) ",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/getPaymentGatewayMethods",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"getPaymentGatewayMethods"
+					]
 				}
 			},
-			"url": "{{base_url}}\/api\/user_notifications"
+			"response": []
 		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/ticket_categories",
-		"_postman_id": "a276c2c3-71c9-4607-a891-77d85191214a",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": []
+		{
+			"name": "{{base_url}}/api/clear_basket",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "table_id",
+							"value": "65",
+							"description": "Required(If If dinein)",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "delivery_type",
+							"value": "1",
+							"description": "Required(Delivery = 1,Takeaway = 2,Dinein = 3)",
+							"type": "text"
+						},
+						{
+							"key": "restaurant_id",
+							"value": "32",
+							"description": "Required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/clear_basket",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"clear_basket"
+					]
+				}
 			},
-			"url": "{{base_url}}\/api\/ticket_categories"
+			"response": []
 		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/create_ticket",
-		"_postman_id": "276c8473-28cd-4282-9fe3-6a6698997af0",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "category",
-					"value": "8",
-					"type": "text"
-				}, {
-					"key": "title",
-					"value": "order",
-					"type": "text"
-				}, {
-					"key": "body",
-					"value": "Name Alive server Mobile Number Email Aliveserver@yopmail.com Order ID Aliveserver@yopmail.com Message",
-					"type": "text"
-				}]
+		{
+			"name": "{{base_url}}/api/unfavorite_restaurant_by_user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "restaurant_id",
+							"value": "1",
+							"description": "Required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/unfavorite_restaurant_by_user",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"unfavorite_restaurant_by_user"
+					]
+				}
 			},
-			"url": "{{base_url}}\/api\/create_ticket"
+			"response": []
 		},
-		"response": []
-	}, {
-		"name": "{{base_url}}\/api\/restaurant_menu",
-		"_postman_id": "ab682f73-3aeb-413b-a601-5e4b6e5ebce8",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "restaurant_id",
-					"value": "30",
-					"type": "text"
-				}, {
-					"key": "table_id",
-					"value": "530",
-					"type": "text"
-				}, {
-					"key": "cart_token_number",
-					"value": "1",
-					"type": "text"
-				}, {
-					"key": "delivery_type",
-					"value": "dinein",
-					"type": "text"
-				}, {
-					"key": "lang_code",
-					"value": "hi",
-					"type": "text",
-					"disabled": true
-				}]
+		{
+			"name": "{{base_url}}/api/favorite_restaurant_by_user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{base_url}}/api/favorite_restaurants",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"favorite_restaurants"
+					]
+				}
 			},
-			"url": "{{base_url}}\/api\/restaurant_menu"
+			"response": []
 		},
-		"response": []
-	}],
-	"event": [{
-		"listen": "prerequest",
-		"script": {
-			"id": "551ff286-a873-4c45-9bea-b5c0d9022d2d",
-			"type": "text\/javascript",
-			"exec": [""]
+		{
+			"name": "{{base_url}}/api/restaurant_timings",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "restaurant_id",
+							"value": "32",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "2019-05-21",
+							"description": "(optional, to get the timings for particular day)",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "2",
+							"description": "Required(Delivery = 1,Takeaway = 2,Dinein = 3) (optional, to get the timings type \nfor reservation bookings or food delivery or takeaway. By default dinein)",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/restaurant_timings",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"restaurant_timings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/book_table",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "restaurant_id",
+							"value": "32",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "contact_name",
+							"value": "sunil",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "no_of_persons",
+							"value": "3",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "booking_date",
+							"value": "2021-03-24",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "booking_time",
+							"value": "8:15",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "contact_phone",
+							"value": "5123566",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "contact_email",
+							"value": "abc@gmail.com",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "message",
+							"value": "This is a test message",
+							"description": "Optional",
+							"type": "text"
+						},
+						{
+							"key": "country_code",
+							"value": "91",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "514",
+							"description": "Required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/book_table",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"book_table"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "sunilthakur@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234567890",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "sunil",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "thakur",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/register",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/customer_profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{base_url}}/api/customer_profile",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"customer_profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/edit_profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "country_code",
+							"value": "101",
+							"description": "Required (numeric)",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "India",
+							"description": "Optional",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "PP Nangal",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "9780051455",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "Phagwara",
+							"description": "Optional",
+							"type": "text"
+						},
+						{
+							"key": "dob",
+							"value": "1989-10-29",
+							"description": "Optional (Format : yyyy-mm-dd)",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Dugg",
+							"description": "Optional",
+							"type": "text"
+						},
+						{
+							"key": "anonymous",
+							"value": "1",
+							"description": "Optional(1=anonymous)",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "Lovedeep",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "lovedeep2910@yopmail.com",
+							"description": "Required (If not verified)",
+							"type": "text"
+						},
+						{
+							"key": "city_id",
+							"value": "49715",
+							"description": "Required (Numeric)",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"description": "Optional",
+							"type": "file",
+							"src": "/home/lovedeep/Pictures/Screenshot from 2021-03-03 21-16-47.png"
+						},
+						{
+							"key": "remove_image",
+							"value": "1",
+							"description": "Optional (1 to remove)",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/edit_profile",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"edit_profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/forgot_password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "sunilthakur@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/forgot_password",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"forgot_password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "1",
+							"description": "Optional",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/logout",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/all_restaurants",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "500",
+							"description": "(OPTIONAL)",
+							"type": "text"
+						},
+						{
+							"key": "latitude",
+							"value": "30.9356468",
+							"description": "(OPTIONAL)",
+							"type": "text"
+						},
+						{
+							"key": "happy_hours",
+							"value": "1",
+							"description": "(OPTIONAL)",
+							"type": "text"
+						},
+						{
+							"key": "longitude",
+							"value": "75.7945674",
+							"description": "(OPTIONAL)",
+							"type": "text"
+						},
+						{
+							"key": "place_id",
+							"value": "ChIJfVo0YnSDGjkREAbGjjQCEWg",
+							"description": "(OPTIONAL)",
+							"type": "text"
+						},
+						{
+							"key": "map_view",
+							"value": "1",
+							"description": "(OPTIONAL)",
+							"type": "text"
+						},
+						{
+							"key": "delivery_type",
+							"value": "1",
+							"description": "OPTIONAL (Delivery = 1,Takeaway = 2,Dinein = 3)",
+							"type": "text"
+						},
+						{
+							"key": "filter_by_is_restaurant_open",
+							"value": "1",
+							"description": "(OPTIONAL)",
+							"type": "text"
+						},
+						{
+							"key": "happy_hours",
+							"value": "1",
+							"description": "(OPTIONAL)",
+							"type": "text"
+						},
+						{
+							"key": "radius",
+							"value": "5",
+							"description": "(OPTIONAL)",
+							"type": "text"
+						},
+						{
+							"key": "map_view",
+							"value": "1",
+							"description": "(OPTIONAL)",
+							"type": "text"
+						},
+						{
+							"key": "food_type",
+							"value": "4",
+							"description": "(OPTIONAL)",
+							"type": "text"
+						},
+						{
+							"key": "filter_by_facilities",
+							"value": "12",
+							"description": "(OPTIONAL)",
+							"type": "text"
+						},
+						{
+							"key": "food_court",
+							"value": "1",
+							"description": "(OPTIONAL)",
+							"type": "text"
+						},
+						{
+							"key": "pre_order",
+							"value": "1",
+							"description": "(OPTIONAL)",
+							"type": "text"
+						},
+						{
+							"key": "page_no",
+							"value": "1",
+							"description": "(OPTIONAL)",
+							"type": "text"
+						},
+						{
+							"key": "limit",
+							"value": "10",
+							"description": "(OPTIONAL)",
+							"type": "text"
+						},
+						{
+							"key": "timezone",
+							"value": "Asia/Kolkata",
+							"description": "(OPTIONAL)",
+							"type": "text"
+						},
+						{
+							"key": "country_code",
+							"value": "IN",
+							"description": "Required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/all_restaurants",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"all_restaurants"
+					]
+				},
+				"description": "user_id=500&timezone=Asia%2FKolkata&latitude=30.900965&limit=20&page_no=1&radius=2&place_id=ChIJfVo0YnSDGjkREAbGjjQCEWg&longitude=75.8572758 => Nearby list\n\nuser_id=500&map_view=1&timezone=Asia%2FKolkata&latitude=30.900965&radius=15&place_id=ChIJfVo0YnSDGjkREAbGjjQCEWg&longitude=75.8572758\n=> Nearby map\n\nuser_id=500&timezone=Asia%2FKolkata&delivery_type=dinein&latitude=30.900965&limit=10&page_no=1&place_id=ChIJfVo0YnSDGjkREAbGjjQCEWg&longitude=75.8572758 => Reservation\n\nuser_id=500&map_view=1&timezone=Asia%2FKolkata&latitude=30.900965&radius=15&happy_hours=1&place_id=ChIJfVo0YnSDGjkREAbGjjQCEWg&longitude=75.8572758 => Happy Hours\n\nuser_id=500&timezone=Asia%2FKolkata&delivery_type=delivery&latitude=30.900965&limit=10&page_no=1&place_id=ChIJfVo0YnSDGjkREAbGjjQCEWg&longitude=75.8572758 => Delivery\n\nuser_id=500&timezone=Asia%2FKolkata&delivery_type=takeaway&latitude=30.900965&limit=10&page_no=1&radius=15&food_court=0&bar_only=0&place_id=ChIJfVo0YnSDGjkREAbGjjQCEWg&longitude=75.8572758 => Takeaway\n\nuser_id=500&timezone=Asia%2FKolkata&delivery_type=takeaway&latitude=30.8633008&limit=10&page_no=1&pre_order=1&food_court=0&bar_only=0&place_id=ChIJbSYDuJaCGjkRxR2v7KJSWG0&longitude=75.8717318 \n=> PreOrder\n\nuser_id=500&timezone=Asia%2FKolkata&delivery_type=takeaway&latitude=30.8633008&limit=10&page_no=1&food_court=0&bar_only=1&place_id=ChIJbSYDuJaCGjkRxR2v7KJSWG0&longitude=75.8717318 => Bar/Festival\n\nuser_id=500&timezone=Asia%2FKolkata&delivery_type=takeaway&latitude=30.8633008&limit=10&page_no=1&food_court=1&bar_only=0&place_id=ChIJbSYDuJaCGjkRxR2v7KJSWG0&longitude=75.8717318 => Food Court\n\ntimezone=Asia%2FKolkata&filter_by_is_restaurant_open=1&latitude=30.900965&page_no=1&food_type=4&food_court=0&filter_by_facilities=12&user_id=500&delivery_type=takeaway&limit=10&radius=15&bar_only=0&place_id=ChIJfVo0YnSDGjkREAbGjjQCEWg&longitude=75.8572758 => with filter options\n"
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/restaurant_highlights",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/restaurant_highlights",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"restaurant_highlights"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/restaurant_categories_list",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/restaurant_categories_list",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"restaurant_categories_list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/restaurant_data",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "date",
+							"value": "2020-03-24",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "500",
+							"type": "text"
+						},
+						{
+							"key": "restaurant_id",
+							"value": "78",
+							"type": "text"
+						},
+						{
+							"key": "delivery_type",
+							"value": "dinein",
+							"description": "(dinein | delivery | takeaway)",
+							"type": "text"
+						},
+						{
+							"key": "latitude",
+							"value": "30.8612724",
+							"type": "text"
+						},
+						{
+							"key": "place_id",
+							"value": "ChIJ-bftE5eCGjkRrNQi8l9EuWw",
+							"type": "text"
+						},
+						{
+							"key": "longitude",
+							"value": "75.872458",
+							"type": "text"
+						},
+						{
+							"key": "food_court",
+							"value": "0",
+							"description": "if delivery_type (delivery | takeaway) then food_court",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/restaurant_data",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"restaurant_data"
+					]
+				},
+				"description": "date=2020-03-24&user_id=500&restaurant_id=78&delivery_type=dinein&latitude=30.8612724&place_id=ChIJ-bftE5eCGjkRrNQi8l9EuWw&longitude=75.872458 => dinein\n\n date=2020-03-24&user_id=500&restaurant_id=78&delivery_type=delivery&latitude=30.900965&food_court=0&place_id=ChIJfVo0YnSDGjkREAbGjjQCEWg&longitude=75.8572758 => delivery\n \n date=2020-03-24&user_id=500&restaurant_id=78&delivery_type=takeaway&latitude=30.900965&food_court=0&place_id=ChIJfVo0YnSDGjkREAbGjjQCEWg&longitude=75.8572758 => takeaway"
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/twitterLogin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "oauth_token",
+							"value": "TWITTER_OAUTH_TOKEN",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "oauth_token_secret",
+							"value": "TWITTER_OAUTH_SECRET",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "ios_device_id",
+							"value": "",
+							"description": "Required (if Requesting Apple)",
+							"type": "text"
+						},
+						{
+							"key": "android_device_id",
+							"value": "",
+							"description": "Required (if Requesting Android)",
+							"type": "text"
+						},
+						{
+							"key": "referred_by",
+							"value": "",
+							"description": "Optional",
+							"type": "text"
+						},
+						{
+							"key": "lang_id",
+							"value": "",
+							"description": "Optional",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/twitterLogin",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"twitterLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/googlelogin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "access_token",
+							"value": "ya29.A0AfH6SMB8RIOBLnXhRAJkGpdU5cjuTWRkpvcIvRE8wNnGHNWRqaNH-XoP6t9IkVFswvc-F05cMntsN_qm76r5VnjMCYQwB0cJafEZ4ZXrWDI6hDgrnsT0L_4l3XIwA-ijVzJRaH-Ivt-x9n1XoQIsn_H2BfFe",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "referred_by",
+							"value": "",
+							"description": "Optional",
+							"type": "text"
+						},
+						{
+							"key": "lang_id",
+							"value": "1",
+							"description": "Optional",
+							"type": "text"
+						},
+						{
+							"key": "ios_device_id",
+							"value": "309b8414dd2e011a6c63731c8d6ac69b01b46c5b5e8683a2bf82b3b4a0856df9",
+							"description": "Required (if Requesting Apple)",
+							"type": "text"
+						},
+						{
+							"key": "android_device_id",
+							"value": "",
+							"description": "Required (if Requesting Android)",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/googlelogin",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"googlelogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/happy_hours",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "restaurant_id",
+							"value": "32",
+							"description": "Required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/happy_hours",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"happy_hours"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/get_payment_addresses_by_user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "16",
+							"description": "Required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/get_payment_addresses_by_user",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"get_payment_addresses_by_user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/list_coupons",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "restaurant_id",
+							"value": "32",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "delivery_type",
+							"value": "1",
+							"description": "Required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/list_coupons",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"list_coupons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/apply_coupon",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "1714",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "restaurant_id",
+							"value": "32",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "delivery_type",
+							"value": "1",
+							"description": "Required(Delivery = 1,Takeaway = 2,Dinein = 3) ",
+							"type": "text"
+						},
+						{
+							"key": "table_id",
+							"value": "123",
+							"description": "Required If Dinein",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/apply_coupon",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"apply_coupon"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/check_restaurant_delivery",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "restaurant_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "address_id",
+							"value": "158",
+							"description": "with payment address id",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "India",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "Ludhiana",
+							"type": "text"
+						},
+						{
+							"key": "latitude",
+							"value": "30.900965",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "Punjab",
+							"type": "text"
+						},
+						{
+							"key": "postal_code",
+							"value": "160015",
+							"type": "text"
+						},
+						{
+							"key": "short_country",
+							"value": "IN",
+							"type": "text"
+						},
+						{
+							"key": "place_id",
+							"value": "ChIJfVo0YnSDGjkREAbGjjQCEWg",
+							"type": "text"
+						},
+						{
+							"key": "longitude",
+							"value": "75.8572758",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/check_restaurant_delivery",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"check_restaurant_delivery"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/add_payment_addresses",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "16",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "9813252133",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "Ludhiana Punjab India",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "house_no",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "flat",
+							"value": "B",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "Holland",
+							"type": "text"
+						},
+						{
+							"key": "postal_code",
+							"value": "1012AA",
+							"type": "text"
+						},
+						{
+							"key": "address_nick_name",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "complete_address",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "latitude",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "place_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "landmark",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "longitude",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "place_id",
+							"value": "Chdsnj3uh7dddsa",
+							"description": "Required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/add_payment_addresses",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"add_payment_addresses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/order_history",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{base_url}}/api/order_history",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"order_history"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/get_all_order_food_items",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "order_id",
+							"value": "1",
+							"description": "Required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/get_all_order_food_items",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"get_all_order_food_items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/track_order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "order_id",
+							"value": "1",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "500",
+							"description": "Required if restaurant id empty",
+							"type": "text"
+						},
+						{
+							"key": "restaurant_id",
+							"value": "",
+							"description": "Required if user id empty",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/track_order",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"track_order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/favorite_restaurants",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{base_url}}/api/favorite_restaurants",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"favorite_restaurants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/get_bookings_by_user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "type",
+							"value": "archived",
+							"description": " upcoming|today|archived [optional]",
+							"type": "text"
+						},
+						{
+							"key": "page_no",
+							"value": "1",
+							"description": "for pagination eg, 1,2,3. by default set to 1[optional]",
+							"type": "text"
+						},
+						{
+							"key": "limit",
+							"value": "20",
+							"description": "by default 10 if not sent  [optional]",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/get_bookings_by_user",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"get_bookings_by_user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/view_organizations",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{base_url}}/api/view_organizations",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"view_organizations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/view_causes",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{base_url}}/api/view_causes",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"view_causes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/favorite_organization",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{base_url}}/api/favorite_organization",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"favorite_organization"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/preferred_organization",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "organization_id",
+							"value": "1",
+							"description": "Required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/preferred_organization",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"preferred_organization"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/set_lang",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "lang_id",
+							"value": "2",
+							"description": "Required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/set_lang",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"set_lang"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/user_notifications",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "216",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "page_no",
+							"value": "1",
+							"description": " [for pagination eg, 1,2,3. by default set to 1] [optional]",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "20",
+							"description": "[by default 10 if not sent] [optional]",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/user_notifications",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"user_notifications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/ticket_categories",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{base_url}}/api/ticket_categories",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"ticket_categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/create_ticket",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "category",
+							"value": "8",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "orderwsd",
+							"description": "Required Greater than 8 character",
+							"type": "text"
+						},
+						{
+							"key": "body",
+							"value": "Name Alive server Mobile Number Email Aliveserver@yopmail.com Order ID Aliveserver@yopmail.com Message",
+							"description": "Required Greater than 20 character",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/create_ticket",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"create_ticket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/restaurant_menu",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "restaurant_id",
+							"value": "32",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "table_id",
+							"value": "530",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "cart_token_number",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "delivery_type",
+							"value": "1",
+							"description": "Required(Delivery = 1,Takeaway = 2,Dinein = 3)",
+							"type": "text"
+						},
+						{
+							"key": "lang_code",
+							"value": "hi",
+							"description": "Optional",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/restaurant_menu",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"restaurant_menu"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/facebookLogin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "access_token",
+							"value": "EAADwLQ3sti4BAPHtlG1VF7kc9VGjywQR3EYEMnytG2TI3vUkH0xncF4iFQKmOlGpKGVFRcmhHkJObZAYbsIXGpMWPNASYRnVPanQhILZCg19yMwuX7OtO5DrHPTpJmTivDnFXv3fJZCeoLcssfYgBBC4BUdZCZC2alBJHWxyxKHV77mTZBgzaREoaC5AX2cY6g18mA87X5MBT5TD7N4ILhXKkpKACV59ZAfCyGhFzbthQZDZD",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "lang_id",
+							"value": "1",
+							"description": "Optional",
+							"type": "text"
+						},
+						{
+							"key": "referred_by",
+							"value": "",
+							"description": "Optional",
+							"type": "text"
+						},
+						{
+							"key": "ios_device_id",
+							"value": "309b8414dd2e011a6c63731c8d6ac69b01b46c5b5e8683a2bf82b3b4a0856df9",
+							"description": "Required (if Requesting Apple)",
+							"type": "text"
+						},
+						{
+							"key": "android_device_id",
+							"value": "",
+							"description": "Required (if Requesting Android)",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/facebookLogin",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"facebookLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/applelogin?apple_notification_debug_on=1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_data",
+							"value": "eyJpc3MiOiJodHRwczovL2FwcGxlaWQuYXBwbGUuY29tIiwiYXVkIjoiY29tLnFvZGVtYWtlci55dGhld2FpdCIsImV4cCI6MTYxNDQwNDAwOSwiaWF0IjoxNjE0MzE3NjA5LCJzdWIiOiIwMDA1NTcuYzA4NGIzOTMwMmYyNDE3YThmMjdlMDY3Y2MwNTQyYzcuMTMwMyIsImNfaGFzaCI6IjJhM0dzMjMwYmNpSENSMHVaTHFzb2ciLCJlbWFpbCI6InRlc3QucW9kZW1ha2VyQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjoidHJ1ZSIsImF1dGhfdGltZSI6MTYxNDMxNzYwOSwibm9uY2Vfc3VwcG9ydGVkIjp0cnVlfQ",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "lang_id",
+							"value": "1",
+							"description": "Optional",
+							"type": "text"
+						},
+						{
+							"key": "code",
+							"value": "cc24ff7ad33e44f8eabaa548d6e56bb28.0.rvvx.Tl0uFxbkXDCyfnzhWQeJ0Q",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "referred_by",
+							"value": "",
+							"description": "Optional",
+							"type": "text"
+						},
+						{
+							"key": "family_name",
+							"value": "",
+							"description": "Optional",
+							"type": "text"
+						},
+						{
+							"key": "ios_device_id",
+							"value": "309b8414dd2e011a6c63731c8d6ac69b01b46c5b5e8683a2bf82b3b4a0856df9",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "given_name",
+							"value": "",
+							"description": "Optional",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/applelogin?apple_notification_debug_on=1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"applelogin"
+					],
+					"query": [
+						{
+							"key": "apple_notification_debug_on",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/update_email_verification_code",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "500",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "verification_code",
+							"value": "123345",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "sunilthakur@gmail.com",
+							"description": "Optional",
+							"type": "text"
+						},
+						{
+							"key": "android_device_id",
+							"value": "",
+							"description": "Required (if Requesting Andriod)",
+							"type": "text"
+						},
+						{
+							"key": "lang_id",
+							"value": "",
+							"description": "Optional",
+							"type": "text"
+						},
+						{
+							"key": "ios_device_id",
+							"value": "",
+							"description": "Required (if Requesting Apple)",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/update_email_verification_code",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"update_email_verification_code"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/verify_email",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "500",
+							"description": "Optional",
+							"type": "text"
+						},
+						{
+							"key": "verification_code",
+							"value": "123345",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "sunilthakur@gmail.com",
+							"description": "Required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/verify_email",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"verify_email"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/resend_verfication_code",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "12",
+							"description": "Required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/resend_verfication_code",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"resend_verfication_code"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/scan_restaurant",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "qr_code",
+							"value": "637521",
+							"type": "text"
+						},
+						{
+							"key": "latitude",
+							"value": "30.8640439",
+							"type": "text"
+						},
+						{
+							"key": "longitude",
+							"value": "75.8720949",
+							"type": "text"
+						},
+						{
+							"key": "timezone",
+							"value": "Asia Kolkata",
+							"type": "text"
+						},
+						{
+							"key": "unique_code",
+							"value": "637521",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/scan_restaurant",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"scan_restaurant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/add_to_cart_batch_local",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "restaurant_id",
+							"value": "32",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "cart_item_id[0]",
+							"value": "50190",
+							"description": "Required (If updating cart items)",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "quantity[0]",
+							"value": "1",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "food_item_name[0]",
+							"value": "Pizza",
+							"description": "Optional",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "attribute_id[0]",
+							"value": "68,70,72",
+							"description": "Required(If attribute needed)",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "delivery_type",
+							"value": "1",
+							"description": "Required(Delivery = 1,Takeaway = 2,Dinein = 3)",
+							"type": "text"
+						},
+						{
+							"key": "attribute_value_id[0]",
+							"value": "65,68,76",
+							"description": "Required(If attribute needed)",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "food_item_id[0]",
+							"value": "18222",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "instructions",
+							"value": "",
+							"description": "Optional",
+							"type": "text"
+						},
+						{
+							"key": "table_id",
+							"value": "",
+							"description": "Required(If If dinein)",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "order_id",
+							"value": "",
+							"description": "Depend upon dinein order",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/add_to_cart_batch_local",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"add_to_cart_batch_local"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/dinning_help_list",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "restaurant_id",
+							"value": "32",
+							"description": "Required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/dinning_help_list",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"dinning_help_list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/check_order_payment_status",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "transaction_id",
+							"value": "",
+							"description": "Required(order_id empty)",
+							"type": "text"
+						},
+						{
+							"key": "restaurant_id",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "payment_gateway_id",
+							"value": "",
+							"description": "Required(order_id empty)",
+							"type": "text"
+						},
+						{
+							"key": "order_id",
+							"value": "9895",
+							"description": "Required(transaction_id & payment_gateway_id empty)",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/check_order_payment_status",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"check_order_payment_status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/favorite_organization_by_user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "organization_id",
+							"value": "1",
+							"description": "Required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/favorite_organization_by_user",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"favorite_organization_by_user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/unfavorite_organization_by_user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "organization_id",
+							"value": "1",
+							"description": "Required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/unfavorite_organization_by_user",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"unfavorite_organization_by_user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/delete_payment_address",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "1",
+							"description": "Required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/delete_payment_address",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"delete_payment_address"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/update_phone_no",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "514",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "9780051455",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "country_code",
+							"value": "91",
+							"description": "Required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/update_phone_no",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"update_phone_no"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/edit_payment_address",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "12",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "23432432",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "gfdgdf",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "place_id",
+							"value": "Chsasad67657dsas6s",
+							"description": "Required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/edit_payment_address",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"edit_payment_address"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/remove_coupon",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "delivery_type",
+							"value": "1",
+							"description": "Required(Delivery = 1,Takeaway = 2,Dinein = 3) ",
+							"type": "text"
+						},
+						{
+							"key": "table_id",
+							"value": "4232",
+							"description": "Required If Dinein",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "coupon_id",
+							"value": "1714",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "restaurant_id",
+							"value": "32",
+							"description": "Required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/remove_coupon",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"remove_coupon"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/change_password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "current_password",
+							"value": "dsfdsfdsdfads#wr4",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "new_password",
+							"value": "fdsfdsdsadsa",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "confirm_password",
+							"value": "dsfdsfdsdfads#wr4",
+							"description": "Required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/change_password",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"change_password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/mark_notification_read",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{base_url}}/api/mark_notification_read",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"mark_notification_read"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/pay_order_payment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "order_id",
+							"value": "2358",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "payment_gateway_id",
+							"value": "82",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "payment_method_id",
+							"value": "35",
+							"description": "Required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/pay_order_payment",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"pay_order_payment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/set_default_organization",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "organization_id",
+							"value": "2",
+							"description": "Required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/set_default_organization",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"set_default_organization"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/short_url_detail",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "short_url",
+							"value": "76TYUX",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/short_url_detail",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"short_url_detail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/save_user_analytic",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "country",
+							"value": "India",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "country_code",
+							"value": "IN",
+							"description": "Optipnal",
+							"type": "text"
+						},
+						{
+							"key": "device_id",
+							"value": "6e0224e73f58ddb0",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "Ludhiana",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "device_type",
+							"value": "android",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "Punjab",
+							"description": "Required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/save_user_analytic",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"save_user_analytic"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/updateDeviceToken",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "ios_device_id",
+							"value": "dsadasdsa",
+							"description": "Required Once",
+							"type": "text"
+						},
+						{
+							"key": "android_device_id",
+							"value": "",
+							"description": "Required Once",
+							"type": "text"
+						},
+						{
+							"key": "web_device_token",
+							"value": "",
+							"description": "Required Once",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/updateDeviceToken",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"updateDeviceToken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/rate_food_delivery_boy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "order_item_rating[0][rating]",
+							"value": "3.0",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "order_item_rating[0][order_item_id]",
+							"value": "32115",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "order_item_rating[1][rating]",
+							"value": "4.0",
+							"type": "text"
+						},
+						{
+							"key": "order_item_rating[1][order_item_id]",
+							"value": "32116",
+							"type": "text"
+						},
+						{
+							"key": "order_item_rating[2][order_item_id]",
+							"value": "32114",
+							"type": "text"
+						},
+						{
+							"key": "order_item_rating[2][rating]",
+							"value": "5.0",
+							"type": "text"
+						},
+						{
+							"key": "order_item_rating[3][rating]",
+							"value": "5.0",
+							"type": "text"
+						},
+						{
+							"key": "order_item_rating[3][order_item_id]",
+							"value": "32117",
+							"type": "text"
+						},
+						{
+							"key": "order_id",
+							"value": "12107",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "staff_rating",
+							"value": "4.0",
+							"description": "Required if want to give rating to waiter/delivery boy",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/rate_food_delivery_boy",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"rate_food_delivery_boy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/gift_card_countries",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/gift_card_countries",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"gift_card_countries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/gift_cards_by_country",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "country_id",
+							"value": "101",
+							"description": "Required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/gift_cards_by_country",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"gift_cards_by_country"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/getOnlinePaymentGatewayMethods",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "country_id",
+							"value": "101",
+							"description": "Required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/getOnlinePaymentGatewayMethods",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"getOnlinePaymentGatewayMethods"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/list_giftcards",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{base_url}}/api/list_giftcards",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"list_giftcards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/create_giftcard",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "amount",
+							"value": "75",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "1",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "country_id",
+							"value": "101",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "lovedeep2910@yopmail.com",
+							"description": "Required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/create_giftcard",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"create_giftcard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/check_gift_card_payment_status",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "gift_card_id",
+							"value": "456",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "order_id",
+							"value": "1278",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "transaction_id",
+							"value": "trek373h3njso213",
+							"type": "text"
+						},
+						{
+							"key": "payment_gateway_id",
+							"value": "37",
+							"description": "Required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/check_gift_card_payment_status",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"check_gift_card_payment_status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/check_gift_card_balance",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "code",
+							"value": "TBGINWU7924R",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "pin",
+							"value": "134559",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "restaurant_id",
+							"value": "182",
+							"description": "Required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/check_gift_card_balance",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"check_gift_card_balance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/send_otp",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "sdfghdghj@yopmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/send_otp",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"send_otp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/claim_restaurant",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "test",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Singh",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "8794621354",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "lovedeep2911@yopmail.com",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "restaurant_id",
+							"value": "32",
+							"description": "Required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/claim_restaurant",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"claim_restaurant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/refer_a_friend_text",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{base_url}}/api/refer_a_friend_text",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"refer_a_friend_text"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/my_rewards",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{base_url}}/api/my_rewards",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"my_rewards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/sync_contacts",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email[]",
+							"value": "sadgjshag@hdkh.com",
+							"description": "Required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/sync_contacts",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"sync_contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/get_userby_unique_code",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "uniquecode",
+							"value": "rfsfsd",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/get_userby_unique_code",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"get_userby_unique_code"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/save_user_location",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "country",
+							"value": "India",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "country_code",
+							"value": "IN",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "device_id",
+							"value": "6e0224e73f58ddb0",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "Ludhiana",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "device_type",
+							"value": "android",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "Punjab",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "latitudes",
+							"value": "75.54646848",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "longitudes",
+							"value": "30.6484894",
+							"description": "Required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/save_user_location",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"save_user_location"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/search_city",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "string",
+							"value": "Phagw",
+							"description": "Required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/search_city",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"search_city"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/generateWalletPin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "wallet_pin",
+							"value": "s35434",
+							"description": "Required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/generateWalletPin",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"generateWalletPin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/forgotWalletPin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/forgotWalletPin",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"forgotWalletPin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/myWalletList",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{base_url}}/api/myWalletList",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"myWalletList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/scanWalletQrCode",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "wallet_qr_code",
+							"value": "87897",
+							"type": "text"
+						},
+						{
+							"key": "wallet_email",
+							"value": "dsadsa@wrew.gfgd",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/scanWalletQrCode",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"scanWalletQrCode"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/walletTransactionList",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{base_url}}/api/walletTransactionList",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"walletTransactionList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/transferFromWallet",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "note",
+							"value": "",
+							"description": "Optional",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "20",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "country_id",
+							"value": "101",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "restaurant_id",
+							"value": "32",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "to_user_id",
+							"value": "514",
+							"description": "Required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/transferFromWallet",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"transferFromWallet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/verifyWalletPin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "wallet_pin",
+							"value": "2132412",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/verifyWalletPin",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"verifyWalletPin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/addWalletMoney",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "country_id",
+							"value": "101",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "10",
+							"description": "Required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/addWalletMoney",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"addWalletMoney"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/updateWalletPin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "new_pin",
+							"value": "3424",
+							"description": "Required MIN=4| MAX=4",
+							"type": "text"
+						},
+						{
+							"key": "confirm_new_pin",
+							"value": "3244",
+							"description": "Required MIN=4| MAX=4",
+							"type": "text"
+						},
+						{
+							"key": "old_pin",
+							"value": "2313",
+							"description": "Required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/updateWalletPin",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"updateWalletPin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/check_wallet_payment_status",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "transaction_id",
+							"value": "dsdadsa",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "order_id",
+							"value": "34421",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "transaction_id",
+							"value": "affadsf3w432",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "payment_gateway_id",
+							"value": "423",
+							"description": "Required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/check_wallet_payment_status",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"check_wallet_payment_status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/resend_verification_code_logedin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "lang_id",
+							"value": "1",
+							"description": "Optional",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/resend_verification_code_logedin",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"resend_verification_code_logedin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/resend_verification_code_logedin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "lang_id",
+							"value": "1",
+							"description": "Optional",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/resend_verification_code_logedin",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"resend_verification_code_logedin"
+					]
+				}
+			},
+			"response": []
 		}
-	}, {
-		"listen": "test",
-		"script": {
-			"id": "ee66c913-6745-43a8-963c-d6daedc1f168",
-			"type": "text\/javascript",
-			"exec": [""]
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
 		}
-	}],
-	"variable": [{
-		"id": "9bf3d4ea-c6d7-4f6b-987f-d50afde2b82d",
-		"key": "access_token",
-		"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6ImU5MWRiNzQxYzIyMWVlYmZkOWMyMjdmMTEzODlkM2RmZmY3Mjk4NzEwN2MwOTFmNjZjMmQzN2E0NmY3NGE0ZTNkZTE5ZDk3ZTI2YjllZjg5ODczY2Y3OWRjZDFhZDQxMTU3M2FkNDgzMTk0Nzg0ZDlkNmEyNDRjYzM2MjlmOTNkemNueHJXLkh3ZFc2Qlp1NzZ6YTNqdVp3NkguLmZEbVozeFpwWE5Oa0tFZy0iLCJlbWFpbCI6InByaXlhc29oYWw0NUBnbWFpbC5jb20iLCJwaG9uZSI6Ijg5Njg5Nzc1NTMiLCJmaXJzdF9uYW1lIjoiZ3VybGVlbmthdXIiLCJsYXN0X25hbWUiOiJkaGFsbCIsImFkZHJlc3MiOiJCLVhYSSAtIDE0NjI3LCBHYW5kaGkgTmFnYXIgMXN0IEZsb29yLCBBYm92ZSBTQkkgRmluYW5jZSBCcmFuY2gsIEdyYW5kIFRydW5rIFJkLCBQYXJiaGF0IE5hZ2FyLCBJbmR1c3RyaWFsIEFyZWEtIEEsIEx1ZGhpYW5hLCBQdW5qYWIgMTQxMDAzLCBJbmRpYSIsImxhbmdfaWQiOiIxIiwiY291bnRyeV9jb2RlIjoiOTEiLCJkb2IiOiIwMDAwLTAwLTAwIiwiYW5vbnltb3VzIjoiMSIsImlzX2VtYWlsX3ZlcmlmaWVkIjoiMSIsImltYWdlIjoiaHR0cDpcL1wvdGVzdC55dGhld2FpdC5jb21cL3VwbG9hZHNcL3VzZXJzXC9lZmM3OTBmMGFhMWVlZjVjNTliODY4ZjdkMTI0Y2ViZC5qcGciLCJncm91cF9pZCI6IjIyZTI0YTExMDgyOWEyMTUyNmVjNDUxYjI2MmEzZDE5MTY5ZDkyNjU0NDliNDlkNTU2ZTJiMzkwNDY1ZjFhMDY5YjkzY2U2ZTEwMTE3ZDViZWM0ZjRlZjE4MDI0MDFlMzlhN2Y0OTIxN2U2ZWIzZjEyMWQxMDA2MTkzNmEyNmMxVzUxdFYzMGlzc2ZGenFCSkJaUFU3bWtZLm9PMXZ0cGliU29aMnc4Z0play0iLCJkb25hdGlvbiI6MSwidXNlcl90eXBlIjoiMSIsImFjY2VwdGVkX3Rlcm1zIjoiMSIsImF1dGhvcml6YXRpb24iOiIiLCJsYXN0X2JpbGxpbmdfYWRkcmVzcyI6IkItWFhJIC0gMTQ2MjcsIEdhbmRoaSBOYWdhciAxc3QgRmxvb3IsIEFib3ZlIFNCSSBGaW5hbmNlIEJyYW5jaCwgR3JhbmQgVHJ1bmsgUmQsIFBhcmJoYXQgTmFnYXIsIEluZHVzdHJpYWwgQXJlYS0gQSwgTHVkaGlhbmEsIFB1bmphYiAxNDEwMDMsIEluZGlhLCAsIiwibGFzdF9iaWxsaW5nX2FkZHJlc3NfaWQiOiIiLCJ0aW1lX2Zvcm1hdCI6MjQsImV4cGlyZV9kYXRlIjoxNjE4OTI5NTg0LCJ1c2VyX2FnZW50IjoiUG9zdG1hblJ1bnRpbWVcLzcuMjQuMSIsInJhbmQiOiI1ZTlkYjQzMDUzMWNhIn0.69Yw_yEwqcD4pUVg92K3hP9YPDY_RAxPBhP0HtE8b1o",
-		"type": "string"
-	}],
-	"protocolProfileBehavior": {}
+	],
+	"variable": [
+		{
+			"key": "access_token",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6ImU5MWRiNzQxYzIyMWVlYmZkOWMyMjdmMTEzODlkM2RmZmY3Mjk4NzEwN2MwOTFmNjZjMmQzN2E0NmY3NGE0ZTNkZTE5ZDk3ZTI2YjllZjg5ODczY2Y3OWRjZDFhZDQxMTU3M2FkNDgzMTk0Nzg0ZDlkNmEyNDRjYzM2MjlmOTNkemNueHJXLkh3ZFc2Qlp1NzZ6YTNqdVp3NkguLmZEbVozeFpwWE5Oa0tFZy0iLCJlbWFpbCI6InByaXlhc29oYWw0NUBnbWFpbC5jb20iLCJwaG9uZSI6Ijg5Njg5Nzc1NTMiLCJmaXJzdF9uYW1lIjoiZ3VybGVlbmthdXIiLCJsYXN0X25hbWUiOiJkaGFsbCIsImFkZHJlc3MiOiJCLVhYSSAtIDE0NjI3LCBHYW5kaGkgTmFnYXIgMXN0IEZsb29yLCBBYm92ZSBTQkkgRmluYW5jZSBCcmFuY2gsIEdyYW5kIFRydW5rIFJkLCBQYXJiaGF0IE5hZ2FyLCBJbmR1c3RyaWFsIEFyZWEtIEEsIEx1ZGhpYW5hLCBQdW5qYWIgMTQxMDAzLCBJbmRpYSIsImxhbmdfaWQiOiIxIiwiY291bnRyeV9jb2RlIjoiOTEiLCJkb2IiOiIwMDAwLTAwLTAwIiwiYW5vbnltb3VzIjoiMSIsImlzX2VtYWlsX3ZlcmlmaWVkIjoiMSIsImltYWdlIjoiaHR0cDpcL1wvdGVzdC55dGhld2FpdC5jb21cL3VwbG9hZHNcL3VzZXJzXC9lZmM3OTBmMGFhMWVlZjVjNTliODY4ZjdkMTI0Y2ViZC5qcGciLCJncm91cF9pZCI6IjIyZTI0YTExMDgyOWEyMTUyNmVjNDUxYjI2MmEzZDE5MTY5ZDkyNjU0NDliNDlkNTU2ZTJiMzkwNDY1ZjFhMDY5YjkzY2U2ZTEwMTE3ZDViZWM0ZjRlZjE4MDI0MDFlMzlhN2Y0OTIxN2U2ZWIzZjEyMWQxMDA2MTkzNmEyNmMxVzUxdFYzMGlzc2ZGenFCSkJaUFU3bWtZLm9PMXZ0cGliU29aMnc4Z0play0iLCJkb25hdGlvbiI6MSwidXNlcl90eXBlIjoiMSIsImFjY2VwdGVkX3Rlcm1zIjoiMSIsImF1dGhvcml6YXRpb24iOiIiLCJsYXN0X2JpbGxpbmdfYWRkcmVzcyI6IkItWFhJIC0gMTQ2MjcsIEdhbmRoaSBOYWdhciAxc3QgRmxvb3IsIEFib3ZlIFNCSSBGaW5hbmNlIEJyYW5jaCwgR3JhbmQgVHJ1bmsgUmQsIFBhcmJoYXQgTmFnYXIsIEluZHVzdHJpYWwgQXJlYS0gQSwgTHVkaGlhbmEsIFB1bmphYiAxNDEwMDMsIEluZGlhLCAsIiwibGFzdF9iaWxsaW5nX2FkZHJlc3NfaWQiOiIiLCJ0aW1lX2Zvcm1hdCI6MjQsImV4cGlyZV9kYXRlIjoxNjE4OTI5NTg0LCJ1c2VyX2FnZW50IjoiUG9zdG1hblJ1bnRpbWVcLzcuMjQuMSIsInJhbmQiOiI1ZTlkYjQzMDUzMWNhIn0.69Yw_yEwqcD4pUVg92K3hP9YPDY_RAxPBhP0HtE8b1o",
+			"type": "string"
+		}
+	]
 }
