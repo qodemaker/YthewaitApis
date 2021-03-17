@@ -1,345 +1,621 @@
 {
 	"info": {
-		"_postman_id": "66661957-6e95-4d2b-9dca-694cdfd527c6",
+		"_postman_id": "5f3aa859-5c1b-4c18-a310-6d1a72f60fbc",
 		"name": "Delivery Boy Apis",
-		"schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.0.0\/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
-	"item": [{
-		"name": "{{base_url}}delivery_boy_api\/login",
-		"_postman_id": "a4e6845d-246c-4604-a404-3991cd29856a",
-		"request": {
-			"method": "POST",
-			"header": [],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "username",
-					"value": "sunil@yopmail.com",
-					"type": "text"
-				}, {
-					"key": "password",
-					"value": "Test@1234",
-					"type": "text"
-				}]
+	"item": [
+		{
+			"name": "{{base_url}}delivery_boy_api/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "simranjeet.singh_test@yopmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}delivery_boy_api/login",
+					"host": [
+						"{{base_url}}delivery_boy_api"
+					],
+					"path": [
+						"login"
+					]
+				}
 			},
-			"url": "{{base_url}}delivery_boy_api\/login"
+			"response": []
 		},
-		"response": []
-	}, {
-		"name": "{{base_url}}delivery_boy_api\/checkin_status",
-		"_postman_id": "c27b5c34-863c-4200-a309-efa91b5d79fd",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "restaurant_id",
-					"value": "2",
-					"type": "text"
-				}]
+		{
+			"name": "{{base_url}}delivery_boy_api/get_my_orders",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "restaurant_id",
+							"value": "182",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}delivery_boy_api/get_my_orders",
+					"host": [
+						"{{base_url}}delivery_boy_api"
+					],
+					"path": [
+						"get_my_orders"
+					]
+				}
 			},
-			"url": "{{base_url}}delivery_boy_api\/checkin_status"
+			"response": []
 		},
-		"response": []
-	}, {
-		"name": "{{base_url}}delivery_boy_api\/get_my_orders",
-		"_postman_id": "4b7025a8-3c50-4319-aa5c-9487b3c939ef",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "restaurant_id",
-					"value": "76",
-					"type": "text"
-				}]
+		{
+			"name": "{{base_url}}delivery_boy_api/edit_profile",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "phone",
+							"value": "9781579166",
+							"type": "text"
+						},
+						{
+							"key": "country_code",
+							"value": "91",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "ludhiana",
+							"type": "text"
+						},
+						{
+							"key": "anonymous",
+							"value": "0",
+							"description": "optional (0) (1)",
+							"type": "text"
+						},
+						{
+							"key": "street",
+							"value": "test",
+							"description": "optional",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "test",
+							"description": "optional",
+							"type": "text"
+						},
+						{
+							"key": "postcode",
+							"value": "141008",
+							"description": "optinoal",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "punjab",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "india",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}delivery_boy_api/edit_profile",
+					"host": [
+						"{{base_url}}delivery_boy_api"
+					],
+					"path": [
+						"edit_profile"
+					]
+				}
 			},
-			"url": "{{base_url}}delivery_boy_api\/get_my_orders"
+			"response": []
 		},
-		"response": []
-	}, {
-		"name": "{{base_url}}delivery_boy_api\/checkin_checkout",
-		"_postman_id": "212a3fcc-f58b-444a-95ed-3bc442c1800c",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "restaurant_id",
-					"value": "76",
-					"type": "text"
-				}]
+		{
+			"name": "{{base_url}}delivery_boy_api/sale_detail",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "order_id",
+							"value": "78",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}delivery_boy_api/sale_detail",
+					"host": [
+						"{{base_url}}delivery_boy_api"
+					],
+					"path": [
+						"sale_detail"
+					]
+				}
 			},
-			"url": "{{base_url}}delivery_boy_api\/checkin_checkout"
+			"response": []
 		},
-		"response": []
-	}, {
-		"name": "{{base_url}}delivery_boy_api\/accept_reject_delivery",
-		"_postman_id": "e4f1749a-7ba7-471a-9ae2-5e3deeea3096",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "order_id",
-					"value": "1",
-					"type": "text"
-				}, {
-					"key": "accept_status",
-					"value": "1",
-					"type": "text"
-				}, {
-					"key": "restaurant_id",
-					"value": "5",
-					"type": "text"
-				}]
+		{
+			"name": "{{base_url}}delivery_boy_api/get_profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{base_url}}delivery_boy_api/get_profile",
+					"host": [
+						"{{base_url}}delivery_boy_api"
+					],
+					"path": [
+						"get_profile"
+					]
+				}
 			},
-			"url": "{{base_url}}delivery_boy_api\/accept_reject_delivery"
+			"response": []
 		},
-		"response": []
-	}, {
-		"name": "{{base_url}}delivery_boy_api\/user_notifications",
-		"_postman_id": "ae15668a-32d0-4bbc-ae92-f139da5339bb",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": []
+		{
+			"name": "{{base_url}}delivery_boy_api/accept_reject_delivery",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "order_id",
+							"value": "3367",
+							"type": "text"
+						},
+						{
+							"key": "restaurant_id",
+							"value": "30",
+							"type": "text"
+						},
+						{
+							"key": "accept_status",
+							"value": "1",
+							"description": "(1 - accept, 3 - reject)",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}delivery_boy_api/accept_reject_delivery",
+					"host": [
+						"{{base_url}}delivery_boy_api"
+					],
+					"path": [
+						"accept_reject_delivery"
+					]
+				}
 			},
-			"url": "{{base_url}}delivery_boy_api\/user_notifications"
+			"response": []
 		},
-		"response": []
-	}, {
-		"name": "{{base_url}}delivery_boy_api\/collect_order_payment",
-		"_postman_id": "eabd2c98-5bd4-4141-b5fc-21190d2ebdd2",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "order_id",
-					"value": "10",
-					"type": "text"
-				}, {
-					"key": "payment_method",
-					"value": "1",
-					"description": "\"1\" => \"Cash\" || \"2\" => \"Pin\" ||\"3\" => \"Online pay by App -- not allowed for delivery so will throw invalid response\" || \"4\" => \"Cheque\"",
-					"type": "text"
-				}]
+		{
+			"name": "{{base_url}}delivery_boy_api/collect_order_payment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "order_id",
+							"value": "3367",
+							"type": "text"
+						},
+						{
+							"key": "payment_method",
+							"value": "4",
+							"description": "(1 - cash, 2 pin, 3 not - available, 4 - cheque)",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}delivery_boy_api/collect_order_payment",
+					"host": [
+						"{{base_url}}delivery_boy_api"
+					],
+					"path": [
+						"collect_order_payment"
+					]
+				}
 			},
-			"url": "{{base_url}}delivery_boy_api\/collect_order_payment"
+			"response": []
 		},
-		"response": []
-	}, {
-		"name": "{{base_url}}delivery_boy_api\/mark_notification_read",
-		"_postman_id": "523ad112-4993-44fc-b90f-f49551835a90",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": []
+		{
+			"name": "{{base_url}}delivery_boy_api/checkin_status",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{base_url}}delivery_boy_api/checkin_status",
+					"host": [
+						"{{base_url}}delivery_boy_api"
+					],
+					"path": [
+						"checkin_status"
+					]
+				}
 			},
-			"url": "{{base_url}}delivery_boy_api\/mark_notification_read"
+			"response": []
 		},
-		"response": []
-	}, {
-		"name": "{{base_url}}delivery_boy_api\/pick_up_order",
-		"_postman_id": "aa20bc49-d0d3-473c-9acd-607eafd2fc38",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "order_id",
-					"value": "168",
-					"type": "text"
-				}]
+		{
+			"name": "{{base_url}}delivery_boy_api/checkin_checkout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{base_url}}delivery_boy_api/checkin_checkout",
+					"host": [
+						"{{base_url}}delivery_boy_api"
+					],
+					"path": [
+						"checkin_checkout"
+					]
+				}
 			},
-			"url": "{{base_url}}delivery_boy_api\/pick_up_order"
+			"response": []
 		},
-		"response": []
-	}, {
-		"name": "{{base_url}}delivery_boy_api\/logout",
-		"_postman_id": "e4d7791d-fc8e-489d-ad49-bfc1199b3733",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": []
+		{
+			"name": "{{base_url}}delivery_boy_api/logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{base_url}}delivery_boy_api/logout",
+					"host": [
+						"{{base_url}}delivery_boy_api"
+					],
+					"path": [
+						"logout"
+					]
+				}
 			},
-			"url": "{{base_url}}delivery_boy_api\/logout"
+			"response": []
 		},
-		"response": []
-	}, {
-		"name": "{{base_url}}delivery_boy_api\/get_profile",
-		"_postman_id": "4a604508-80e0-4654-a74a-9d9d46d228bd",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": []
+		{
+			"name": "{{base_url}}delivery_boy_api/user_notifications",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "page_no",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "limit",
+							"value": "15",
+							"description": "optional",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}delivery_boy_api/user_notifications",
+					"host": [
+						"{{base_url}}delivery_boy_api"
+					],
+					"path": [
+						"user_notifications"
+					]
+				}
 			},
-			"url": "{{base_url}}delivery_boy_api\/get_profile"
+			"response": []
 		},
-		"response": []
-	}, {
-		"name": "{{base_url}}delivery_boy_api\/edit_profile",
-		"_postman_id": "f0d16ee2-daff-43bf-9b26-024052b6724d",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "first_name",
-					"value": "sunil",
-					"type": "text"
-				}, {
-					"key": "last_name",
-					"value": "thakur",
-					"type": "text"
-				}, {
-					"key": "phone",
-					"value": "1236547890",
-					"type": "text"
-				}, {
-					"key": "address",
-					"value": "214 phase 3b1 mohali",
-					"type": "text"
-				}, {
-					"key": "image",
-					"type": "file",
-					"src": []
-				}, {
-					"key": "country_code",
-					"value": "101",
-					"type": "text"
-				}]
+		{
+			"name": "{{base_url}}delivery_boy_api/mark_notification_read",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "16222",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}delivery_boy_api/mark_notification_read",
+					"host": [
+						"{{base_url}}delivery_boy_api"
+					],
+					"path": [
+						"mark_notification_read"
+					]
+				}
 			},
-			"url": "{{base_url}}delivery_boy_api\/edit_profile"
+			"response": []
 		},
-		"response": []
-	}, {
-		"name": "{{base_url}}delivery_boy_api\/sale_detail",
-		"_postman_id": "ea5882a2-d165-49f9-bae0-d2b39ef0abd5",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "billing_user",
-					"value": "1",
-					"type": "text"
-				}, {
-					"key": "order_id",
-					"value": "78",
-					"type": "text"
-				}]
+		{
+			"name": "{{base_url}}delivery_boy_api/set_lang",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "lang_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}delivery_boy_api/set_lang",
+					"host": [
+						"{{base_url}}delivery_boy_api"
+					],
+					"path": [
+						"set_lang"
+					]
+				}
 			},
-			"url": "{{base_url}}delivery_boy_api\/sale_detail"
+			"response": []
 		},
-		"response": []
-	}, {
-		"name": "{{base_url}}delivery_boy_api\/order_delivered",
-		"_postman_id": "dfff3022-8479-4618-9af2-fcb2f77a2c44",
-		"request": {
-			"method": "POST",
-			"header": [{
-				"key": "X-Auth-Token",
-				"value": "{{access_token}}",
-				"type": "text"
-			}],
-			"body": {
-				"mode": "formdata",
-				"formdata": [{
-					"key": "order_id",
-					"value": "78",
-					"type": "text"
-				}]
+		{
+			"name": "{{base_url}}delivery_boy_api/pick_up_order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "order_id",
+							"value": "3367",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}delivery_boy_api/pick_up_order",
+					"host": [
+						"{{base_url}}delivery_boy_api"
+					],
+					"path": [
+						"pick_up_order"
+					]
+				}
 			},
-			"url": "{{base_url}}delivery_boy_api\/order_delivered"
+			"response": []
 		},
-		"response": []
-	}],
-	"event": [{
-		"listen": "prerequest",
-		"script": {
-			"id": "0a38fe58-0a29-43b7-8af6-06035e2c69a0",
-			"type": "text\/javascript",
-			"exec": [""]
+		{
+			"name": "{{base_url}}delivery_boy_api/order_delivered",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "order_id",
+							"value": "3367",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}delivery_boy_api/order_delivered",
+					"host": [
+						"{{base_url}}delivery_boy_api"
+					],
+					"path": [
+						"order_delivered"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}delivery_boy_api/get_google_direction",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "origin",
+							"value": "30.8921144,75.8750061",
+							"type": "text"
+						},
+						{
+							"key": "destination",
+							"value": "30.8921144,75.8750061",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}delivery_boy_api/get_google_direction",
+					"host": [
+						"{{base_url}}delivery_boy_api"
+					],
+					"path": [
+						"get_google_direction"
+					]
+				}
+			},
+			"response": []
 		}
-	}, {
-		"listen": "test",
-		"script": {
-			"id": "0aa6508c-af9f-4b36-97af-730f52c22a97",
-			"type": "text\/javascript",
-			"exec": [""]
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
 		}
-	}],
-	"variable": [{
-		"id": "b90e7378-a0fe-4241-8a25-05af7d58df6c",
-		"key": "access_token",
-		"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjFlZDYxZGI5NDhjM2UxMDUwYmJlMTViMDFlNGJmZmQwODg5MWYzMWM0ZjNkMjExOGQyMmNiNjEyYjZmZWFkZmEzNDUxMWYwZTY5MGZiNDRkODhjMTkxN2M5ZGRhNjBmZWZjYjY4NTNlNDBkNDY5M2MxYjNmM2Q1ZDVkNDllZjgwaGdjZ2NyRUl0LkVOYlJxQlVXbUU0Z3VrcWtzaTJNZ0FnZU8yUGpYTVZJcy0iLCJ1c2VybmFtZSI6InN1bmlsQHlvcG1haWwuY29tIiwiZW1haWwiOiJzdW5pbEB5b3BtYWlsLmNvbSIsInBob25lIjoiMTIzNjU0Nzg5MCIsImZpcnN0X25hbWUiOiJzdW5pbCIsImxhc3RfbmFtZSI6InRoYWt1ciIsImFkZHJlc3MiOiIyMTQgcGhhc2UgM2IxIG1vaGFsaSIsImxhbmdfaWQiOiIxIiwiaXNfZW1haWxfdmVyaWZpZWQiOiIxIiwiYWNjZXB0ZWRfdGVybXMiOiIwIiwiaW1hZ2UiOiJodHRwOlwvXC90ZXN0Lnl0aGV3YWl0LmNvbVwvdXBsb2Fkc1wvdXNlcnNcL2JvdF91c2VyLnBuZyIsInJlc3RhdXJhbnRfbmFtZSI6IllUVyBMYXVuY2ggTWFycmlvdHQiLCJyZXN0YXVyYW50X2ltYWdlIjoiMTU3NTcwNzE4OS5wbmciLCJyZXN0YXVyYW50X2xvbmdpdHVkZSI6Ijc1Ljg5ODI1OSIsInJlc3RhdXJhbnRfbGF0aXR1ZGUiOiIzMC44NzQ3NjUiLCJhdXRob3JpemF0aW9uIjoiIiwiY3VycmVudF9yZXN0YXVyYW50X2lkIjoiMjgiLCJjdXJyZW50X3dhaXRlcl9pZCI6IiIsImN1cnJlbnRfZGVsaXZlcnlfYm95X2lkIjoiMTAyMiIsInJlc3RhdXJhbnRzX2FkZHJlc3MiOiJHYW5kaGkgTmFnYXIgMXN0IEZsb29yLCBBYm92ZSBTQkkgRmluYW5jZSBCcmFuY2gsIEdyYW5kIFRydW5rIFJkLCBQYXJiaGF0IE5hZ2FyLCBMdWRoaWFuYSwgUHVuamFiLCBJbmRpYSIsImdyb3VwX2lkIjoiZDUwMGZiOGQ1M2M2NWYzYTMzZmQ0MmQwYWM3MjA3Y2RjMTMwODk5ODk3NzY0NzI2NmFjYWY2YmYyYTIwZjFmZGQwM2NiZjNiM2VhZTQwYzQ2YWU5NzQ1Y2Q2YjMyZmYwMDI3Mjg2Njc2M2M3M2JkZjYxZGI2YTA3MGM3ZGQyZmFISmE3UXNrMkhuMXVvbnR0TkhaRndYWUd3V1lhbTJWTERVNk5pdTB3NzJ3LSIsImN1cnJlbmN5IjoiXHUyMGI5IiwiZXhwaXJlX2RhdGUiOjE2MTY5Mjg4MDEsInVzZXJfYWdlbnQiOiJQb3N0bWFuUnVudGltZVwvNy4yNC4wIiwicmFuZCI6IjVlN2YzYWIxM2Q4ZjEifQ._OvV7KeFDwtNnDMpVaWn-VnN4Rf_c6d-OxdjhVGwTwk",
-		"type": "string"
-	}],
-	"protocolProfileBehavior": {}
+	],
+	"variable": [
+		{
+			"key": "access_token",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6Ijg5YmYzYmM2NDdlOGNhZmEyMzY5NTg3MWQzODUyYzVjM2ZjMGFiZmFhZDk0YWNlMjc1ZDAyYzU3ZjE4YWUyYzA0ZGU0YmNhNGNhOTdhODAyYjc5OWZjYTg5Yzg2M2UyMTM4ZWUyMDUwYjBjZjEwZDgxMDk1YTU5ZGMyZWQyZGQ1MVNkWEhTdmpYSVpkQ3VjNENaNVJQQ1JHT211eS5wTFAySGtUflBENFMwSS0iLCJ1c2VybmFtZSI6InNpbXJhbmplZXQuc2luZ2hfdGVzdEB5b3BtYWlsLmNvbSIsImVtYWlsIjoic2ltcmFuamVldC5zaW5naF90ZXN0QHlvcG1haWwuY29tIiwicGhvbmUiOiI5NzgxNTc5MTY2IiwiZmlyc3RfbmFtZSI6bnVsbCwibGFzdF9uYW1lIjpudWxsLCJhZGRyZXNzIjoidGVzdCIsImxhbmdfaWQiOiIxIiwiaXNfZW1haWxfdmVyaWZpZWQiOiIxIiwiYWNjZXB0ZWRfdGVybXMiOiIwIiwiaW1hZ2UiOiJodHRwOlwvXC9sb2NhbGhvc3RcL3l0aGV3YWl0XC91cGxvYWRzXC91c2Vyc1wvYm90X3VzZXIucG5nIiwicmVzdGF1cmFudF9uYW1lIjoiWWVsbG93IENoaWxsaVxcJ3MiLCJyZXN0YXVyYW50X2ltYWdlIjoiMTU4NzU0MDE5OS5wbmciLCJyZXN0YXVyYW50X2xvbmdpdHVkZSI6Ijc1Ljg3NTAwNjEiLCJyZXN0YXVyYW50X2xhdGl0dWRlIjoiMzAuODkyMTE0NCIsImF1dGhvcml6YXRpb24iOiIiLCJjdXJyZW50X3Jlc3RhdXJhbnRfaWQiOiIxODIiLCJjdXJyZW50X3dhaXRlcl9pZCI6IiIsImN1cnJlbnRfZGVsaXZlcnlfYm95X2lkIjoiNzAwIiwicmVzdGF1cmFudHNfYWRkcmVzcyI6IkV4dGVuc2lvbiBCYXNhbnQgdmloYXIgLFN0cmVldCBOby4yLE5vb3J3YWxhIHJvYWQsIEx1ZGhpYW5hLCBQdW5qYWIsIEluZGlhIiwiZ3JvdXBfaWQiOiI5Y2RkNjA0YmFiN2M2NjNlYTQ1MWEyZDY4YzkxYzQ5ZWViZWM2YWIwNjQ2YTllYzFmZDRjMmU2OWNkYmNjZTE1NDc3YzhlOWNmOWYxNDI1NzhiYjZlZWZkODc2ZjA5ZDdjY2NhNGRlMTYxYmQzMmRmNmVjYWRhZTdhNTJlZTc2ZkVKWDNDRk5ENXpDNFVuUTBMUEY5VU81YjcyMXl6U3YxRVUxbFRha3VUNnMtIiwiY3VycmVuY3kiOiJcdTIwYjkiLCJleHBpcmVfZGF0ZSI6MTY0NzQxODE1MCwidXNlcl9hZ2VudCI6IlBvc3RtYW5SdW50aW1lXC83LjI2LjgiLCJyYW5kIjoiNjA1MDY3YTYwYmE1OSJ9.LbwoRAo3wVVRW0Ky0vrEe7_COtmaIqCr5oOe9ufadvE"
+		}
+	]
 }
