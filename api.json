@@ -2296,26 +2296,20 @@
 					]
 				},
 				"url": {
-					"raw": "{{base_url}}/api/countryConversionRates?testing=11",
+					"raw": "{{base_url}}/api/countryConversionRates",
 					"host": [
 						"{{base_url}}"
 					],
 					"path": [
 						"api",
 						"countryConversionRates"
-					],
-					"query": [
-						{
-							"key": "testing",
-							"value": "11"
-						}
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "convertWalletCountry?testing=11",
+			"name": "convertWalletCountry",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -2356,19 +2350,13 @@
 					]
 				},
 				"url": {
-					"raw": "{{base_url}}/api/convertWalletCountry?testing=11",
+					"raw": "{{base_url}}/api/convertWalletCountry",
 					"host": [
 						"{{base_url}}"
 					],
 					"path": [
 						"api",
 						"convertWalletCountry"
-					],
-					"query": [
-						{
-							"key": "testing",
-							"value": "11"
-						}
 					]
 				}
 			},
