@@ -3756,6 +3756,834 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "{{base_url}}pos_api/product_report_daily",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"type": "text",
+						"value": "{{access_token}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "restaurant_id",
+							"value": "182",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "04-01-2021",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}pos_api/product_report_daily",
+					"host": [
+						"{{base_url}}pos_api"
+					],
+					"path": [
+						"product_report_daily"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}pos_api/product_report_weekly",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"type": "text",
+						"value": "{{access_token}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "restaurant_id",
+							"value": "182",
+							"type": "text"
+						},
+						{
+							"key": "week",
+							"value": "04-01-2021",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}pos_api/product_report_weekly",
+					"host": [
+						"{{base_url}}pos_api"
+					],
+					"path": [
+						"product_report_weekly"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}pos_api/product_report_monthly",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"type": "text",
+						"value": "{{access_token}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "restaurant_id",
+							"value": "182",
+							"type": "text"
+						},
+						{
+							"key": "month",
+							"value": "01",
+							"type": "text"
+						},
+						{
+							"key": "year",
+							"value": "2021",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}pos_api/product_report_monthly",
+					"host": [
+						"{{base_url}}pos_api"
+					],
+					"path": [
+						"product_report_monthly"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}pos_api/labour_report_daily",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"type": "text",
+						"value": "{{access_token}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "restaurant_id",
+							"value": "182",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "11-01-2021",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}pos_api/labour_report_daily",
+					"host": [
+						"{{base_url}}pos_api"
+					],
+					"path": [
+						"labour_report_daily"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}pos_api/labour_report_weekly",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"type": "text",
+						"value": "{{access_token}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "restaurant_id",
+							"value": "182",
+							"type": "text"
+						},
+						{
+							"key": "week",
+							"value": "2021-01-09",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}pos_api/labour_report_weekly",
+					"host": [
+						"{{base_url}}pos_api"
+					],
+					"path": [
+						"labour_report_weekly"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}pos_api/labour_report_monthly",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"type": "text",
+						"value": "{{access_token}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "restaurant_id",
+							"value": "182",
+							"type": "text"
+						},
+						{
+							"key": "month",
+							"value": "01",
+							"type": "text"
+						},
+						{
+							"key": "year",
+							"value": "2021",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}pos_api/labour_report_monthly",
+					"host": [
+						"{{base_url}}pos_api"
+					],
+					"path": [
+						"labour_report_monthly"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}pos_api/waiter_report_daily",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"type": "text",
+						"value": "{{access_token}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "restaurant_id",
+							"value": "182",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "11-01-2021",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}pos_api/waiter_report_daily",
+					"host": [
+						"{{base_url}}pos_api"
+					],
+					"path": [
+						"waiter_report_daily"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}pos_api/waiter_report_weekly",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"type": "text",
+						"value": "{{access_token}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "restaurant_id",
+							"value": "182",
+							"type": "text"
+						},
+						{
+							"key": "week",
+							"value": "11-01-2021",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}pos_api/waiter_report_weekly",
+					"host": [
+						"{{base_url}}pos_api"
+					],
+					"path": [
+						"waiter_report_weekly"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}pos_api/waiter_report_monthly",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"type": "text",
+						"value": "{{access_token}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "restaurant_id",
+							"value": "182",
+							"type": "text"
+						},
+						{
+							"key": "month",
+							"value": "01",
+							"type": "text"
+						},
+						{
+							"key": "year",
+							"value": "2021",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}pos_api/waiter_report_monthly",
+					"host": [
+						"{{base_url}}pos_api"
+					],
+					"path": [
+						"waiter_report_monthly"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}pos_api/ingredient_report_daily",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"type": "text",
+						"value": "{{access_token}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "restaurant_id",
+							"value": "182",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "11-01-2021",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}pos_api/ingredient_report_daily",
+					"host": [
+						"{{base_url}}pos_api"
+					],
+					"path": [
+						"ingredient_report_daily"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}pos_api/ingredient_report_weekly",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"type": "text",
+						"value": "{{access_token}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "restaurant_id",
+							"value": "182",
+							"type": "text"
+						},
+						{
+							"key": "week",
+							"value": "11-01-2021",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}pos_api/ingredient_report_weekly",
+					"host": [
+						"{{base_url}}pos_api"
+					],
+					"path": [
+						"ingredient_report_weekly"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}pos_api/ingredient_report_monthly",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"type": "text",
+						"value": "{{access_token}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "restaurant_id",
+							"value": "182",
+							"type": "text"
+						},
+						{
+							"key": "month",
+							"value": "01",
+							"type": "text"
+						},
+						{
+							"key": "year",
+							"value": "2021",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}pos_api/ingredient_report_monthly",
+					"host": [
+						"{{base_url}}pos_api"
+					],
+					"path": [
+						"ingredient_report_monthly"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}pos_api/revenue_report_daily",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"type": "text",
+						"value": "{{access_token}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "restaurant_id",
+							"value": "182",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "01-01-2021",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}pos_api/revenue_report_daily",
+					"host": [
+						"{{base_url}}pos_api"
+					],
+					"path": [
+						"revenue_report_daily"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}pos_api/revenue_report_weekly",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"type": "text",
+						"value": "{{access_token}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "restaurant_id",
+							"value": "182",
+							"type": "text"
+						},
+						{
+							"key": "week",
+							"value": "01-01-2021",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}pos_api/revenue_report_weekly",
+					"host": [
+						"{{base_url}}pos_api"
+					],
+					"path": [
+						"revenue_report_weekly"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}pos_api/revenue_report_monthly",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"type": "text",
+						"value": "{{access_token}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "restaurant_id",
+							"value": "182",
+							"type": "text"
+						},
+						{
+							"key": "month",
+							"value": "01",
+							"type": "text"
+						},
+						{
+							"key": "year",
+							"value": "2021",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}pos_api/revenue_report_monthly",
+					"host": [
+						"{{base_url}}pos_api"
+					],
+					"path": [
+						"revenue_report_monthly"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}pos_api/tips_report",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"type": "text",
+						"value": "{{access_token}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "restaurant_id",
+							"value": "182",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "monthly",
+							"description": "daily||weekly||monthly",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "",
+							"description": "any one from date||week||month  (Enter date 01-01-2021)",
+							"type": "text"
+						},
+						{
+							"key": "week",
+							"value": "",
+							"description": "any one from date||week||month (Enter date 01-01-2021)",
+							"type": "text"
+						},
+						{
+							"key": "month",
+							"value": "01-01-2021",
+							"description": "any one from date||week||month (Enter date 01-01-2021)",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}pos_api/tips_report",
+					"host": [
+						"{{base_url}}pos_api"
+					],
+					"path": [
+						"tips_report"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"event": [
@@ -3781,7 +4609,7 @@
 	"variable": [
 		{
 			"key": "access_token",
-			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6ImMxMGQxYjliODExZTEyZTQzMzllNmMwNTEzYzY3MWY0ZGQ0MjYyMjc4NjAwY2FjZTlkMmNiY2ZkM2ZjZjUzOTQ1ZGIzMjYxMTMyMWEyNDRkODEyNzk0YmFmMzc2MTA4NGFkMzdlZjZkNjE1NWM0NzliODkwMGY2Mzk2ZTY2NmJmRUtSUFIyR2dSbVlEZTh2cE9OVDladTA3bnVIeVFUTThseE50MjY0S3dZRS0iLCJlbWFpbCI6Imp5b3Rpc2hhcm1hMTk2NUB5b3BtYWlsLmNvbSIsInBob25lIjoiOTg3NDEyMzQ1NiIsImZpcnN0X25hbWUiOiJKeW90aSIsImxhc3RfbmFtZSI6IlNoYXJtYSIsInBpbiI6IjExMTEiLCJhZGRyZXNzIjoiTHVkaGlhbmEsIFB1bmphYiwgSW5kaWEiLCJncm91cF9pZCI6ImQ4ZjgxMTk5ZGUyOWY3YjZmYzRiMTQ3MjE2NjlhZDZiMzFhNWEyZGI3YjZkNjI5YWY0NzQ0ZjIwZWZjODg0NGI5YWI4M2QyOTE1YTFiMTQwZGZiZDVjOTlkOWE4NWU2NjViNjdjZWE1N2U2OWIwNDIxNTQyZDkxZDRmOTVlZTE0aUxBM1F0TzlCTzNlZ1ZFc3BUbUVLQUh-MDJXNWlKODBYU2lQSlQ1WTM1NC0iLCJsYW5nX2lkIjoiMSIsImlzX2VtYWlsX3ZlcmlmaWVkIjoiMSIsImFjY2VwdGVkX3Rlcm1zIjoiMCIsImltYWdlIjoiaHR0cDpcL1wvd3d3Lnl0aGV3YWl0LWxvY2FsLmNvbVwvdXBsb2Fkc1wvdXNlcnNcL2JvdF91c2VyLnBuZyIsImNhc2hfY291bnRlcl90eXBlIjoiIiwiY2FzaF9jb3VudGVyX21lYW4iOiJNYWluIENvdW50ZXIgKyBXYWl0ZXJzIENvdW50ZXIiLCJhdXRob3JpemF0aW9uIjoiIiwibm9fb2ZfcGVyc29uc19kcm9wZG93bl9lbmRfdmFsdWUiOiIiLCJleHBpcmVfZGF0ZSI6MTY0ODc5Njk4NCwidXNlcl9hZ2VudCI6IlBvc3RtYW5SdW50aW1lXC83LjI2LjgiLCJyYW5kIjoiNjA2NTcxYjg4OTg0NSJ9.0pn1IrLWocmA2CYJBEVJJrJRdu0Ev8IBKAFzaCCKn3g"
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjdkNmM3M2FkNDZjMTUwMjk5MzM2MzZlYzM3MWI2YjdjNTlkNWE5YjljYTA0MTNkNDlhNTYwN2U4ZDE0ZWYxZWVjMTFhNDg3NDE4MzUzYTBhNjYyMWU0ODUzZDQ0OTE4OWM1NDdiYzY5ZjdlOWFmZDYwNThmZmEzNWE5MWNkMDA5LmNSNHp0U0tpSUxCbzF0cTZMd2dlaGcwT0QxWjdBLnZRUjdFYkF6djF-NC0iLCJlbWFpbCI6Imp5b3Rpc2hhcm1hMTk2NUB5b3BtYWlsLmNvbSIsInBob25lIjoiOTg3NDEyMzQ1NiIsImZpcnN0X25hbWUiOiJKeW90aSIsImxhc3RfbmFtZSI6IlNoYXJtYSIsInBpbiI6IjExMTEiLCJhZGRyZXNzIjoiTHVkaGlhbmEsIFB1bmphYiwgSW5kaWEiLCJncm91cF9pZCI6ImY0MTlkMjYyN2JmY2NiYzAxMzY3Yzc1Zjg5N2ZjYzk1YTU1MThjMGE3OTkwNjFlNDNlMTJkOWE0ODM4Y2VlZjc2NTdmYzI3YTUyZDY5OWZjMTc3ZDUyMjk3N2JkNmQzYTM2NjA2MGUwNjAxYjk5MzFmNTY0YzdlYjFiYjhjOWJmUTZ-UzFZNm0uQ3ZpMGxpRmpOb1UuaXhrTjdLNS5rVkNtalVqR0xCQ2R1NC0iLCJsYW5nX2lkIjoiMSIsImlzX2VtYWlsX3ZlcmlmaWVkIjoiMSIsImFjY2VwdGVkX3Rlcm1zIjoiMCIsImltYWdlIjoiaHR0cDpcL1wvd3d3Lnl0aGV3YWl0LWxvY2FsLmNvbVwvdXBsb2Fkc1wvdXNlcnNcL2JvdF91c2VyLnBuZyIsImNhc2hfY291bnRlcl90eXBlIjoiIiwiY2FzaF9jb3VudGVyX21lYW4iOiJNYWluIENvdW50ZXIgKyBXYWl0ZXJzIENvdW50ZXIiLCJhdXRob3JpemF0aW9uIjoiIiwibm9fb2ZfcGVyc29uc19kcm9wZG93bl9lbmRfdmFsdWUiOiIiLCJleHBpcmVfZGF0ZSI6MTY0ODgwMDc3NSwidXNlcl9hZ2VudCI6IlBvc3RtYW5SdW50aW1lXC83LjI2LjgiLCJyYW5kIjoiNjA2NTgwODcyMDMyZCJ9.9FvqBEw9DLu4zhCtL5k7GcgKI54k2G3J2v45bkzMBR8"
 		},
 		{
 			"key": "base_url",
