@@ -5299,6 +5299,94 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "{{base_url}}/pos_api/kitchen",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "restaurant_id",
+							"value": "296",
+							"description": "Required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/pos_api/kitchen",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"pos_api",
+						"kitchen"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/pos_api/start_cooking",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "restaurant_id",
+							"value": "296",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "item_status[0]",
+							"value": "2",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "order_item_id[0]",
+							"value": "34105",
+							"description": "Required",
+							"type": "text"
+						},
+						{
+							"key": "order_id[0]",
+							"value": "12970",
+							"description": "Required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/pos_api/start_cooking",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"pos_api",
+						"start_cooking"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"event": [
