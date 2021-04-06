@@ -5301,7 +5301,7 @@
 			"response": []
 		},
 		{
-			"name": "{{base_url}}/pos_api/kitchen",
+			"name": "{{base_url}}/pos_api/all_kitchen_order",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -5323,13 +5323,13 @@
 					]
 				},
 				"url": {
-					"raw": "{{base_url}}/pos_api/kitchen",
+					"raw": "{{base_url}}/pos_api/all_kitchen_order",
 					"host": [
 						"{{base_url}}"
 					],
 					"path": [
 						"pos_api",
-						"kitchen"
+						"all_kitchen_order"
 					]
 				}
 			},
