@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "6e9c672a-bfe2-4f8a-b902-c6ff4bd0e752",
-		"name": "User Apis",
+		"_postman_id": "55c35e1e-306b-4783-9d6d-1cbcb6ee03f7",
+		"name": "User Apis Copy",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -2383,6 +2383,80 @@
 					"path": [
 						"api",
 						"invite_all_users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/api/submitRestaurantCheckListCode",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "restaurant_id",
+							"value": "182",
+							"type": "text"
+						},
+						{
+							"key": "check_list[res_ques_one_loc]",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "check_list[res_ques_two_loc]",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "check_list[res_ques_three_loc]",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "check_list[res_ques_four_loc]",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "check_list[res_ques_five_loc]",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "check_list[res_ques_six_loc]",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "check_list[res_ques_seven_loc]",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "check_list[res_ques_eight_loc]",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/submitRestaurantCheckListCode",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"submitRestaurantCheckListCode"
 					]
 				}
 			},
