@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "9f28a644-0351-45de-94bd-5c194abf3deb",
-		"name": "POS APIS",
+		"_postman_id": "79979670-6a1c-4937-881c-0740c3eb6ad8",
+		"name": "POS APIS Testing",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -11,7 +11,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "6d197679-156c-4e4e-aea3-7c002c2485c8",
 						"exec": [
 							""
 						],
@@ -55,7 +54,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "38458899-5336-4856-9d5c-69741acab844",
 						"exec": [
 							""
 						],
@@ -87,7 +85,6 @@
 						"type": "text"
 					}
 				],
-				"body": {},
 				"url": {
 					"raw": "{{base_url}}pos_api/user_restaurants_list",
 					"host": [
@@ -773,9 +770,9 @@
 						},
 						{
 							"key": "docsimage",
+							"value": "",
 							"description": "[send files/file in docsimage[] array]",
-							"type": "file",
-							"src": ""
+							"type": "file"
 						}
 					]
 				},
@@ -851,13 +848,13 @@
 						},
 						{
 							"key": "front_page",
-							"type": "file",
-							"src": ""
+							"value": "",
+							"type": "file"
 						},
 						{
 							"key": "back_page",
-							"type": "file",
-							"src": ""
+							"value": "",
+							"type": "file"
 						}
 					]
 				},
@@ -3538,205 +3535,37 @@
 					"formdata": [
 						{
 							"key": "restaurant_id",
-							"value": "182",
+							"value": "67",
 							"type": "text"
 						},
 						{
 							"key": "start_date",
-							"value": "01-04-2021",
+							"value": "01-03-2020",
 							"type": "text"
 						},
 						{
 							"key": "end_date",
-							"value": "01-04-2021",
+							"value": "01-04-2020",
 							"type": "text"
 						},
 						{
 							"key": "report",
 							"value": "sales_report",
 							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "{{base_url}}pos_api/get_report",
-					"host": [
-						"{{base_url}}pos_api"
-					],
-					"path": [
-						"get_report"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "restaurant_bookings_by_daily",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							""
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "X-Auth-Token",
-						"type": "text",
-						"value": "{{access_token}}"
-					}
-				],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "restaurant_id",
-							"value": "182",
-							"type": "text"
-						},
-						{
-							"key": "start_date",
-							"value": "01-04-2020",
-							"type": "text"
-						},
-						{
-							"key": "end_date",
-							"value": "01-04-2021",
-							"type": "text"
-						},
-						{
-							"key": "report",
-							"value": "restaurant_bookings_by_daily",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "{{base_url}}pos_api/get_report",
-					"host": [
-						"{{base_url}}pos_api"
-					],
-					"path": [
-						"get_report"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "restaurant_bookings_by_month",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							""
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "X-Auth-Token",
-						"type": "text",
-						"value": "{{access_token}}"
-					}
-				],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "restaurant_id",
-							"value": "182",
-							"type": "text"
-						},
-						{
-							"key": "start_date",
-							"value": "01-04-2020",
-							"type": "text"
-						},
-						{
-							"key": "end_date",
-							"value": "01-04-2021",
-							"type": "text"
-						},
-						{
-							"key": "report",
-							"value": "restaurant_bookings_by_month",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "{{base_url}}pos_api/get_report",
-					"host": [
-						"{{base_url}}pos_api"
-					],
-					"path": [
-						"get_report"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "sales_by_daily",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							""
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "X-Auth-Token",
-						"type": "text",
-						"value": "{{access_token}}"
-					}
-				],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "restaurant_id",
-							"value": "182",
-							"type": "text"
-						},
-						{
-							"key": "start_date",
-							"value": "01-04-2020",
-							"type": "text"
-						},
-						{
-							"key": "end_date",
-							"value": "01-04-2021",
-							"type": "text"
 						},
 						{
 							"key": "delivery_type",
-							"value": "Delivery",
-							"description": "Delivery||Takeaway||Dine In",
+							"value": "3",
 							"type": "text"
 						},
 						{
-							"key": "report",
-							"value": "sales_by_daily",
+							"key": "page_no",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "limit",
+							"value": "10",
 							"type": "text"
 						}
 					]
@@ -3754,7 +3583,7 @@
 			"response": []
 		},
 		{
-			"name": "sales_by_month",
+			"name": "restaurant_bookings_report",
 			"event": [
 				{
 					"listen": "test",
@@ -3780,28 +3609,32 @@
 					"formdata": [
 						{
 							"key": "restaurant_id",
-							"value": "182",
+							"value": "67",
 							"type": "text"
 						},
 						{
 							"key": "start_date",
-							"value": "01-04-2020",
+							"value": "01-02-2020",
 							"type": "text"
 						},
 						{
 							"key": "end_date",
-							"value": "01-04-2021",
-							"type": "text"
-						},
-						{
-							"key": "delivery_type",
-							"value": "Delivery",
-							"description": "Delivery||Takeaway||Dine In",
+							"value": "01-04-2020",
 							"type": "text"
 						},
 						{
 							"key": "report",
-							"value": "sales_by_month",
+							"value": "restaurant_bookings_report",
+							"type": "text"
+						},
+						{
+							"key": "page_no",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "limit",
+							"value": "10",
 							"type": "text"
 						}
 					]
@@ -3819,7 +3652,7 @@
 			"response": []
 		},
 		{
-			"name": "product_report_daily",
+			"name": "product_report",
 			"event": [
 				{
 					"listen": "test",
@@ -3845,17 +3678,32 @@
 					"formdata": [
 						{
 							"key": "restaurant_id",
-							"value": "182",
+							"value": "67",
 							"type": "text"
 						},
 						{
 							"key": "start_date",
-							"value": "04-01-2021",
+							"value": "01-01-2016",
 							"type": "text"
 						},
 						{
 							"key": "report",
-							"value": "product_report_daily",
+							"value": "product_report",
+							"type": "text"
+						},
+						{
+							"key": "end_date",
+							"value": "30-12-2016",
+							"type": "text"
+						},
+						{
+							"key": "page_no",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "limit",
+							"value": "10",
 							"type": "text"
 						}
 					]
@@ -3873,7 +3721,7 @@
 			"response": []
 		},
 		{
-			"name": "product_report_weekly",
+			"name": "labour_report",
 			"event": [
 				{
 					"listen": "test",
@@ -3899,17 +3747,32 @@
 					"formdata": [
 						{
 							"key": "restaurant_id",
-							"value": "182",
+							"value": "67",
 							"type": "text"
 						},
 						{
 							"key": "start_date",
-							"value": "04-01-2021",
+							"value": "01-01-2020",
 							"type": "text"
 						},
 						{
 							"key": "report",
-							"value": "product_report_weekly",
+							"value": "labour_report",
+							"type": "text"
+						},
+						{
+							"key": "end_date",
+							"value": "30-01-2020",
+							"type": "text"
+						},
+						{
+							"key": "page_no",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "limit",
+							"value": "1",
 							"type": "text"
 						}
 					]
@@ -3927,7 +3790,7 @@
 			"response": []
 		},
 		{
-			"name": "product_report_monthly",
+			"name": "waiter_report",
 			"event": [
 				{
 					"listen": "test",
@@ -3953,17 +3816,32 @@
 					"formdata": [
 						{
 							"key": "restaurant_id",
-							"value": "182",
+							"value": "67",
 							"type": "text"
 						},
 						{
 							"key": "start_date",
-							"value": "01-06-2021",
+							"value": "01-02-2020",
 							"type": "text"
 						},
 						{
 							"key": "report",
-							"value": "product_report_monthly",
+							"value": "waiter_report",
+							"type": "text"
+						},
+						{
+							"key": "end_date",
+							"value": "30-12-2021",
+							"type": "text"
+						},
+						{
+							"key": "page_no",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "limit",
+							"value": "1",
 							"type": "text"
 						}
 					]
@@ -3981,7 +3859,7 @@
 			"response": []
 		},
 		{
-			"name": "labour_report_daily",
+			"name": "ingredient_report",
 			"event": [
 				{
 					"listen": "test",
@@ -4007,169 +3885,7 @@
 					"formdata": [
 						{
 							"key": "restaurant_id",
-							"value": "182",
-							"type": "text"
-						},
-						{
-							"key": "start_date",
-							"value": "11-01-2021",
-							"type": "text"
-						},
-						{
-							"key": "report",
-							"value": "labour_report_daily",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "{{base_url}}pos_api/get_report",
-					"host": [
-						"{{base_url}}pos_api"
-					],
-					"path": [
-						"get_report"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "labour_report_weekly",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							""
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "X-Auth-Token",
-						"type": "text",
-						"value": "{{access_token}}"
-					}
-				],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "restaurant_id",
-							"value": "182",
-							"type": "text"
-						},
-						{
-							"key": "start_date",
-							"value": "2021-01-09",
-							"type": "text"
-						},
-						{
-							"key": "report",
-							"value": "labour_report_weekly",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "{{base_url}}pos_api/get_report",
-					"host": [
-						"{{base_url}}pos_api"
-					],
-					"path": [
-						"get_report"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "labour_report_monthly",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							""
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "X-Auth-Token",
-						"type": "text",
-						"value": "{{access_token}}"
-					}
-				],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "restaurant_id",
-							"value": "182",
-							"type": "text"
-						},
-						{
-							"key": "start_date",
-							"value": "01-06-2021",
-							"type": "text"
-						},
-						{
-							"key": "report",
-							"value": "labour_report_monthly",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "{{base_url}}pos_api/get_report",
-					"host": [
-						"{{base_url}}pos_api"
-					],
-					"path": [
-						"get_report"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "waiter_report_daily",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							""
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "X-Auth-Token",
-						"type": "text",
-						"value": "{{access_token}}"
-					}
-				],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "restaurant_id",
-							"value": "182",
+							"value": "67",
 							"type": "text"
 						},
 						{
@@ -4179,7 +3895,22 @@
 						},
 						{
 							"key": "report",
-							"value": "waiter_report_daily",
+							"value": "ingredient_report",
+							"type": "text"
+						},
+						{
+							"key": "end_date",
+							"value": "31-01-2021",
+							"type": "text"
+						},
+						{
+							"key": "page_no",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "limit",
+							"value": "10",
 							"type": "text"
 						}
 					]
@@ -4197,277 +3928,7 @@
 			"response": []
 		},
 		{
-			"name": "waiter_report_weekly",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							""
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "X-Auth-Token",
-						"type": "text",
-						"value": "{{access_token}}"
-					}
-				],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "restaurant_id",
-							"value": "182",
-							"type": "text"
-						},
-						{
-							"key": "start_date",
-							"value": "11-01-2021",
-							"type": "text"
-						},
-						{
-							"key": "report",
-							"value": "waiter_report_weekly",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "{{base_url}}pos_api/get_report",
-					"host": [
-						"{{base_url}}pos_api"
-					],
-					"path": [
-						"get_report"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "waiter_report_monthly",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							""
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "X-Auth-Token",
-						"type": "text",
-						"value": "{{access_token}}"
-					}
-				],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "restaurant_id",
-							"value": "182",
-							"type": "text"
-						},
-						{
-							"key": "start_date",
-							"value": "01-06-2021",
-							"type": "text"
-						},
-						{
-							"key": "report",
-							"value": "waiter_report_monthly",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "{{base_url}}pos_api/get_report",
-					"host": [
-						"{{base_url}}pos_api"
-					],
-					"path": [
-						"get_report"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "ingredient_report_daily",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							""
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "X-Auth-Token",
-						"type": "text",
-						"value": "{{access_token}}"
-					}
-				],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "restaurant_id",
-							"value": "182",
-							"type": "text"
-						},
-						{
-							"key": "start_date",
-							"value": "11-01-2021",
-							"type": "text"
-						},
-						{
-							"key": "report",
-							"value": "ingredient_report_daily",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "{{base_url}}pos_api/get_report",
-					"host": [
-						"{{base_url}}pos_api"
-					],
-					"path": [
-						"get_report"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "ingredient_report_weekly",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							""
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "X-Auth-Token",
-						"type": "text",
-						"value": "{{access_token}}"
-					}
-				],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "restaurant_id",
-							"value": "182",
-							"type": "text"
-						},
-						{
-							"key": "start_date",
-							"value": "11-01-2021",
-							"type": "text"
-						},
-						{
-							"key": "report",
-							"value": "ingredient_report_weekly",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "{{base_url}}pos_api/get_report",
-					"host": [
-						"{{base_url}}pos_api"
-					],
-					"path": [
-						"get_report"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "ingredient_report_monthly",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							""
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "X-Auth-Token",
-						"type": "text",
-						"value": "{{access_token}}"
-					}
-				],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "restaurant_id",
-							"value": "182",
-							"type": "text"
-						},
-						{
-							"key": "start_date",
-							"value": "01-06-2021",
-							"type": "text"
-						},
-						{
-							"key": "report",
-							"value": "ingredient_report_monthly",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "{{base_url}}pos_api/get_report",
-					"host": [
-						"{{base_url}}pos_api"
-					],
-					"path": [
-						"get_report"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "revenue_report_daily",
+			"name": "revenue_report",
 			"event": [
 				{
 					"listen": "test",
@@ -4503,115 +3964,22 @@
 						},
 						{
 							"key": "report",
-							"value": "revenue_report_daily",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "{{base_url}}pos_api/get_report",
-					"host": [
-						"{{base_url}}pos_api"
-					],
-					"path": [
-						"get_report"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "revenue_report_weekly",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							""
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "X-Auth-Token",
-						"type": "text",
-						"value": "{{access_token}}"
-					}
-				],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "restaurant_id",
-							"value": "182",
+							"value": "revenue_report",
 							"type": "text"
 						},
 						{
-							"key": "start_date",
-							"value": "01-01-2021",
+							"key": "end_date",
+							"value": "31-01-2021",
 							"type": "text"
 						},
 						{
-							"key": "report",
-							"value": "revenue_report_weekly",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "{{base_url}}pos_api/get_report",
-					"host": [
-						"{{base_url}}pos_api"
-					],
-					"path": [
-						"get_report"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "revenue_report_monthly",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							""
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "X-Auth-Token",
-						"type": "text",
-						"value": "{{access_token}}"
-					}
-				],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "restaurant_id",
-							"value": "182",
+							"key": "page_no",
+							"value": "1",
 							"type": "text"
 						},
 						{
-							"key": "start_date",
-							"value": "01-06-2021",
-							"type": "text"
-						},
-						{
-							"key": "report",
-							"value": "revenue_report_monthly",
+							"key": "limit",
+							"value": "10",
 							"type": "text"
 						}
 					]
@@ -4655,24 +4023,32 @@
 					"formdata": [
 						{
 							"key": "restaurant_id",
-							"value": "182",
-							"type": "text"
-						},
-						{
-							"key": "type",
-							"value": "monthly",
-							"description": "daily||weekly||monthly",
+							"value": "67",
 							"type": "text"
 						},
 						{
 							"key": "start_date",
-							"value": "01-06-2021",
-							"description": "any one from date||week||month  (Enter date 01-01-2021)",
+							"value": "01-01-2021",
 							"type": "text"
 						},
 						{
 							"key": "report",
 							"value": "tips_report",
+							"type": "text"
+						},
+						{
+							"key": "end_date",
+							"value": "31-07-2021",
+							"type": "text"
+						},
+						{
+							"key": "page_no",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "limit",
+							"value": "10",
 							"type": "text"
 						}
 					]
@@ -4694,7 +4070,6 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "c07abade-8715-46de-ab88-c4d028f4c703",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -4704,7 +4079,6 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "c860a481-6c44-4004-9c92-b273846b5e70",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -4714,7 +4088,6 @@
 	],
 	"variable": [
 		{
-			"id": "29efa745-15e4-40e0-8143-64c2ba1541dd",
 			"key": "access_token",
 			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjA4ZDc3NjFkNDcyNDg3YWExZTJiOTg4NDQyYTM4NmM5ZDdlNTJjMjVjOGIyNWJmNzZiMWIyZDZlNTAzNjJiZGJmNTQ3Yjc5ZWU2MGE4NTcwNjY3YzNiNDM4YmU2NmQ4ZDIyNTkzNzBhZjAwY2QxM2ZiNGU1MTRiYmJjZTc0MjMzNmk5MzlWLm82UTVZUS5tOWRYMVRlbDg1SzRSNHg3MFNUNkNVODJKbTdUMC0iLCJlbWFpbCI6ImhhcnByZWV0c2luZ2hzYWhpODlAeW9wbWFpbC5jb20iLCJwaG9uZSI6Ijc4OTQ1NjEyMzAiLCJmaXJzdF9uYW1lIjoiSGFycHJlZXQgU2luZ2giLCJsYXN0X25hbWUiOiJTYWhpIiwicGluIjoiMTExMSIsImFkZHJlc3MiOiJTdHJlZXQuTm8uOCIsImdyb3VwX2lkIjoiNjRhNWJjMGFlM2QyZDExZjUyOWYwOGZiNDg3OTRiMTgwM2U5MGY0YjMwMzRiZDhkN2E4NGRhYTFkYTk2NjAxMmEyODE4MmY0ZDBjMzZmMjM1MjY5OTY3Yzg4YWZiNjc2YTIxZTVjZDE5ZjZlNzVmZjMwNjE4NjI0M2UxMTdmZWZKYkRoa2RGalIxREY0QmxIdUdLYTl0ZWpBTGpqc3pVYzZmfjF-MlI3czJZLSIsImxhbmdfaWQiOiIxIiwiaXNfZW1haWxfdmVyaWZpZWQiOiIwIiwiYWNjZXB0ZWRfdGVybXMiOiIwIiwiaW1hZ2UiOiJodHRwOlwvXC9saXZlLnl0aGV3YWl0LmNvbVwvdXBsb2Fkc1wvdXNlcnNcL2JvdF91c2VyLnBuZyIsImNhc2hfY291bnRlcl90eXBlIjoiIiwiY2FzaF9jb3VudGVyX21lYW4iOiJNYWluIENvdW50ZXIgKyBXYWl0ZXJzIENvdW50ZXIiLCJhdXRob3JpemF0aW9uIjoiIiwibm9fb2ZfcGVyc29uc19kcm9wZG93bl9lbmRfdmFsdWUiOiI1MCIsImV4cGlyZV9kYXRlIjoxNjE3MjgzMjY1LCJ1c2VyX2FnZW50IjoiUG9zdG1hblJ1bnRpbWVcLzcuMjQuMCIsInJhbmQiOiI1ZTg0OTU0MTljODhlIn0.FkutaQ3gCEBARypYlc7vPNH2vNERYOG4RM0G0ipBAE0",
 			"type": "string"
