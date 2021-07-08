@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "f238ff8d-0234-448c-9c86-73f6f1e8efcc",
+		"_postman_id": "4076e8e8-164a-4ae0-b97b-fc66512a8a10",
 		"name": "POS APIS",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -6561,6 +6561,80 @@
 					],
 					"path": [
 						"get_report"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}pos_api/register",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "Simranjeet",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Singh",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "simranjeet.qodemaker26@yopmail.com",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "9781579168",
+							"type": "text"
+						},
+						{
+							"key": "country_code",
+							"value": "91",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "confirm_password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}pos_api/register?testing=11",
+					"host": [
+						"{{base_url}}pos_api"
+					],
+					"path": [
+						"register"
+					],
+					"query": [
+						{
+							"key": "testing",
+							"value": "11"
+						}
 					]
 				}
 			},
