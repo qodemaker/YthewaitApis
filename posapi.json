@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "4076e8e8-164a-4ae0-b97b-fc66512a8a10",
+		"_postman_id": "695910d5-271d-4f33-a61a-a907378ad544",
 		"name": "POS APIS",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -6635,6 +6635,300 @@
 							"key": "testing",
 							"value": "11"
 						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "googlelogin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "Simranjeet",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Singh",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "simranjeet.qodemaker26@yopmail.com",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "9781579168",
+							"type": "text"
+						},
+						{
+							"key": "country_code",
+							"value": "91",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "confirm_password",
+							"value": "12345678?",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}pos_api/googleLogin?access_token=ya29.a0ARrdaM8Wo7CpKEqFUufj0q3zjToQGH2qkerdc5Sw-B9M4noc5wMdqAfKqaZGa4gfVlTHByr2aemaeT8L6d3ld2f8e7oYIUpAvQdbAlT6BzM6SmK4fqrYc8JSOs3ZWGijS_6ouayX3rGjqKONAf3J88uVBebB",
+					"host": [
+						"{{base_url}}pos_api"
+					],
+					"path": [
+						"googleLogin"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "ya29.a0ARrdaM8Wo7CpKEqFUufj0q3zjToQGH2qkerdc5Sw-B9M4noc5wMdqAfKqaZGa4gfVlTHByr2aemaeT8L6d3ld2f8e7oYIUpAvQdbAlT6BzM6SmK4fqrYc8JSOs3ZWGijS_6ouayX3rGjqKONAf3J88uVBebB"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "twitterLogin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "Simranjeet",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Singh",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "simranjeet.qodemaker26@yopmail.com",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "9781579168",
+							"type": "text"
+						},
+						{
+							"key": "country_code",
+							"value": "91",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "confirm_password",
+							"value": "12345678?",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}pos_api/twitterLogin?oauth_token=1411977746238955520-5Y0rh7UmEtTRT4ZSqPCZ47wSGrklMu&oauth_token_secret=q1qZsAtyhLt4dYDbihknwsqKKXRfk5RW1VolN3vaTuty0",
+					"host": [
+						"{{base_url}}pos_api"
+					],
+					"path": [
+						"twitterLogin"
+					],
+					"query": [
+						{
+							"key": "oauth_token",
+							"value": "1411977746238955520-5Y0rh7UmEtTRT4ZSqPCZ47wSGrklMu"
+						},
+						{
+							"key": "oauth_token_secret",
+							"value": "q1qZsAtyhLt4dYDbihknwsqKKXRfk5RW1VolN3vaTuty0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "facebookLogin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "Simranjeet",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Singh",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "simranjeet.qodemaker26@yopmail.com",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "9781579168",
+							"type": "text"
+						},
+						{
+							"key": "country_code",
+							"value": "91",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "confirm_password",
+							"value": "12345678?",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}pos_api/facebookLogin?access_token=EAA8hcZCnag3IBACCSRJeIwwiZCOu0TafTMqaPYFq6CXUNjqCX156rrEnCIHjtZAZATmai7OPrPZBTVKwZAoa490PQX0ZACjlY3zkdk4jAskjPpN1dtRkXTTyUGtVC4iocSa8SabRtmsklDVvMChRdaezpuahFcIRUyCLpf8PBWDxVJNniVQCiZAm",
+					"host": [
+						"{{base_url}}pos_api"
+					],
+					"path": [
+						"facebookLogin"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "EAA8hcZCnag3IBACCSRJeIwwiZCOu0TafTMqaPYFq6CXUNjqCX156rrEnCIHjtZAZATmai7OPrPZBTVKwZAoa490PQX0ZACjlY3zkdk4jAskjPpN1dtRkXTTyUGtVC4iocSa8SabRtmsklDVvMChRdaezpuahFcIRUyCLpf8PBWDxVJNniVQCiZAm"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "appleLogin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "family_name",
+							"value": "singh",
+							"type": "text"
+						},
+						{
+							"key": "given_name",
+							"value": "pawanpreet",
+							"type": "text"
+						},
+						{
+							"key": "code",
+							"value": "c8879878637974ca7a32316a1e9eaccbe.0.rwzv.tzTLu31TOn7XcX3ApenULQ",
+							"type": "text"
+						},
+						{
+							"key": "lang_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "referred_by",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "ios_device_id",
+							"value": "5fba9b261c7bc07bce6b73ae92cc21dc7b7fb074f480e010df0c849878c4832e",
+							"type": "text"
+						},
+						{
+							"key": "user_data",
+							"value": "eyJpc3MiOiJodHRwczovL2FwcGxlaWQuYXBwbGUuY29tIiwiYXVkIjoiY29tLnFvZGVtYWtlci55dGhld2FpdCIsImV4cCI6MTYyNTg5Nzc1NywiaWF0IjoxNjI1ODExMzU3LCJzdWIiOiIwMDA2OTUuNWEyYThhYmU0MTIzNDRkNDhiZWQ5MDdlNGIzMzRlYjkuMDYxNSIsImNfaGFzaCI6IndVTGhqWktrdFFFU2FXT20td1hKLXciLCJlbWFpbCI6InBhd2FubWFra2FyNjdAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOiJ0cnVlIiwiYXV0aF90aW1lIjoxNjI1ODExMzU3LCJub25jZV9zdXBwb3J0ZWQiOnRydWUsInJlYWxfdXNlcl9zdGF0dXMiOjJ9",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}pos_api/appleLogin",
+					"host": [
+						"{{base_url}}pos_api"
+					],
+					"path": [
+						"appleLogin"
 					]
 				}
 			},
